@@ -610,4 +610,4 @@ This repository contains structured, reproducible outputs and analysis artifacts
 1. **BLAST & Orthology Search:** Raw tabular files containing sequence alignments mapped by NCBI Taxonomy IDs.
 2. **HMMER & Foldseek:** Hidden Markov Model homology profiles and 3D structural comparisons.
 3. **Phylostratr Checkpoints:** Evolutionary phylogenomic profiling checkpoints exported to plain-text CSV for transparent version control.
-4. **Enrichment & Expression:** Gene Ontology (GO), KEGG pathways, and Human Protein Atlas (HPA) expression datasets.
+4. **Enrichment & Expression:** Gene Ontology (GO), KEGG pathways, and Human Protein Atlas (HPA) expression datasets.# comparative-genomics-workspace
