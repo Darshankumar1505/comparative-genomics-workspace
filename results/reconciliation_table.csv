@@ -1,0 +1,4 @@
+Attempt_ID,Target_Species,Accession_Used,Primary_Tool,Boundary_Definition,Aligned_Length_aa,RMSD_Angstrom,TM_Score_Ref_Human,Status,Notes
+Attempt_1,Arabidopsis thaliana (Mislabeled),P56711,Foldseek,Full-Length / Heuristic,430,14.88,N/A,SUPERSEDED_INVALID_ACCESSION,P56711 is cone snail conotoxin PnVIIA peptide
+Attempt_2,Arabidopsis thaliana,Q9LKZ3,Foldseek Fallback (Mislabeled TMalign),Pocket Domain (382-842),284,6.12,0.4341,SUPERSEDED_METHOD_DISCREPANCY,TMalign executable missing; fell back to unaligned local heuristics
+Attempt_3,Arabidopsis thaliana,Q9LKZ3,TM-align (v20240303),Pre-registered Pfam (382-842),336,3.15,0.7441,VALIDATED_FINAL,Verified execution with official TM-align binary
