@@ -1,0 +1,216 @@
+# jackhmmer :: iteratively search a protein sequence against a protein database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             queries/RBL2_human.fasta
+# target sequence database:        7227.faa
+# MSA of hits saved to file:       hmmer_out/RBL2_vs_7227.sto
+# per-seq hits tabular output:     hmmer_out/RBL2_vs_7227.tab
+# number of worker threads:        4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q08999|RBL2_HUMAN  [L=1139]
+Description: Retinoblastoma-like protein 2 OS=Homo sapiens OX=9606 GN=RBL2 PE=1 SV=3
+
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------            -----------
++  4.4e-117  390.0  14.1    9.8e-63  210.1   0.3    4.0  4  sp|Q24472|RBF_DROME  Retinoblastoma family protein OS=Drosoph
+
+
+Domain annotation for each sequence (and alignments):
+>> sp|Q24472|RBF_DROME  Retinoblastoma family protein OS=Drosophila melanogaster OX=7227 GN=Rbf PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  210.1   0.3   2.5e-66   9.8e-63      43     363 ..      26     345 ..       5     361 .. 0.92
+   2 !   72.2   0.2   1.1e-24   4.3e-21     488     619 ..     432     570 ..     406     578 .. 0.88
+   3 !   83.8   0.3   3.4e-28   1.3e-24     828     932 ..     574     679 ..     571     685 .. 0.94
+   4 !   32.3   0.2   1.2e-12   4.7e-09     998    1096 ..     686     787 ..     680     794 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 210.1 bits;  conditional E-value: 2.5e-66
+  sp|Q08999|RBL2_HUMAN  43 pqiqqrfdelcsrlnmdeaaraeawdsyrsmsesytlegndlhwlacalyvacrk.svptvs..kgtvegnyvsltrilkcseqslief 128
+                             i  ++  lc  lnmd   + + +++y  +s+  ++eg   hw+ ca+y acr+ s ptv+   + v+gn vsl ++l+c + s+ ef
+   sp|Q24472|RBF_DROME  26 EMINAEYTNLCRDLNMDRQTELQGYETYLEVSQRCSMEGTASHWMCCAIYTACRRtSTPTVTgqNAVVKGNCVSLNNLLRCCKMSIYEF 114
+                           56788999*********************************************87479*997335789********************* PP
+
+  sp|Q08999|RBL2_HUMAN 129 fnkmkkwedmanlpphfrerterlernftvsavifkkyepifqdifkypqeeqprqqr...grkqrrqpctvseifhfcwvlfiyakgn 214
+                             k+k+w dmanlp +f  + e l+r f+++ ++ k++  i+  if  p  e+ + +         +  c+  ++  +cw lf+ ak+ 
+   sp|Q24472|RBF_DROME 115 KTKIKQWCDMANLPQEFVNEIEDLDRKFSITFMLHKRFRIIMDMIFSCPPNEKKHSKYislHGNHAHGKCSYIKLDDICWRLFLCAKNQ 203
+                           ************************************************999887765311123456778******************** PP
+
+  sp|Q08999|RBL2_HUMAN 215 fpmisddlvnsyhlllcaldlvygnalqcsnrkelvnpnfkglsedfhakdskpssdppciieklcslhdglvleakgikehfwkpyir 303
+                            p  + dlv sy+l++c +dl+y+n l +  r +l+np f+gl  ++   d +   +p ci+  +c +      eak++k   ++  + 
+   sp|Q24472|RBF_DROME 204 KPSNTVDLVTSYNLMICCIDLIYNNVL-AEKRTDLINPKFEGLPSNWTELDFR--HNPHCILSNFCDMT----EEAKAMKATTFRQIMS 285
+                           *************************98.6899***************999987..57*********875....59************** PP
+
+  sp|Q08999|RBL2_HUMAN 304 klyekkllkgkeenltgflepgnfgesfkainkayeeyvlsvgnlderiflgedaeeeig 363
+                            +++   + g ++ + g+l   nf  ++k++n +ye+yvlsvg +deri+ + da e  +
+   sp|Q24472|RBF_DROME 286 SFFQASTIYGNKDTMLGLLANENFERNLKSLNISYEQYVLSVGEFDERILSAYDAGEHTA 345
+                           ******************************************************998765 PP
+
+  == domain 2  score: 72.2 bits;  conditional E-value: 1.1e-24
+  sp|Q08999|RBL2_HUMAN 488 askhfrfaemlyykvlesvieqeqkrlgdmdlsgileqda....fhrsllacclevvtfsykppgnfpfiteifdvplyhfykvievfi 572
+                           a  +f++a+ +++ +l+ +++ e ++  d+dl  +l q      f+ +l+acc+e+v  +yk    fp++ + f +  ++f k+ie+ +
+   sp|Q24472|RBF_DROME 432 AKSRFQLAKSFFFYLLDQILQAEIRNKPDIDLKRLLVQKVslviFNITLMACCVELVLEAYKTELKFPWVLDCFSISAFEFQKIIEIVV 520
+                           6678*******************************99974344499******************************************* PP
+
+  sp|Q08999|RBL2_HUMAN 573 r..aedg.lcrevvkhlnqieeqildhlawkpesplwekirdnenrvptc 619
+                           r  + +g l r ++khln iee  l++law   s +we i   +  +pt 
+   sp|Q24472|RBF_DROME 521 RhgSHEGcLNRSLIKHLNSIEETCLERLAWARNSTVWEMIASAQLPLPTW 570
+                           95434443789*****************************9998888875 PP
+
+  == domain 3  score: 83.8 bits;  conditional E-value: 3.4e-28
+  sp|Q08999|RBL2_HUMAN 828 nrprktsslslffrkvyhlaavrlrdlcakldisdelrkkiwtcfefsiiqcpelmmdrhldqllmcaiyvmakvtk.edksfqnimrc 915
+                           n  r    l +f+rkvy l  +r++ lc++l + ++  + iw  fe si    elm drhldq +mcaiy+  +v + ed  f +imr+
+   sp|Q24472|RBF_DROME 574 NLDRAAGPLQIFLRKVYLLGWLRIQKLCSELSLCEKTPESIWHIFEHSITHETELMKDRHLDQNIMCAIYIYIRVKRmEDPKFSDIMRA 662
+                           556788899****************************************************************997559********** PP
+
+  sp|Q08999|RBL2_HUMAN 916 yrtqpqarsqvyrsvli 932
+                           yr qpqa + vyr v+i
+   sp|Q24472|RBF_DROME 663 YRNQPQAVNSVYREVFI 679
+                           **************987 PP
+
+  == domain 4  score: 32.3 bits;  conditional E-value: 1.2e-12
+  sp|Q08999|RBL2_HUMAN  998 eeeergdliqfynniyikqiktfamkysqanmdap......plspypfvrtgsprriqlsqnhpvyisp.hknetmlsprekifyyf 1077
+                            e  +  d+i fyn+ y+  ++ f + y     d         lsp+p  r + p+++  +q+h +++s   kne + sp++   y f
+   sp|Q24472|RBF_DROME  686 E-PKVKDIIHFYNHTYVPLMRQFVIDYLNVTPDVSgrasdlQLSPHPKERAAQPKKV--TQSHSLFVSQmSKNEIQQSPNQM-VYSF 768 
+                            3.34569********************9988875422223369************86..799*****96379*******976.5889 PP
+
+  sp|Q08999|RBL2_HUMAN 1078 snspskrlreinsmirtge 1096
+                              sp+k l+ +n  +r g+
+   sp|Q24472|RBF_DROME  769 CRSPAKDLQAMNEKVRGGK 787 
+                            9***************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1139 nodes)
+Target sequences:                       3899  (2429921 residues searched)
+Passed MSV filter:                       375  (0.0961785); expected 78.0 (0.02)
+Passed bias filter:                      119  (0.0305206); expected 78.0 (0.02)
+Passed Vit filter:                        18  (0.00461657); expected 3.9 (0.001)
+Passed Fwd filter:                         1  (0.000256476); expected 0.0 (1e-05)
+Initial search space (Z):               3899  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.15u 0.00s 00:00:00.15 Elapsed: 00:00:00.09
+# Mc/sec: 30370.16
+
+@@ New targets included:   1
+@@ New alignment includes: 5 subseqs (was 1), including original query
+@@ Continuing to next round.
+
+@@
+@@ Round:                  2
+@@ Included in MSA:        5 subsequences (query + 4 subseqs from 1 targets)
+@@ Model size:             1139 positions
+@@
+
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+          0 1155.2  31.8   1.3e-179  597.1   7.8    4.0  4  sp|Q24472|RBF_DROME   Retinoblastoma family protein OS=Drosop
+
+
+Domain annotation for each sequence (and alignments):
+>> sp|Q24472|RBF_DROME  Retinoblastoma family protein OS=Drosophila melanogaster OX=7227 GN=Rbf PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  597.1   7.8  3.4e-183  1.3e-179      39     365 ..      22     347 ..       7     357 .. 0.98
+   2 !  223.5   1.7   2.2e-70   8.8e-67     487     619 ..     431     570 ..     397     573 .. 0.95
+   3 !  201.3   0.7   1.1e-63   4.4e-60     827     933 ..     573     680 ..     571     683 .. 0.98
+   4 !  149.5   1.0   4.8e-48   1.9e-44     994    1096 ..     682     787 ..     679     793 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 597.1 bits;  conditional E-value: 3.4e-183
+                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxx..xxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1  39 espteqiqqrfdelcsrlnmdeaaraeaydsyrsvsesytleGndlhwlacalyvacrk.svptvs..kavveGnyvsltrllkcs 121
+                              +   e+i++++++lc++lnmd+++++++y++y++vs+++++eG+++hw++ca+y+acr+ s+ptv+  +avv+Gn+vsl++ll+c+
+      sp|Q24472|RBF_DROME  22 DDRLEMINAEYTNLCRDLNMDRQTELQGYETYLEVSQRCSMEGTASHWMCCAIYTACRRtSTPTVTgqNAVVKGNCVSLNNLLRCC 107
+                              56679*************************************************************99****************** PP
+
+                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...xxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 122 eqslieffnkikkwedmanlppefrerierlerkftvsavlfkkyeiilddifkypqeekkrqkr...grkqrrqkctvselfdic 204
+                              ++s++ef++kik+w+dmanlp+ef+++ie+l+rkf+++++l+k+++ii+d+if++p++ekk++k+   +++++++kc++++l+dic
+      sp|Q24472|RBF_DROME 108 KMSIYEFKTKIKQWCDMANLPQEFVNEIEDLDRKFSITFMLHKRFRIIMDMIFSCPPNEKKHSKYislHGNHAHGKCSYIKLDDIC 193
+                              ************************************************************************************** PP
+
+                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 205 wvlflyakgnfpsisddlvnsyhlllcaldlvygnalqaskrkelvnpkfkGlsedftakdskpssdppcileklcsltdglvlea 290
+                              w+lfl+ak+++ps+++dlv+sy+l++c++dl+y+n+l a+kr++l+npkf+Gl++++t++d++  ++p+cil+++c++t    +ea
+      sp|Q24472|RBF_DROME 194 WRLFLCAKNQKPSNTVDLVTSYNLMICCIDLIYNNVL-AEKRTDLINPKFEGLPSNWTELDFR--HNPHCILSNFCDMT----EEA 272
+                              *************************************.*************************..**************....*** PP
+
+                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 291 kaiketffkpyirklyekkllkGkeenllGllepenfeeslkalnkayeeyvlsvGelderillaedaeeeigtl 365
+                              ka+k+t+f++++++++++++++G+++++lGll++enfe++lk+ln++ye+yvlsvGe+deril+a+da+e+++  
+      sp|Q24472|RBF_DROME 273 KAMKATTFRQIMSSFFQASTIYGNKDTMLGLLANENFERNLKSLNISYEQYVLSVGEFDERILSAYDAGEHTALN 347
+                              ***********************************************************************9765 PP
+
+  == domain 2  score: 223.5 bits;  conditional E-value: 2.2e-70
+                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 487 iaskrfrlaeslyykvlesvleqeqkrlgdidlsglleqda....fhrsllacclevvlfsykpegkfpfileifdvslyefykvi 568
+                               a++rf+la+s+++++l+++l++e+++++didl++ll+q++    f+++l+acc+e+vl++yk+e+kfp++l++f++s++ef+k+i
+      sp|Q24472|RBF_DROME 431 EAKSRFQLAKSFFFYLLDQILQAEIRNKPDIDLKRLLVQKVslviFNITLMACCVELVLEAYKTELKFPWVLDCFSISAFEFQKII 516
+                              599*********************************************************************************** PP
+
+                              xxxxx..xxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 569 evvir..aedG.lcrevvkhlnqieeqildrlawkresplwekirdaenrvptc 619
+                              e+v+r  +++G l+r+++khln+iee++l+rlaw+r+s++we+i++a++++pt 
+      sp|Q24472|RBF_DROME 517 EIVVRhgSHEGcLNRSLIKHLNSIEETCLERLAWARNSTVWEMIASAQLPLPTW 570
+                              ****************************************************95 PP
+
+  == domain 3  score: 201.3 bits;  conditional E-value: 1.1e-63
+                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 827 snrdrktsslslflrkvyllaavrlrdlcakldlsdelrkkiwtifefsiiqepelmkdrhldqllmcaiyvmikvkk.edksfqd 911
+                               n+dr++++l++flrkvyll+++r+++lc++l+l+++++++iw+ife+si++e+elmkdrhldq++mcaiy++i+vk+ ed++f+d
+      sp|Q24472|RBF_DROME 573 VNLDRAAGPLQIFLRKVYLLGWLRIQKLCSELSLCEKTPESIWHIFEHSITHETELMKDRHLDQNIMCAIYIYIRVKRmEDPKFSD 658
+                              59************************************************************************************ PP
+
+                              xxxxxxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 912 imrayrtqpqarsqvyrsvlik 933
+                              imrayr+qpqa+++vyr+v+i 
+      sp|Q24472|RBF_DROME 659 IMRAYRNQPQAVNSVYREVFID 680
+                              ********************96 PP
+
+  == domain 4  score: 149.5 bits;  conditional E-value: 4.8e-48
+                               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1  994 nsdmeeeerkdliqfynniyikliktfaikysqanmdas......plspypfvrtasprriqlsqnhsvyisp.skneimlspr 1070
+                               n d e +++kd+i+fyn++y++l+++f+i+y+++++d+s      +lsp+p++r+a+p+++  +q+hs+++s+ sknei++sp+
+      sp|Q24472|RBF_DROME  682 NEDGE-PKVKDIIHFYNHTYVPLMRQFVIDYLNVTPDVSgrasdlQLSPHPKERAAQPKKV--TQSHSLFVSQmSKNEIQQSPN 762 
+                               66666.*******************************************************..********************* PP
+
+                               xxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|Q08999|RBL2_HUMAN-i1 1071 ekivyyfsrspskrlreinskirtGe 1096
+                               ++ vy+f+rsp+k+l+++n+k+r+G+
+      sp|Q24472|RBF_DROME  763 QM-VYSFCRSPAKDLQAMNEKVRGGK 787 
+                               **.*********************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1139 nodes)
+Target sequences:                       3899  (2429921 residues searched)
+Passed MSV filter:                       297  (0.0761734); expected 78.0 (0.02)
+Passed bias filter:                      105  (0.02693); expected 78.0 (0.02)
+Passed Vit filter:                        13  (0.00333419); expected 3.9 (0.001)
+Passed Fwd filter:                         2  (0.000512952); expected 0.0 (1e-05)
+Initial search space (Z):               3899  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.28u 0.01s 00:00:00.29 Elapsed: 00:00:00.22
+# Mc/sec: 12476.08
+
+@@ New targets included:   0
+@@ New alignment includes: 5 subseqs (was 5), including original query
+@@
+@@ CONVERGED (in 2 rounds). 
+@@
+
+# Alignment of 5 hits satisfying inclusion thresholds saved to: hmmer_out/RBL2_vs_7227.sto
+//
+[ok]

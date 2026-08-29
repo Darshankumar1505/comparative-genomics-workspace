@@ -1,0 +1,1260 @@
+# jackhmmer :: iteratively search a protein sequence against a protein database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             queries/RBL2_human.fasta
+# target sequence database:        7955.faa
+# output directed to file:         hmmer_out/RBL2_vs_7955_v2.log
+# per-seq hits tabular output:     hmmer_out/RBL2_vs_7955_v2.tab
+# number of worker threads:        4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q08999|RBL2_HUMAN  [L=1139]
+Description: Retinoblastoma-like protein 2 OS=Homo sapiens OX=9606 GN=RBL2 PE=1 SV=3
+
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                       -----------
++         0 1504.4   6.2          0 1504.0   6.2    1.0  1  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  Retinoblastoma-like protein 2 OS
++         0 1503.3   6.3          0 1503.0   6.3    1.0  1  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  Retinoblastoma-like protein 2 OS
++         0 1197.7   5.5          0 1197.5   5.5    1.0  1  tr|A0A8M2BA88|A0A8M2BA88_DANRE  Retinoblastoma-like protein 2 is
++         0 1098.0  10.9          0 1093.7  10.9    2.5  1  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  Retinoblastoma-like protein 1 OS
++         0 1094.6  11.6          0 1082.1  11.6    2.8  1  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  Retinoblastoma-like protein 1 OS
++   1.1e-65  223.9  15.9    2.5e-32  113.5   0.5    5.2  4  tr|A0AC58IA68|A0AC58IA68_DANRE  Retinoblastoma-associated protei
++   2.1e-65  223.0  15.7    2.5e-32  113.5   0.5    5.2  4  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  Retinoblastoma-associated protei
+
+
+Domain annotation for each sequence (and alignments):
+>> tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  Retinoblastoma-like protein 2 OS=Danio rerio OX=7955 GN=rbl2 PE=3 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1504.0   6.2         0         0      45    1138 ..      11    1076 ..       3    1078 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 1504.0 bits;  conditional E-value: 0
+            sp|Q08999|RBL2_HUMAN   45 iqqrfdelcsrlnmdeaaraeawdsyrsmsesytlegndlhwlacalyvacrksvptvskgtvegnyvsltrilkcs 121 
+                                       +  f+elc  lnmde +   aw sy+++s++ytleg++lhwlac+lyvacr svpt+skgt egnyvsltril+ s
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE   11 TKHAFEELCRDLNMDEESSNRAWRSYENISKNYTLEGSELHWLACSLYVACRSSVPTMSKGTAEGNYVSLTRILRSS 87  
+                                      6778************************************************************************* PP
+
+            sp|Q08999|RBL2_HUMAN  122 eqslieffnkmkkwedmanlpphfrerterlernftvsavifkkyepifqdifkypqeeqprqqrgrkqrrqpctvs 198 
+                                      +qslieff+kmkkw+dmanlp  f++ te+lernftv++vifkky p+f+difk p +e pr  rgrkqrr pctv+
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE   88 QQSLIEFFSKMKKWQDMANLPRDFQQSTEKLERNFTVTSVIFKKYLPLFRDIFKTPTDELPRTHRGRKQRRHPCTVT 164 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  199 eifhfcwvlfiyakgnfpmisddlvnsyhlllcaldlvygnalqcsnrkelvnpnfkglsedfhakdskpssdppci 275 
+                                      e+f+fcw+lfi+akgnfpmisddlvnsyhlllcaldlvy nal cs+rk+l+np fkgl edf++kd kp     c+
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  165 EVFNFCWILFIHAKGNFPMISDDLVNSYHLLLCALDLVYCNALLCSSRKDLLNPAFKGLPEDFNSKDYKPGPGSLCF 241 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  276 ieklcslhdglvleakgikehfwkpyirklyekkllkgkeenltgflepgnfgesfkainkayeeyvlsvgnlderi 352 
+                                      ie+lc lhdglvleakg kehfwkp+i+kl+e+k+lkgke+ ltgflep nfg+s+ ++n+ yee+vls g+lderi
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  242 IEQLCELHDGLVLEAKGAKEHFWKPFIKKLFERKILKGKEDTLTGFLEPVNFGDSLASLNRVYEEHVLSSGSLDERI 318 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  353 flgedaeeeigtlsrclnagsgtetaervqmknilqqhfdkskalristpltgvryikenspcvtpvstathslsrl 429 
+                                      flg+ a e+igt         g e  +r    n lq  +  + alr+stpltg ry+ e+    tpvs+a +s+ rl
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  319 FLGDGAREDIGTPGP----YEGIENQDRA--NNPLQNSMT-ASALRVSTPLTGRRYVPES-IVGTPVSSAMQSVGRL 387 
+                                      ************764....5789998886..588887775.679*************985.678************* PP
+
+            sp|Q08999|RBL2_HUMAN  430 htmltglrnapsekleqilrtcsrdptqaianrlkemfeiysqhfqp.dedfsncakeiaskhfrfaemlyykvles 505 
+                                      ht+ltg++  ps kl  i+r+c rdpt+++a rlkem ei+ q+++   +d  + a++ia k+f +ae lyyk le 
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  388 HTLLTGFKYRPSVKLRDIFRSCIRDPTESVAARLKEMSEIFLQNYEGtGDDNKSLARDIAVKYFCLAEALYYKSLEV 464 
+                                      *********************************************9625677899********************** PP
+
+            sp|Q08999|RBL2_HUMAN  506 vieqeqkrlgdmdlsgileqdafhrsllacclevvtfsykppgnfpfiteifdvplyhfykvievfiraedglcrev 582 
+                                      +i qe+krlgd+dlsg+leqd fhrsl+accle+v fsy+ppg fp + +ifd+p yhfykviev++rae++l rev
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  465 IINQEKKRLGDVDLSGVLEQDVFHRSLIACCLEIVIFSYRPPGEFPRVLQIFDLPAYHFYKVIEVLVRAEESLFREV 541 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  583 vkhlnqieeqildhlawkpesplwekirdnenrvptceevmppqnleradeiciagspltprrvtevrad.tgglgr 658 
+                                      vkhln +eeq+l+ lawk  splwe+ir+ +n vp c+evmppq+le        ++  tp   te   +  +g g+
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  542 VKHLNHVEEQVLESLAWKGNSPLWERIREAKNCVPACQEVMPPQHLEDGS----GSNANTPSSKTEFSGNiAAGAGK 614 
+                                      **********************************************9775....34556888888888773468899 PP
+
+            sp|Q08999|RBL2_HUMAN  659 sit.spttlydryssppasttrrrlfvendspsdggtpgrmppqplvnavpvqnvsgetvsvtpvpgqtlvtmatat 734 
+                                       ++ spt+l+drysspp  t  rrlfv+ d+  + + p ++ p  +v+++p               gqt+vtmatat
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  615 GVSpSPTSLHDRYSSPPTGTAVRRLFVDGDTTPEPAPPVKVAPPSIVSSIP--------------AGQTVVTMATAT 677 
+                                      88549**********************999866655555555555555544..............49********** PP
+
+            sp|Q08999|RBL2_HUMAN  735 vtanngqtvtipvqgianenggitffpvqvnvggqaqavtgsiqplsaqalagslssqqvtgttlqvpgqvaiqqis 811 
+                                      vtanngqtvtipvqgiane+ggitf+pvqv+v +qa a    +  lsaq l g+l++qq+t t +   g v     s
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  678 VTANNGQTVTIPVQGIANESGGITFIPVQVSVTSQAGAT---LPTLSAQTLTGTLTTQQLTTTPM---GAVQ-NNPS 747 
+                                      **********************************99874...6789**************98765...4333.4568 PP
+
+            sp|Q08999|RBL2_HUMAN  812 pggqqqkqgqsvtsssnrprktsslslffrkvyhlaavrlrdlcakldisdelrkkiwtcfefsiiqcpelmmdrhl 888 
+                                      p  q +k  q  t  + r +kt sl lffrkvyhla+vrlrdlcakldis +lr+kiwtcfe+s++ c +lmmdrhl
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  748 PPKQDKKTPQQGTP-TKRAQKTGSLCLFFRKVYHLASVRLRDLCAKLDISADLRRKIWTCFEYSLVHCTDLMMDRHL 823 
+                                      88888888888775.6899********************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  889 dqllmcaiyvmakvtkedksfqnimrcyrtqpqarsqvyrsvlikgkrkrrnsgssdsrshqnsptelnkdrtsrds 965 
+                                      dqllmcaiyvm kvtkedksfqnim+cyr+qpqa s vyrsvli g rkrr+sg++++  +q+spte  +++ s +s
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  824 DQLLMCAIYVMTKVTKEDKSFQNIMKCYRSQPQASSSVYRSVLISG-RKRRHSGNTENTHRQSSPTEGAQEQASGES 899 
+                                      ********************************************99.6899************************** PP
+
+            sp|Q08999|RBL2_HUMAN  966 spv.mrssstlpvpqpssapptptrltgansdmeeeergdliqfynniyikqiktfamkysqan....mdapplspy 1037
+                                      spv mrssstlp+pqpssap tptr  g   + +eeergdli+fyn++yikqik fa++ys  +     + ppl py
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  900 SPVsMRSSSTLPIPQPSSAPSTPTRAPGGPQE-QEEERGDLIRFYNHVYIKQIKPFALRYSSNSpkngAETPPLCPY 975 
+                                      **979***********************9877.5679***********************96432223689****** PP
+
+            sp|Q08999|RBL2_HUMAN 1038 pfvrtgsprriqlsqnhpvyisphknetmlsprekifyyfsnspskrlreinsmirtgetptkkrgilledgsespa 1114
+                                      p +r gsprr+ ls nh +yisphk  + +spr+kifyy s+sps rlrein+mirtgetptkkr+i le+  +spa
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  976 PSLRIGSPRRVLLSHNHSIYISPHKTGSPISPRDKIFYYVSSSPSHRLREINTMIRTGETPTKKRSIALEEEQQSPA 1052
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN 1115 kricpenhsallrrlqdvandrgs 1138
+                                      kr+c en++allrrlqdvandr+s
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE 1053 KRLCQENQTALLRRLQDVANDRSS 1076
+                                      **********************86 PP
+
+>> tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  Retinoblastoma-like protein 2 OS=Danio rerio OX=7955 GN=rbl2 PE=3 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1503.0   6.3         0         0      45    1138 ..      11    1077 ..       3    1079 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 1503.0 bits;  conditional E-value: 0
+            sp|Q08999|RBL2_HUMAN   45 iqqrfdelcsrlnmdeaaraeawdsyrsmsesytlegndlhwlacalyvacrksvptvskgtvegnyvsltrilkcs 121 
+                                       +  f+elc  lnmde +   aw sy+++s++ytleg++lhwlac+lyvacr svpt+skgt egnyvsltril+ s
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE   11 TKHAFEELCRDLNMDEESSNRAWRSYENISKNYTLEGSELHWLACSLYVACRSSVPTMSKGTAEGNYVSLTRILRSS 87  
+                                      6778************************************************************************* PP
+
+            sp|Q08999|RBL2_HUMAN  122 eqslieffnkmkkwedmanlpphfrerterlernftvsavifkkyepifqdifkypqeeqprqqrgrkqrrqpctvs 198 
+                                      +qslieff+kmkkw+dmanlp  f++ te+lernftv++vifkky p+f+difk p +e pr  rgrkqrr pctv+
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE   88 QQSLIEFFSKMKKWQDMANLPRDFQQSTEKLERNFTVTSVIFKKYLPLFRDIFKTPTDELPRTHRGRKQRRHPCTVT 164 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  199 eifhfcwvlfiyakgnfpmisddlvnsyhlllcaldlvygnalqcsnrkelvnpnfkglsedfhakdskpssdppci 275 
+                                      e+f+fcw+lfi+akgnfpmisddlvnsyhlllcaldlvy nal cs+rk+l+np fkgl edf++kd kp     c+
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  165 EVFNFCWILFIHAKGNFPMISDDLVNSYHLLLCALDLVYCNALLCSSRKDLLNPAFKGLPEDFNSKDYKPGPGSLCF 241 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  276 ieklcslhdglvleakgikehfwkpyirklyekkllkgkeenltgflepgnfgesfkainkayeeyvlsvgnlderi 352 
+                                      ie+lc lhdglvleakg kehfwkp+i+kl+e+k+lkgke+ ltgflep nfg+s+ ++n+ yee+vls g+lderi
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  242 IEQLCELHDGLVLEAKGAKEHFWKPFIKKLFERKILKGKEDTLTGFLEPVNFGDSLASLNRVYEEHVLSSGSLDERI 318 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  353 flgedaeeeigtlsrclnagsgtetaervqmknilqqhfdkskalristpltgvryikenspcvtpvstathslsrl 429 
+                                      flg+ a e+igt         g e  +r    n lq  +  + alr+stpltg ry+ e+    tpvs+a +s+ rl
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  319 FLGDGAREDIGTPGP----YEGIENQDRA--NNPLQNSMT-ASALRVSTPLTGRRYVPES-IVGTPVSSAMQSVGRL 387 
+                                      ************764....5789998886..588887775.679*************985.678************* PP
+
+            sp|Q08999|RBL2_HUMAN  430 htmltglrnapsekleqilrtcsrdptqaianrlkemfeiysqhfqp.dedfsncakeiaskhfrfaemlyykvles 505 
+                                      ht+ltg++  ps kl  i+r+c rdpt+++a rlkem ei+ q+++   +d  + a++ia k+f +ae lyyk le 
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  388 HTLLTGFKYRPSVKLRDIFRSCIRDPTESVAARLKEMSEIFLQNYEGtGDDNKSLARDIAVKYFCLAEALYYKSLEV 464 
+                                      *********************************************9625677899********************** PP
+
+            sp|Q08999|RBL2_HUMAN  506 vieqeqkrlgdmdlsgileqdafhrsllacclevvtfsykppgnfpfiteifdvplyhfykvievfiraedglcrev 582 
+                                      +i qe+krlgd+dlsg+leqd fhrsl+accle+v fsy+ppg fp + +ifd+p yhfykviev++rae++l rev
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  465 IINQEKKRLGDVDLSGVLEQDVFHRSLIACCLEIVIFSYRPPGEFPRVLQIFDLPAYHFYKVIEVLVRAEESLFREV 541 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  583 vkhlnqieeqildhlawkpesplwekirdnenrvptceevmppqnleradeiciagspltprrvtevrad.tgglgr 658 
+                                      vkhln +eeq+l+ lawk  splwe+ir+ +n vp c+evmppq+le        ++  tp   te   +  +g g+
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  542 VKHLNHVEEQVLESLAWKGNSPLWERIREAKNCVPACQEVMPPQHLEDGS----GSNANTPSSKTEFSGNiAAGAGK 614 
+                                      **********************************************9775....34556888888888773468899 PP
+
+            sp|Q08999|RBL2_HUMAN  659 sit.spttlydryssppasttrrrlfvendspsdggtpgrmppqplvnavpvqnvsgetvsvtpvpgqtlvtmatat 734 
+                                       ++ spt+l+drysspp  t  rrlfv+ d+  + + p ++ p  +v+++p               gqt+vtmatat
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  615 GVSpSPTSLHDRYSSPPTGTAVRRLFVDGDTTPEPAPPVKVAPPSIVSSIP--------------AGQTVVTMATAT 677 
+                                      88549**********************999866655555555555555544..............49********** PP
+
+            sp|Q08999|RBL2_HUMAN  735 vtanngqtvtipvqgianenggitffpvqvnvggqaqavtgsiqplsaqalagslssqqvtgttlqvpgqvaiqqis 811 
+                                      vtanngqtvtipvqgiane+ggitf+pvqv+v +qa a    +  lsaq l g+l++qq+t t +   g v     s
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  678 VTANNGQTVTIPVQGIANESGGITFIPVQVSVTSQAGAT---LPTLSAQTLTGTLTTQQLTTTPM---GAVQ-NNPS 747 
+                                      **********************************99874...6789**************98765...4333.4568 PP
+
+            sp|Q08999|RBL2_HUMAN  812 pggqqqkqgqsvtsssnrprktsslslffrkvyhlaavrlrdlcakldisdelrkkiwtcfefsiiqcpelmmdrhl 888 
+                                      p  q +k  q  t  + r +kt sl lffrkvyhla+vrlrdlcakldis +lr+kiwtcfe+s++ c +lmmdrhl
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  748 PPKQDKKTPQQGTP-TKRAQKTGSLCLFFRKVYHLASVRLRDLCAKLDISADLRRKIWTCFEYSLVHCTDLMMDRHL 823 
+                                      88888888888775.6899********************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  889 dqllmcaiyvmakvtkedksfqnimrcyrtqpqarsqvyrsvlikgkrkrrnsgssdsrshqnsptelnkdrtsrds 965 
+                                      dqllmcaiyvm kvtkedksfqnim+cyr+qpqa s vyrsvli g rkrr+sg++++  +q+spte  +++ s +s
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  824 DQLLMCAIYVMTKVTKEDKSFQNIMKCYRSQPQASSSVYRSVLISG-RKRRHSGNTENTHRQSSPTEGAQEQASGES 899 
+                                      ********************************************99.6899************************** PP
+
+            sp|Q08999|RBL2_HUMAN  966 spv.mrssstlpvpqpssapptptrltgansdmeeeergdliqfynniyikqiktfamkysq.....anmdapplsp 1036
+                                      spv mrssstlp+pqpssap tptr  g   + +eeergdli+fyn++yikqik fa++ys         + ppl p
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  900 SPVsMRSSSTLPIPQPSSAPSTPTRAPGGPQE-QEEERGDLIRFYNHVYIKQIKPFALRYSSnspknGQAETPPLCP 975 
+                                      **979***********************9877.5679***********************862222134689***** PP
+
+            sp|Q08999|RBL2_HUMAN 1037 ypfvrtgsprriqlsqnhpvyisphknetmlsprekifyyfsnspskrlreinsmirtgetptkkrgilledgsesp 1113
+                                      yp +r gsprr+ ls nh +yisphk  + +spr+kifyy s+sps rlrein+mirtgetptkkr+i le+  +sp
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  976 YPSLRIGSPRRVLLSHNHSIYISPHKTGSPISPRDKIFYYVSSSPSHRLREINTMIRTGETPTKKRSIALEEEQQSP 1052
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN 1114 akricpenhsallrrlqdvandrgs 1138
+                                      akr+c en++allrrlqdvandr+s
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE 1053 AKRLCQENQTALLRRLQDVANDRSS 1077
+                                      ***********************86 PP
+
+>> tr|A0A8M2BA88|A0A8M2BA88_DANRE  Retinoblastoma-like protein 2 isoform X3 OS=Danio rerio OX=7955 GN=rbl2 PE=4 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1197.5   5.5         0         0     217    1138 ..       1     895 [.       1     897 [] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 1197.5 bits;  conditional E-value: 0
+            sp|Q08999|RBL2_HUMAN  217 misddlvnsyhlllcaldlvygnalqcsnrkelvnpnfkglsedfhakdskpssdppciieklcslhdglvleakgi 293 
+                                      misddlvnsyhlllcaldlvy nal cs+rk+l+np fkgl edf++kd kp     c+ie+lc lhdglvleakg 
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE    1 MISDDLVNSYHLLLCALDLVYCNALLCSSRKDLLNPAFKGLPEDFNSKDYKPGPGSLCFIEQLCELHDGLVLEAKGA 77  
+                                      89*************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  294 kehfwkpyirklyekkllkgkeenltgflepgnfgesfkainkayeeyvlsvgnlderiflgedaeeeigtlsrcln 370 
+                                      kehfwkp+i+kl+e+k+lkgke+ ltgflep nfg+s+ ++n+ yee+vls g+lderiflg+ a e+igt      
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE   78 KEHFWKPFIKKLFERKILKGKEDTLTGFLEPVNFGDSLASLNRVYEEHVLSSGSLDERIFLGDGAREDIGTPGP--- 151 
+                                      ***********************************************************************764... PP
+
+            sp|Q08999|RBL2_HUMAN  371 agsgtetaervqmknilqqhfdkskalristpltgvryikenspcvtpvstathslsrlhtmltglrnapsekleqi 447 
+                                         g e  +r    n lq  +  + alr+stpltg ry+ e+    tpvs+a +s+ rlht+ltg++  ps kl  i
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  152 -YEGIENQDRA--NNPLQNSMT-ASALRVSTPLTGRRYVPES-IVGTPVSSAMQSVGRLHTLLTGFKYRPSVKLRDI 223 
+                                      .5789998886..588887775.679*************985.678******************************* PP
+
+            sp|Q08999|RBL2_HUMAN  448 lrtcsrdptqaianrlkemfeiysqhfqp.dedfsncakeiaskhfrfaemlyykvlesvieqeqkrlgdmdlsgil 523 
+                                      +r+c rdpt+++a rlkem ei+ q+++   +d  + a++ia k+f +ae lyyk le +i qe+krlgd+dlsg+l
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  224 FRSCIRDPTESVAARLKEMSEIFLQNYEGtGDDNKSLARDIAVKYFCLAEALYYKSLEVIINQEKKRLGDVDLSGVL 300 
+                                      ***************************9625677899**************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  524 eqdafhrsllacclevvtfsykppgnfpfiteifdvplyhfykvievfiraedglcrevvkhlnqieeqildhlawk 600 
+                                      eqd fhrsl+accle+v fsy+ppg fp + +ifd+p yhfykviev++rae++l revvkhln +eeq+l+ lawk
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  301 EQDVFHRSLIACCLEIVIFSYRPPGEFPRVLQIFDLPAYHFYKVIEVLVRAEESLFREVVKHLNHVEEQVLESLAWK 377 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  601 pesplwekirdnenrvptceevmppqnleradeiciagspltprrvtevrad.tgglgrsit.spttlydryssppa 675 
+                                        splwe+ir+ +n vp c+evmppq+le        ++  tp   te   +  +g g+ ++ spt+l+drysspp 
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  378 GNSPLWERIREAKNCVPACQEVMPPQHLEDGS----GSNANTPSSKTEFSGNiAAGAGKGVSpSPTSLHDRYSSPPT 450 
+                                      ****************************9775....3455688888888877346889988549************* PP
+
+            sp|Q08999|RBL2_HUMAN  676 sttrrrlfvendspsdggtpgrmppqplvnavpvqnvsgetvsvtpvpgqtlvtmatatvtanngqtvtipvqgian 752 
+                                       t  rrlfv+ d+  + + p ++ p  +v+++p               gqt+vtmatatvtanngqtvtipvqgian
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  451 GTAVRRLFVDGDTTPEPAPPVKVAPPSIVSSIP--------------AGQTVVTMATATVTANNGQTVTIPVQGIAN 513 
+                                      *********999866655555555555555544..............49**************************** PP
+
+            sp|Q08999|RBL2_HUMAN  753 enggitffpvqvnvggqaqavtgsiqplsaqalagslssqqvtgttlqvpgqvaiqqispggqqqkqgqsvtsssnr 829 
+                                      e+ggitf+pvqv+v +qa a    +  lsaq l g+l++qq+t t +   g v     sp  q +k  q  t  + r
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  514 ESGGITFIPVQVSVTSQAGAT---LPTLSAQTLTGTLTTQQLTTTPM---GAVQ-NNPSPPKQDKKTPQQGTP-TKR 582 
+                                      ****************99874...6789**************98765...4333.456888888888888775.689 PP
+
+            sp|Q08999|RBL2_HUMAN  830 prktsslslffrkvyhlaavrlrdlcakldisdelrkkiwtcfefsiiqcpelmmdrhldqllmcaiyvmakvtked 906 
+                                       +kt sl lffrkvyhla+vrlrdlcakldis +lr+kiwtcfe+s++ c +lmmdrhldqllmcaiyvm kvtked
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  583 AQKTGSLCLFFRKVYHLASVRLRDLCAKLDISADLRRKIWTCFEYSLVHCTDLMMDRHLDQLLMCAIYVMTKVTKED 659 
+                                      9**************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  907 ksfqnimrcyrtqpqarsqvyrsvlikgkrkrrnsgssdsrshqnsptelnkdrtsrdsspv.mrssstlpvpqpss 982 
+                                      ksfqnim+cyr+qpqa s vyrsvli g rkrr+sg++++  +q+spte  +++ s +sspv mrssstlp+pqpss
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  660 KSFQNIMKCYRSQPQASSSVYRSVLISG-RKRRHSGNTENTHRQSSPTEGAQEQASGESSPVsMRSSSTLPIPQPSS 735 
+                                      **************************99.6899****************************979************* PP
+
+            sp|Q08999|RBL2_HUMAN  983 apptptrltgansdmeeeergdliqfynniyikqiktfamkysq.....anmdapplspypfvrtgsprriqlsqnh 1054
+                                      ap tptr  g   + +eeergdli+fyn++yikqik fa++ys         + ppl pyp +r gsprr+ ls nh
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  736 APSTPTRAPGGPQE-QEEERGDLIRFYNHVYIKQIKPFALRYSSnspknGQAETPPLCPYPSLRIGSPRRVLLSHNH 811 
+                                      **********9877.5679***********************862222134689*********************** PP
+
+            sp|Q08999|RBL2_HUMAN 1055 pvyisphknetmlsprekifyyfsnspskrlreinsmirtgetptkkrgilledgsespakricpenhsallrrlqd 1131
+                                       +yisphk  + +spr+kifyy s+sps rlrein+mirtgetptkkr+i le+  +spakr+c en++allrrlqd
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  812 SIYISPHKTGSPISPRDKIFYYVSSSPSHRLREINTMIRTGETPTKKRSIALEEEQQSPAKRLCQENQTALLRRLQD 888 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN 1132 vandrgs 1138
+                                      vandr+s
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  889 VANDRSS 895 
+                                      *****86 PP
+
+>> tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  Retinoblastoma-like protein 1 OS=Danio rerio OX=7955 GN=rbl1 PE=4 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1093.7  10.9         0         0      39    1138 ..      12    1057 ..       3    1058 .] 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 1093.7 bits;  conditional E-value: 0
+            sp|Q08999|RBL2_HUMAN   39 esptpqiqqrfdelcsrlnmdeaaraeawdsyrsmsesytlegndlhwlacalyvacrk.svptvskgtvegnyvsl 114 
+                                       s    i+ +f+ lc +lnmde   aea  ++rs+  +ytleg+ +hwlac+ly acrk s+ptv +g +egn vsl
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE   12 RSADGSIRSNFEALCQELNMDEETAAEALQNFRSIWNTYTLEGDVMHWLACSLYAACRKsSIPTVGRGVMEGNCVSL 88  
+                                      456678999*************************************************9459*************** PP
+
+            sp|Q08999|RBL2_HUMAN  115 trilkcseqslieffnkmkkwedmanlpphfrerterlernftvsavifkkyepifqdifkypqeeqprqqrgrkqr 191 
+                                      tril+ ++ sli+ff+kmkkw dmanl   fr r  rlernf vs vif+k+epif d+f+ pq e pr  r+rk r
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE   89 TRILRSAKLSLIQFFSKMKKWSDMANLCQDFRSRIGRLERNFEVSTVIFRKFEPIFLDMFQNPQSEPPRMPRSRKHR 165 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  192 rqpctvseifhfcwvlfiyakgnfpmisddlvnsyhlllcaldlvygnalqcsnrkelvnpnfkglsedfhakdskp 268 
+                                      r pc +s++f fcw lf+y kgnf mi ddlvnsyhlllc ldlv+ nal csnrk+l+n nf+gl      kd++ 
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  166 RLPCHISDVFKFCWTLFVYTKGNFHMIGDDLVNSYHLLLCCLDLVFCNALMCSNRKDLINQNFRGLP-----KDTEN 237 
+                                      ******************************************************************7.....56677 PP
+
+            sp|Q08999|RBL2_HUMAN  269 ssdppciieklcslhdglvleakgikehfwkpyirklyekkllkgkeenltgflepgnfgesfkainkayeeyvlsv 345 
+                                        + pc+i+klc lhdglv+eakgikeh++kpyi+ l+ek++lkg  e lt +l+  nf ++ kain+ yee+vl+v
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  238 LKEMPCVIDKLCELHDGLVVEAKGIKEHYFKPYIKTLFEKRMLKGDVETLTELLDTPNFQDNNKAINRDYEEFVLTV 314 
+                                      7899************************************************************************* PP
+
+            sp|Q08999|RBL2_HUMAN  346 gnlderiflgedaeeeigtlsrclnagsgtetaervqmknilqqhfdkskalristpltgvryikenspcvtpvsta 422 
+                                      g++der+flg da+eeigt  +      +   + r+q++n lqqhf+k+++l  stpltg ry+ke    vtpvs+a
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  315 GDFDERVFLGADADEEIGTPRKSPAEPPSGHLSARMQVENNLQQHFEKTRSLAPSTPLTGRRYLKEKEVLVTPVSSA 391 
+                                      *******************998876666667888******************************************* PP
+
+            sp|Q08999|RBL2_HUMAN  423 thslsrlhtmltglrnapsekleqilrtcsrdptqaianrlkemfeiysqhf.qpdedfsncakeiaskhfrfaeml 498 
+                                      t+s+srl++m++glrnaps+ l qi+++csr+pt++i nr+k + e + q +  p +d+  +  ++a k++++ae+l
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  392 TQSVSRLQSMVSGLRNAPSDALLQIFNSCSRNPTESILNRVKTLGEKFKQAYtNPTDDLPGAHMDFAEKRLKLAEIL 468 
+                                      ************************************************9976379********************** PP
+
+            sp|Q08999|RBL2_HUMAN  499 yykvlesvieqeqkrlgdmdlsgileqdafhrsllacclevvtfsykppgnfpfiteifdvplyhfykvievfirae 575 
+                                      y+k+le+v+ qe krl   d + +leq+ +h sllacclevv fsy     fp+i eif +p ++fykvievfir+e
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  469 YFKILENVMTQEMKRLQGKDWAVLLEQEVLHCSLLACCLEVVLFSYSSQRTFPWILEIFQIPPFYFYKVIEVFIRSE 545 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  576 dglcrevvkhlnqieeqildhlawkpesplwekirdnenrvptceevmppqnleradei.......ciagspltprr 645 
+                                      +gl r++vkhln ieeq+l+  aw  +s lw  ++ + n+vpt eev  p n++  +          +a sp+   r
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  546 EGLSRDMVKHLNSIEEQVLESRAWTRDSALWNALNKDNNKVPTVEEVNFPSNFDTGNNAggpthlpLVALSPIIHPR 622 
+                                      *****************************************************98775422222336899****9** PP
+
+            sp|Q08999|RBL2_HUMAN  646 vtevradtgglgrsi..tspttlydryssppasttrrrlfvendspsdggtpgrmppqplvnavpvqnvsgetvsvt 720 
+                                      + evr   g+ +r     sp +l+dryssp a + +rrlf + d+p          p   ++  p++ +       +
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  623 LREVRTGLGSSARKDvpQSPISLHDRYSSPAAGSAKRRLFGD-DAPPQ-------SPVKRISVTPIKIIP------S 685 
+                                      *********9998742369*********************75.44322.......122334444444332......2 PP
+
+            sp|Q08999|RBL2_HUMAN  721 pvpgqtlvtmatatvtanngqtvtipvqgianenggitffpvqvnvggqaqavtgsiqplsaqalagslssqqvtgt 797 
+                                       + +qt  t    ++   ngq +tip+  + ne ggit + +q           + + pl+aq l  +  s+     
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  686 GMENQTTTTTVL-SMATGNGQQLTIPLPVVKNEAGGITVIQLQA----------SDMNPLTAQVLLTASPSRP---- 747 
+                                      234455444433.344579*******************875543..........4689*****9975544432.... PP
+
+            sp|Q08999|RBL2_HUMAN  798 tlqvpgqvaiqqispggqqqkqgqsvtsssnrprktsslslffrkvyhlaavrlrdlcakldisdelrkkiwtcfef 874 
+                                       l  p       is  +            +n+pr+t sl+lffrkvyhla+vrlrdlc kldis elr kiwtcfe 
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  748 ALAAP------AISSDS--------QPPPANKPRRTGSLALFFRKVYHLASVRLRDLCLKLDISSELRGKIWTCFEH 810 
+                                      33333......344332........23568*********************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  875 siiqcpelmmdrhldqllmcaiyvmakvtkedksfqnimrcyrtqpqarsqvyrsvlikgkrkrrnsgssdsrshqn 951 
+                                      s++ c +lm drhldqll+ca+y+++++tke+ +fq+im+cyrtqpqa+s vyrsvlik + k +    +d + + +
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  811 SLLHCTDLMKDRHLDQLLLCAVYIISRITKEEHTFQDIMKCYRTQPQANSHVYRSVLIKRRPKVQ---QADENMEVD 884 
+                                      **********************************************************9666554...568888899 PP
+
+            sp|Q08999|RBL2_HUMAN  952 sptelnkdrtsrdsspvmrssstlpvpqpssapptptrltgansdmeeeergdliqfynniyikqiktfamkysqa. 1027
+                                       p + + +rt + ++   r+           a  t t        +e eergdliqfynniy+ ++++fa+ky+ + 
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  885 PPADQSNERTDQAANE--RT---------DQADRTQT-------VFESEERGDLIQFYNNIYVSKMRSFAFKYALSt 943 
+                                      9999999999764432..22.........33444443.......5799*************************9762 PP
+
+            sp|Q08999|RBL2_HUMAN 1028 ...nmdapplspypfvr..tgsprriqlsqnhpvyisphknetmlsprekifyyfsnspskrlreinsmirtgetpt 1099
+                                          m+applsp+p vr  t sprr+  sq h +++sphkn + l+p     y f+ spsk+l +in mir g   +
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  944 ldnRMEAPPLSPFPSVRshTLSPRRV--SQKHSIFVSPHKNSSSLTPSTAYTYRFTGSPSKELSDINQMIRQGGV-S 1017
+                                      222478**********9334578875..9********************************************87.5 PP
+
+            sp|Q08999|RBL2_HUMAN 1100 kkrgille.dgsespakricpenhsallrrlqdvandrgs 1138
+                                      kkr++ +e d +esp+k +  en   ll+rlqdv ++r+s
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE 1018 KKRAFTMEgDETESPSKCLRQENDDVLLKRLQDVVSERAS 1057
+                                      677776664899************************9986 PP
+
+>> tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  Retinoblastoma-like protein 1 OS=Danio rerio OX=7955 GN=rbl1 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1082.1  11.6         0         0      39    1138 ..      12    1049 ..       3    1050 .] 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 1082.1 bits;  conditional E-value: 0
+            sp|Q08999|RBL2_HUMAN   39 esptpqiqqrfdelcsrlnmdeaaraeawdsyrsmsesytlegndlhwlacalyvacrk.svptvskgtvegnyvsl 114 
+                                       s    i+ +f+ lc +lnmde   aea  ++rs+  +ytleg+ +hwlac+ly acrk s+ptv +g +egn vsl
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE   12 RSADGSIRSNFEALCQELNMDEETAAEALQNFRSIWNTYTLEGDVMHWLACSLYAACRKsSIPTVGRGVMEGNCVSL 88  
+                                      456678999*************************************************9459*************** PP
+
+            sp|Q08999|RBL2_HUMAN  115 trilkcseqslieffnkmkkwedmanlpphfrerterlernftvsavifkkyepifqdifkypqeeqprqqrgrkqr 191 
+                                      tril+ ++ sli+ff+kmkkw dmanl   fr r  rlernf vs vif+k+epif d+f+ pq e pr  r+rk r
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE   89 TRILRSAKLSLIQFFSKMKKWSDMANLCQDFRSRIGRLERNFEVSTVIFRKFEPIFLDMFQNPQSEPPRMPRSRKHR 165 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  192 rqpctvseifhfcwvlfiyakgnfpmisddlvnsyhlllcaldlvygnalqcsnrkelvnpnfkglsedfhakdskp 268 
+                                      r pc +s++f fcw lf+y kgnf mi ddlvnsyhlllc ldlv+ nal csnrk+l+n nf+gl      kd++ 
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  166 RLPCHISDVFKFCWTLFVYTKGNFHMIGDDLVNSYHLLLCCLDLVFCNALMCSNRKDLINQNFRGLP-----KDTEN 237 
+                                      ******************************************************************7.....56677 PP
+
+            sp|Q08999|RBL2_HUMAN  269 ssdppciieklcslhdglvleakgikehfwkpyirklyekkllkgkeenltgflepgnfgesfkainkayeeyvlsv 345 
+                                        + pc+i+klc lhdglv+eakgikeh++kpyi+ l+ek++lkg  e lt +l+  nf ++ kain+ yee+vl+v
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  238 LKEMPCVIDKLCELHDGLVVEAKGIKEHYFKPYIKTLFEKRMLKGDVETLTELLDTPNFQDNNKAINRDYEEFVLTV 314 
+                                      7899************************************************************************* PP
+
+            sp|Q08999|RBL2_HUMAN  346 gnlderiflgedaeeeigtlsrclnagsgtetaervqmknilqqhfdkskalristpltgvryikenspcvtpvsta 422 
+                                      g++der+flg da+eeigt  +      +   + r+q++n lqqhf+k+++l  stpltg ry+ke    vtpvs+a
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  315 GDFDERVFLGADADEEIGTPRKSTAEPPSGHLSARMQVENNLQQHFEKTRSLAPSTPLTGRRYLKEKEVLVTPVSSA 391 
+                                      *******************998877666667888******************************************* PP
+
+            sp|Q08999|RBL2_HUMAN  423 thslsrlhtmltglrnapsekleqilrtcsrdptqaianrlkemfeiysqhf.qpdedfsncakeiaskhfrfaeml 498 
+                                      t+s+srl++m++glrnaps+ l qi+ +csr+pt++i nr+k + e + q +  p +d+  +  ++a k++++ae+l
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  392 TQSVSRLQSMVSGLRNAPSDALLQIFISCSRNPTESILNRVKTLGEKFKQAYtNPTDDLPGAHMDFAEKRLKLAEIL 468 
+                                      ************************************************9976379********************** PP
+
+            sp|Q08999|RBL2_HUMAN  499 yykvlesvieqeqkrlgdmdlsgileqdafhrsllacclevvtfsykppgnfpfiteifdvplyhfykvievfirae 575 
+                                      y+k+le+v+ qe krl   d + +leq+ +h sllacclevv fsy     fp+i eif +p ++fykvievfir+e
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  469 YFKILENVMTQEMKRLQGKDWAVLLEQEVLHCSLLACCLEVVLFSYSSQRTFPWILEIFQIPPFYFYKVIEVFIRSE 545 
+                                      ***************************************************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  576 dglcrevvkhlnqieeqildhlawkpesplwekirdnenrvptceevmppqnleradei.......ciagspltprr 645 
+                                      +gl r++vkhln ieeq+l+  aw  +s lw  ++ + n+vpt eev  p n++  +          +a sp+   r
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  546 EGLSRDMVKHLNSIEEQVLESRAWTRDSALWNALNKDNNKVPTVEEVNFPSNFDTGNNAggpthlpLVALSPIIHPR 622 
+                                      *****************************************************98775422222336899****9** PP
+
+            sp|Q08999|RBL2_HUMAN  646 vtevradtgglgrsi..tspttlydryssppasttrrrlfvendspsdggtpgrmppqplvnavpvqnvsgetvsvt 720 
+                                      + evr   g+ +r     sp +l+dryssp a + +rrlf + d+p          p   ++  p++ +       +
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  623 LREVRTGLGSSARKDvpQSPISLHDRYSSPAAGSAKRRLFGD-DAPPQ-------SPVKRISVTPIKIIP------S 685 
+                                      *********9998742369*********************75.44322.......222334444444333......2 PP
+
+            sp|Q08999|RBL2_HUMAN  721 pvpgqtlvtmatatvtanngqtvtipvqgianenggitffpvqvnvggqaqavtgsiqplsaqalagslssqqvtgt 797 
+                                       + +qt  t    ++   ngq +tip+  + ne ggit + +q           + + pl+aq l  +  s+     
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  686 GLENQTTTTTVL-SMATGNGQQLTIPLPVVKNEAGGITVIQLQA----------SDMNPLTAQVLLTASPSRP---- 747 
+                                      344555544443.344479*******************875543..........4689*****9975544432.... PP
+
+            sp|Q08999|RBL2_HUMAN  798 tlqvpgqvaiqqispggqqqkqgqsvtsssnrprktsslslffrkvyhlaavrlrdlcakldisdelrkkiwtcfef 874 
+                                       l  p       is  +            +n+pr+t sl+lffrkvyhla+vrlrdlc kldis elr kiwtcfe 
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  748 ALAAP------AISSDS--------QPPPANKPRRTGSLALFFRKVYHLASVRLRDLCLKLDISSELRGKIWTCFEH 810 
+                                      33333......344332........23568*********************************************** PP
+
+            sp|Q08999|RBL2_HUMAN  875 siiqcpelmmdrhldqllmcaiyvmakvtkedksfqnimrcyrtqpqarsqvyrsvlikgkrkrrnsgssdsrshqn 951 
+                                      s++ c +lm drhldqll+ca+y+++++tke+ +fq+im+cyrtqpqa+s vyrsvlik + k +    +d + + +
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  811 SLLHCTDLMKDRHLDQLLLCAVYIISRITKEEHTFQDIMKCYRTQPQANSHVYRSVLIKRRPKVQ---QADENMEVD 884 
+                                      **********************************************************9665544...345555555 PP
+
+            sp|Q08999|RBL2_HUMAN  952 sptelnkdrtsrdsspvmrssstlpvpqpssapptptrltgansdmeeeergdliqfynniyikqiktfamkysqa. 1027
+                                       p + + +r+                     a  t        + +e eergdliqfynniy+ ++++fa+ky+ + 
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  885 PPADQSNERSD-------------------QADRTQ-------TVFESEERGDLIQFYNNIYVSKMRSFAFKYALSt 935 
+                                      56554444432...................222333.......34789*************************9762 PP
+
+            sp|Q08999|RBL2_HUMAN 1028 ...nmdapplspypfvr..tgsprriqlsqnhpvyisphknetmlsprekifyyfsnspskrlreinsmirtgetpt 1099
+                                          m+applsp+p vr  t sprr+  sq h +++sphkn + l+p     y f+ spsk+l +in mir g   +
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  936 ldnRMEAPPLSPFPSVRshTLSPRRV--SQKHSIFVSPHKNSSSLTPSTAYTYRFTGSPSKELSDINQMIRQGGV-S 1009
+                                      222478**********9334578875..9********************************************87.5 PP
+
+            sp|Q08999|RBL2_HUMAN 1100 kkrgille.dgsespakricpenhsallrrlqdvandrgs 1138
+                                      kkr++ +e d +esp+k +  en   ll+rlqdv ++r+s
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE 1010 KKRAFTMEgDETESPSKCLRQENDDVLLKRLQDVVSERAS 1049
+                                      677776664899************************9986 PP
+
+>> tr|A0AC58IA68|A0AC58IA68_DANRE  Retinoblastoma-associated protein OS=Danio rerio OX=7955 GN=rb1 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.5   0.1   2.9e-11   2.9e-07      70     237 ..      70     213 ..      15     330 .. 0.72
+   2 !  113.5   0.5   2.5e-36   2.5e-32     417     629 ..     359     588 ..     352     607 .. 0.88
+   3 !   62.2   0.1   7.9e-21   7.8e-17     823     933 ..     619     729 ..     597     733 .. 0.88
+   4 !   22.6   1.3   7.2e-09   7.1e-05    1003    1110 ..     734     844 ..     729     855 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 30.5 bits;  conditional E-value: 2.9e-11
+            sp|Q08999|RBL2_HUMAN  70 yrsmsesytlegndlhwlacalyvacrksvptvskgtvegnyvsltrilkcseqslieffnkmkkwe.dmanlpphfre 147
+                                      rsm ++    +n  +w ac l++a            +eg  +++t++lk+   s+ +f++ ++k + ++  + p  + 
+  tr|A0AC58IA68|A0AC58IA68_DANRE  70 IRSMDKTNMPYSNRQQWGAC-LFIAG---------MELEGINLTFTQFLKAVGLSVKQFISLVRKMDvNVDTISPKVNS 138
+                                     46666666666666666666.34443.........247999999******************99997457789****** PP
+
+            sp|Q08999|RBL2_HUMAN 148 rterlernftvsavifkkyepifqdifkypqeeqprqqrgrkqrrqpctvseifhfcwvlfiyakgnfpmisddlvnsy 226
+                                        rle+ + v+  +++++    + if  p   +      r          e+++  w +f+ akg f ++ ddlv s+
+  tr|A0AC58IA68|A0AC58IA68_DANRE 139 AVTRLENKYDVTLALYQRFVKTCEKIFAEPDNAK------R---------KELWESSWTMFLLAKGTFLQMEDDLVISF 202
+                                     ***************************9876432......2.........3789999********************** PP
+
+            sp|Q08999|RBL2_HUMAN 227 hlllcaldlvy 237
+                                     +lllc l++  
+  tr|A0AC58IA68|A0AC58IA68_DANRE 203 QLLLCVLEFFA 213
+                                     *******9753 PP
+
+  == domain 2  score: 113.5 bits;  conditional E-value: 2.5e-36
+            sp|Q08999|RBL2_HUMAN 417 tpvstathslsrlhtmltglrnapsekleqilrtcsrdptqaianrlkemfeiysqhfqpdedfsncakeiaskhfrfa 495
+                                     tp+  a  s+ +l+  lt+  + ps  l    + c+ dp+  i  r++e+ e++ q+f       +c + +  k+f + 
+  tr|A0AC58IA68|A0AC58IA68_DANRE 359 TPIRAAMTSIQQLRGDLTSGSDQPSSNLLVYYKNCTVDPSGEIKKRVEELGEVFIQRFAQAV-GQHC-EGLGRKRFYLG 435
+                                     9*********************************************************8543.3555.789******** PP
+
+            sp|Q08999|RBL2_HUMAN 496 emlyykvlesvieqeqkrlgdmdlsgileqdafhrsllacclevvtfsy.....kppg..n.............fpfit 554
+                                      +lyykv+es+++ e+krl+ +++s +l   afh sllac+levv  +y     k  g                fp+i 
+  tr|A0AC58IA68|A0AC58IA68_DANRE 436 AQLYYKVMESMLKSEEKRLSVQNFSKLLNNAAFHTSLLACALEVVIATYvgsslKNGGfgRssgasdsvesdlcFPWIL 514
+                                     ********************************************9877633332322222022233444555669**** PP
+
+            sp|Q08999|RBL2_HUMAN 555 eifdvplyhfykvievfiraedglcrevvkhlnqieeqildhlawkpesplwekirdnenrvptceevmppqnle 629
+                                      +f +p + fykvie fi+ae  l +++vkhl q e  i++ law+ +spl++ ++ +  + p  e+  pp  l 
+  tr|A0AC58IA68|A0AC58IA68_DANRE 515 SVFQLPAFDFYKVIESFIKAEPTLKHDMVKHLEQCEHVIMESLAWRADSPLFDLLKQSREEGP-GEQAEPPATLN 588
+                                     ********************************************************9998888.58899998876 PP
+
+  == domain 3  score: 62.2 bits;  conditional E-value: 7.9e-21
+            sp|Q08999|RBL2_HUMAN 823 vtsssnrprktsslslffrkvyhlaavrlrdlcakldis.delrkkiwtcfefsiiqcpelmmdrhldqllmcaiyvma 900
+                                      t  +  pr ++slslf++k+y++a +rl+ l + l  s  e++  iwt ++ ++    elm drhldql+m a+y + 
+  tr|A0AC58IA68|A0AC58IA68_DANRE 619 PTPGTRAPR-SNSLSLFYKKLYRMAYLRLKMLFSNLLTShPEMEPIIWTLLQHTLQNEYELMRDRHLDQLIMSAMYAIC 696
+                                     455555565.789********************998766269999********************************** PP
+
+            sp|Q08999|RBL2_HUMAN 901 kvtkedksfqnimrcyrtqpqarsqvyrsvlik 933
+                                     kv   d  f+ i+ +y+  p  + + ++ vli+
+  tr|A0AC58IA68|A0AC58IA68_DANRE 697 KVKNVDLRFKTIVTAYKELPNTNQETFKRVLIR 729
+                                     *******************************97 PP
+
+  == domain 4  score: 22.6 bits;  conditional E-value: 7.2e-09
+            sp|Q08999|RBL2_HUMAN 1003 gdliqfynniyikqiktfamkysqanmdapplspypfvrt....gsprriqlsqnhpvyisphkne....tmlspre 1071
+                                        +i fyn ++++++kt  ++ys      pplsp p +      +sp r+  s  + vy+sp k+      +++pr 
+  tr|A0AC58IA68|A0AC58IA68_DANRE  734 DSIIVFYNLVFMQKLKTNILQYSSPR--PPPLSPIPHIPCspykNSPLRVPGS--NNVYVSPLKSSrvspLVMTPRS 806 
+                                      56899*****************9765..7********9751111466666555..559****997622224689*** PP
+
+            sp|Q08999|RBL2_HUMAN 1072 kifyyfsns..pskrlreinsmirtgetptkkrgilledgs 1110
+                                      +i+  +  s   + ++++in m+ +++   k+ +  l+ gs
+  tr|A0AC58IA68|A0AC58IA68_DANRE  807 RILISIGESfgSADKFQKINQMVSSSDWSLKR-S--LDGGS 844 
+                                      **99887663256799*******999887654.3..44444 PP
+
+>> tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  Retinoblastoma-associated protein OS=Danio rerio OX=7955 GN=rb1 PE=4 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.0   0.1   4.3e-11   4.2e-07      70     236 ..      70     212 ..      15     330 .. 0.77
+   2 !  113.5   0.5   2.6e-36   2.5e-32     417     629 ..     359     588 ..     352     607 .. 0.88
+   3 !   62.2   0.1     8e-21   7.9e-17     823     933 ..     619     729 ..     597     733 .. 0.88
+   4 !   22.2   1.3   9.7e-09   9.5e-05    1003    1110 ..     734     844 ..     729     855 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 30.0 bits;  conditional E-value: 4.3e-11
+            sp|Q08999|RBL2_HUMAN  70 yrsmsesytlegndlhwlacalyvacrksvptvskgtvegnyvsltrilkcseqslieffnkmkkwe.dmanlpphfre 147
+                                      rsm ++    +n  +w ac l++a            +eg  +++t++lk+   s+ +f++ ++k + ++  + p  + 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  70 IRSMDKTNMPYSNRQQWGAC-LFIAG---------MELEGINLTFTQFLKAVGLSVKQFISLVRKMDvNVDTISPKVNS 138
+                                     46666666666666666666.34443.........247999999******************99997457789****** PP
+
+            sp|Q08999|RBL2_HUMAN 148 rterlernftvsavifkkyepifqdifkypqeeqprqqrgrkqrrqpctvseifhfcwvlfiyakgnfpmisddlvnsy 226
+                                        rle+ + v+  +++++    + if  p   +      r          e+++  w +f+ akg f ++ ddlv s+
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 139 AVTRLENKYDVTLALYQRFVKTCEKIFAEPDNAK------R---------KELWESSWTMFLLAKGTFLQMEDDLVISF 202
+                                     ***************************9876432......2.........3789999********************** PP
+
+            sp|Q08999|RBL2_HUMAN 227 hlllcaldlv 236
+                                     +lllc l++ 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 203 QLLLCVLEFF 212
+                                     *******974 PP
+
+  == domain 2  score: 113.5 bits;  conditional E-value: 2.6e-36
+            sp|Q08999|RBL2_HUMAN 417 tpvstathslsrlhtmltglrnapsekleqilrtcsrdptqaianrlkemfeiysqhfqpdedfsncakeiaskhfrfa 495
+                                     tp+  a  s+ +l+  lt+  + ps  l    + c+ dp+  i  r++e+ e++ q+f       +c + +  k+f + 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 359 TPIRAAMTSIQQLRGDLTSGSDQPSSNLLVYYKNCTVDPSGEIKKRVEELGEVFIQRFAQAV-GQHC-EGLGRKRFYLG 435
+                                     9*********************************************************8543.3555.789******** PP
+
+            sp|Q08999|RBL2_HUMAN 496 emlyykvlesvieqeqkrlgdmdlsgileqdafhrsllacclevvtfsy.....kppg..n.............fpfit 554
+                                      +lyykv+es+++ e+krl+ +++s +l   afh sllac+levv  +y     k  g                fp+i 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 436 AQLYYKVMESMLKSEEKRLSVQNFSKLLNNAAFHTSLLACALEVVIATYvgsslKNGGfgRssgasdsvesdlcFPWIL 514
+                                     ********************************************9877633332322222022233444555669**** PP
+
+            sp|Q08999|RBL2_HUMAN 555 eifdvplyhfykvievfiraedglcrevvkhlnqieeqildhlawkpesplwekirdnenrvptceevmppqnle 629
+                                      +f +p + fykvie fi+ae  l +++vkhl q e  i++ law+ +spl++ ++ +  + p  e+  pp  l 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 515 SVFQLPAFDFYKVIESFIKAEPTLKHDMVKHLEQCEHVIMESLAWRTDSPLFDLLKQSREEGP-GEQAEPPATLN 588
+                                     ********************************************************9998888.58899998876 PP
+
+  == domain 3  score: 62.2 bits;  conditional E-value: 8e-21
+            sp|Q08999|RBL2_HUMAN 823 vtsssnrprktsslslffrkvyhlaavrlrdlcakldis.delrkkiwtcfefsiiqcpelmmdrhldqllmcaiyvma 900
+                                      t  +  pr ++slslf++k+y++a +rl+ l + l  s  e++  iwt ++ ++    elm drhldql+m a+y + 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 619 PTPGTRAPR-SNSLSLFYKKLYRMAYLRLKMLFSNLLTShPEMEPIIWTLLQHTLQNEYELMRDRHLDQLIMSAMYAIC 696
+                                     455555565.789********************998766269999********************************** PP
+
+            sp|Q08999|RBL2_HUMAN 901 kvtkedksfqnimrcyrtqpqarsqvyrsvlik 933
+                                     kv   d  f+ i+ +y+  p  + + ++ vli+
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 697 KVKNVDLRFKTIVTAYKELPNTNQETFKRVLIR 729
+                                     *******************************97 PP
+
+  == domain 4  score: 22.2 bits;  conditional E-value: 9.7e-09
+            sp|Q08999|RBL2_HUMAN 1003 gdliqfynniyikqiktfamkysqanmdapplspypfvrt....gsprriqlsqnhpvyisphkne....tmlspre 1071
+                                        +i fyn ++++++kt  ++ys      pplsp p +      +sp r+  s  + vy+sp k+      +++pr 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  734 DSIIVFYNLVFMQKLKTNILQYSSPR--PPPLSPIPHIPCspykNSPLRVPGS--NNVYVSPLKSSrvspLVMTPRS 806 
+                                      56899*****************9765..7********9751111466666555..559****997622224689*** PP
+
+            sp|Q08999|RBL2_HUMAN 1072 kifyyfsns..pskrlreinsmirtgetptkkrgilledgs 1110
+                                      +i+  +  s   + ++++in m+ +++   k+ +  l+ gs
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  807 RILISIGESfgSADKFQKINQMLSSSDWSLKR-S--LDGGS 844 
+                                      **998876632567999******999876654.3..34444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1139 nodes)
+Target sequences:                      68855  (59015307 residues searched)
+Passed MSV filter:                      9172  (0.133207); expected 1377.1 (0.02)
+Passed bias filter:                     1644  (0.0238763); expected 1377.1 (0.02)
+Passed Vit filter:                       193  (0.00280299); expected 68.9 (0.001)
+Passed Fwd filter:                        30  (0.000435698); expected 0.7 (1e-05)
+Initial search space (Z):              68855  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 2.84u 0.07s 00:00:02.90 Elapsed: 00:00:00.73
+# Mc/sec: 91688.44
+
+@@ New targets included:   7
+@@ New alignment includes: 14 subseqs (was 1), including original query
+@@ Continuing to next round.
+
+@@
+@@ Round:                  2
+@@ Included in MSA:        14 subsequences (query + 13 subseqs from 7 targets)
+@@ Model size:             1139 positions
+@@
+
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                       -----------
+          0 2083.7   0.0          0 2083.3   0.0    1.0  1  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  Retinoblastoma-like protein 2 OS
+          0 2082.8   0.0          0 2082.4   0.0    1.0  1  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  Retinoblastoma-like protein 2 OS
+          0 1858.9   2.0          0 1858.6   2.0    1.0  1  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  Retinoblastoma-like protein 1 OS
+          0 1841.2   4.2          0 1838.8   4.2    1.8  1  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  Retinoblastoma-like protein 1 OS
+          0 1732.3   0.0          0 1732.0   0.0    1.0  1  tr|A0A8M2BA88|A0A8M2BA88_DANRE  Retinoblastoma-like protein 2 is
+   1.1e-246  823.5  18.8    8.2e-97  327.2   0.0    4.9  4  tr|A0AC58IA68|A0AC58IA68_DANRE  Retinoblastoma-associated protei
+   1.1e-245  820.2  19.5    7.4e-97  327.3   0.0    4.9  4  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  Retinoblastoma-associated protei
+
+
+Domain annotation for each sequence (and alignments):
+>> tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  Retinoblastoma-like protein 2 OS=Danio rerio OX=7955 GN=rbl2 PE=3 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 2083.3   0.0         0         0      41    1138 ..       7    1077 ..       2    1078 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 2083.3 bits;  conditional E-value: 0
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1   41 adgsiksafeelcrelnmdeeaaaealqsyrsisktytlegnelhWlaCslyvacrksvptvskgtleGnyvsltri 117 
+                                      + g++k+afeelcr+lnmdee++++a++sy++isk+ytleg+elhWlaCslyvacr+svpt+skgt+eGnyvsltri
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE    7 TLGKTKHAFEELCRDLNMDEESSNRAWRSYENISKNYTLEGSELHWLACSLYVACRSSVPTMSKGTAEGNYVSLTRI 83  
+                                      56899************************************************************************ PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  118 lkssklslieffskvkkwedvanlsrdfrsrverlernfevsavifkkfepifedifkePqeekprtkrgrkqrrlp 194 
+                                      l+ss++slieffsk+kkw+d+anl+rdf++++e+lernf+v++vifkk++p+f+difk+P++e prt+rgrkqrr+p
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE   84 LRSSQQSLIEFFSKMKKWQDMANLPRDFQQSTEKLERNFTVTSVIFKKYLPLFRDIFKTPTDELPRTHRGRKQRRHP 160 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  195 ctvsevfefcWvlfiyakGnflmisDDLvnsyhLLLCaLdlvycnallcsnrkdllnpafkGlpedfnskdtkpske 271 
+                                      ctv+evf+fcW+lfi+akGnf+misDDLvnsyhLLLCaLdlvycnallcs+rkdllnpafkGlpedfnskd+kp+++
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  161 CTVTEVFNFCWILFIHAKGNFPMISDDLVNSYHLLLCALDLVYCNALLCSSRKDLLNPAFKGLPEDFNSKDYKPGPG 237 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  272 slcvieklcelhdGlvleakGikehffkpyikklfekkllkGkeetltgllepvnfgdslkalnrvyeefvlsvGdl 348 
+                                      slc+ie+lcelhdGlvleakG+kehf+kp+ikklfe+k+lkGke+tltg+lepvnfgdsl++lnrvyee+vls+G+l
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  238 SLCFIEQLCELHDGLVLEAKGAKEHFWKPFIKKLFERKILKGKEDTLTGFLEPVNFGDSLASLNRVYEEHVLSSGSL 314 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  349 deriflGddaeeeiGtpskslaeyegielsdrvqvennlqqslekakalrvstpltGrryvkekevvvtPvssamqs 425 
+                                      deriflGd+a+e+iGtp++    yegie++dr+  +n+lq+s++ a+alrvstpltGrryv+e+ +v+tPvssamqs
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  315 DERIFLGDGAREDIGTPGP----YEGIENQDRA--NNPLQNSMT-ASALRVSTPLTGRRYVPES-IVGTPVSSAMQS 383 
+                                      *******************....**********..*********.******************9.************ PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  426 vsrLrtlltglknaPsekLlqifrsCsrdPtesiakrlkelgeiflqayep.addlkslakdlaekrfklaeaLyyk 501 
+                                      v+rL+tlltg+k++Ps+kL++ifrsC+rdPtes+a+rlke++eiflq+ye+ +dd+ksla+d+a+k+f+laeaLyyk
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  384 VGRLHTLLTGFKYRPSVKLRDIFRSCIRDPTESVAARLKEMSEIFLQNYEGtGDDNKSLARDIAVKYFCLAEALYYK 460 
+                                      *************************************************9989************************ PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  502 vlesvlkqekkrLgdkdlsglLeqdvfhrsLlaCcLevvifsykspgefPwileifdlPayhfykvievliraeesL 578 
+                                      +le++++qekkrLgd+dlsg+LeqdvfhrsL+aCcLe+vifsy++pgefP++l+ifdlPayhfykvievl+raeesL
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  461 SLEVIINQEKKRLGDVDLSGVLEQDVFHRSLIACCLEIVIFSYRPPGEFPRVLQIFDLPAYHFYKVIEVLVRAEESL 537 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xx RF
+         sp|Q08999|RBL2_HUMAN-i1  579 srevvkhLnqveeqvleslaWkadspLweklreaknkvPaveevepPqnledgseilvassaltpsrltevrad.aa 654 
+                                      +revvkhLn+veeqvleslaWk++spLwe++reakn+vPa++ev+pPq+ledgs    +s+a+tps++te++++ aa
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  538 FREVVKHLNHVEEQVLESLAWKGNSPLWERIREAKNCVPACQEVMPPQHLEDGS----GSNANTPSSKTEFSGNiAA 610 
+                                      ******************************************************....****************999 PP
+
+                                      xxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  655 gagrkvs.sptslhdryssppagtakrrlfvdgdatpepatpvkvapvklvssipvkivsgetvsvsglegqtvvtm 730 
+                                      gag++vs sptslhdrysspp+gta+rrlfvdgd+tpepa+pvkvap+++vssip              +gqtvvtm
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  611 GAGKGVSpSPTSLHDRYSSPPTGTAVRRLFVDGDTTPEPAPPVKVAPPSIVSSIP--------------AGQTVVTM 673 
+                                      ******99***********************************************..............8******* PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  731 atatvtannGqtvtipvqgianesGGitfipvqvsvtsqagavtsdlntlsaqvllgaltsqqltttalaapgavqi 807 
+                                      atatvtannGqtvtipvqgianesGGitfipvqvsvtsqaga+   l+tlsaq+l+g+lt+qqlttt++   gavq 
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  674 ATATVTANNGQTVTIPVQGIANESGGITFIPVQVSVTSQAGAT---LPTLSAQTLTGTLTTQQLTTTPM---GAVQ- 743 
+                                      *******************************************...***********************...9***. PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  808 naispdkqdkktpqqqtpstkrprktgsLsLffrkvyhlasvrLrdLcakLdisaelrkkiWtcfeysllhctdLmk 884 
+                                      n++sp+kqdkktpqq+tp tkr++ktgsL+LffrkvyhlasvrLrdLcakLdisa+lr+kiWtcfeysl+hctdLm+
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  744 NNPSPPKQDKKTPQQGTP-TKRAQKTGSLCLFFRKVYHLASVRLRDLCAKLDISADLRRKIWTCFEYSLVHCTDLMM 819 
+                                      ******************.********************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  885 DrhLDqLllcaiyviakvtkedksfqnimkcyreqPqansevyrsvLikgkrkrrhsgnadetsrqdspteqakera 961 
+                                      DrhLDqLl+caiyv++kvtkedksfqnimkcyr+qPqa+s+vyrsvLi+g rkrrhsgn+++t+rq+spte+a+e+a
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  820 DRHLDQLLMCAIYVMTKVTKEDKSFQNIMKCYRSQPQASSSVYRSVLISG-RKRRHSGNTENTHRQSSPTEGAQEQA 895 
+                                      **************************************************.9************************* PP
+
+                                      xxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  962 sresspv.mrssstlpipqpssapstptratgapqeleeeergdliqfynnvyikklktfalkysss.....raeaP 1032
+                                      s+esspv mrssstlpipqpssapstptra+g+pqe +eeergdli+fyn+vyik++k+fal+yss+     +ae+P
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  896 SGESSPVsMRSSSTLPIPQPSSAPSTPTRAPGGPQE-QEEERGDLIRFYNHVYIKQIKPFALRYSSNspkngQAETP 971 
+                                      ************************************.*****************************5555558**** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1033 PLsPyPsvrigsPrrvllsqnhsiyvsPhknssvlsPrekilyyvsespskrlreinqmirtgetptkkrsialede 1109
+                                      PL+PyPs+rigsPrrvlls+nhsiy+sPhk++s++sPr+ki+yyvs+sps+rlrein+mirtgetptkkrsiale+e
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE  972 PLCPYPSLRIGSPRRVLLSHNHSIYISPHKTGSPISPRDKIFYYVSSSPSHRLREINTMIRTGETPTKKRSIALEEE 1048
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1110 qespakrlcqenddallrrlqdvandras 1138
+                                      q+spakrlcqen++allrrlqdvandr+s
+  tr|A0ACD6B5T3|A0ACD6B5T3_DANRE 1049 QQSPAKRLCQENQTALLRRLQDVANDRSS 1077
+                                      ***************************99 PP
+
+>> tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  Retinoblastoma-like protein 2 OS=Danio rerio OX=7955 GN=rbl2 PE=3 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 2082.4   0.0         0         0      41    1138 ..       7    1076 ..       2    1077 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 2082.4 bits;  conditional E-value: 0
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1   41 adgsiksafeelcrelnmdeeaaaealqsyrsisktytlegnelhWlaCslyvacrksvptvskgtleGnyvsltri 117 
+                                      + g++k+afeelcr+lnmdee++++a++sy++isk+ytleg+elhWlaCslyvacr+svpt+skgt+eGnyvsltri
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE    7 TLGKTKHAFEELCRDLNMDEESSNRAWRSYENISKNYTLEGSELHWLACSLYVACRSSVPTMSKGTAEGNYVSLTRI 83  
+                                      56899************************************************************************ PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  118 lkssklslieffskvkkwedvanlsrdfrsrverlernfevsavifkkfepifedifkePqeekprtkrgrkqrrlp 194 
+                                      l+ss++slieffsk+kkw+d+anl+rdf++++e+lernf+v++vifkk++p+f+difk+P++e prt+rgrkqrr+p
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE   84 LRSSQQSLIEFFSKMKKWQDMANLPRDFQQSTEKLERNFTVTSVIFKKYLPLFRDIFKTPTDELPRTHRGRKQRRHP 160 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  195 ctvsevfefcWvlfiyakGnflmisDDLvnsyhLLLCaLdlvycnallcsnrkdllnpafkGlpedfnskdtkpske 271 
+                                      ctv+evf+fcW+lfi+akGnf+misDDLvnsyhLLLCaLdlvycnallcs+rkdllnpafkGlpedfnskd+kp+++
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  161 CTVTEVFNFCWILFIHAKGNFPMISDDLVNSYHLLLCALDLVYCNALLCSSRKDLLNPAFKGLPEDFNSKDYKPGPG 237 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  272 slcvieklcelhdGlvleakGikehffkpyikklfekkllkGkeetltgllepvnfgdslkalnrvyeefvlsvGdl 348 
+                                      slc+ie+lcelhdGlvleakG+kehf+kp+ikklfe+k+lkGke+tltg+lepvnfgdsl++lnrvyee+vls+G+l
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  238 SLCFIEQLCELHDGLVLEAKGAKEHFWKPFIKKLFERKILKGKEDTLTGFLEPVNFGDSLASLNRVYEEHVLSSGSL 314 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  349 deriflGddaeeeiGtpskslaeyegielsdrvqvennlqqslekakalrvstpltGrryvkekevvvtPvssamqs 425 
+                                      deriflGd+a+e+iGtp++    yegie++dr+  +n+lq+s++ a+alrvstpltGrryv+e+ +v+tPvssamqs
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  315 DERIFLGDGAREDIGTPGP----YEGIENQDRA--NNPLQNSMT-ASALRVSTPLTGRRYVPES-IVGTPVSSAMQS 383 
+                                      *******************....**********..*********.******************9.************ PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  426 vsrLrtlltglknaPsekLlqifrsCsrdPtesiakrlkelgeiflqayep.addlkslakdlaekrfklaeaLyyk 501 
+                                      v+rL+tlltg+k++Ps+kL++ifrsC+rdPtes+a+rlke++eiflq+ye+ +dd+ksla+d+a+k+f+laeaLyyk
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  384 VGRLHTLLTGFKYRPSVKLRDIFRSCIRDPTESVAARLKEMSEIFLQNYEGtGDDNKSLARDIAVKYFCLAEALYYK 460 
+                                      *************************************************9989************************ PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  502 vlesvlkqekkrLgdkdlsglLeqdvfhrsLlaCcLevvifsykspgefPwileifdlPayhfykvievliraeesL 578 
+                                      +le++++qekkrLgd+dlsg+LeqdvfhrsL+aCcLe+vifsy++pgefP++l+ifdlPayhfykvievl+raeesL
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  461 SLEVIINQEKKRLGDVDLSGVLEQDVFHRSLIACCLEIVIFSYRPPGEFPRVLQIFDLPAYHFYKVIEVLVRAEESL 537 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xx RF
+         sp|Q08999|RBL2_HUMAN-i1  579 srevvkhLnqveeqvleslaWkadspLweklreaknkvPaveevepPqnledgseilvassaltpsrltevrad.aa 654 
+                                      +revvkhLn+veeqvleslaWk++spLwe++reakn+vPa++ev+pPq+ledgs    +s+a+tps++te++++ aa
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  538 FREVVKHLNHVEEQVLESLAWKGNSPLWERIREAKNCVPACQEVMPPQHLEDGS----GSNANTPSSKTEFSGNiAA 610 
+                                      ******************************************************....****************999 PP
+
+                                      xxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  655 gagrkvs.sptslhdryssppagtakrrlfvdgdatpepatpvkvapvklvssipvkivsgetvsvsglegqtvvtm 730 
+                                      gag++vs sptslhdrysspp+gta+rrlfvdgd+tpepa+pvkvap+++vssip              +gqtvvtm
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  611 GAGKGVSpSPTSLHDRYSSPPTGTAVRRLFVDGDTTPEPAPPVKVAPPSIVSSIP--------------AGQTVVTM 673 
+                                      ******99***********************************************..............8******* PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  731 atatvtannGqtvtipvqgianesGGitfipvqvsvtsqagavtsdlntlsaqvllgaltsqqltttalaapgavqi 807 
+                                      atatvtannGqtvtipvqgianesGGitfipvqvsvtsqaga+   l+tlsaq+l+g+lt+qqlttt++   gavq 
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  674 ATATVTANNGQTVTIPVQGIANESGGITFIPVQVSVTSQAGAT---LPTLSAQTLTGTLTTQQLTTTPM---GAVQ- 743 
+                                      *******************************************...***********************...9***. PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  808 naispdkqdkktpqqqtpstkrprktgsLsLffrkvyhlasvrLrdLcakLdisaelrkkiWtcfeysllhctdLmk 884 
+                                      n++sp+kqdkktpqq+tp tkr++ktgsL+LffrkvyhlasvrLrdLcakLdisa+lr+kiWtcfeysl+hctdLm+
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  744 NNPSPPKQDKKTPQQGTP-TKRAQKTGSLCLFFRKVYHLASVRLRDLCAKLDISADLRRKIWTCFEYSLVHCTDLMM 819 
+                                      ******************.********************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  885 DrhLDqLllcaiyviakvtkedksfqnimkcyreqPqansevyrsvLikgkrkrrhsgnadetsrqdspteqakera 961 
+                                      DrhLDqLl+caiyv++kvtkedksfqnimkcyr+qPqa+s+vyrsvLi+g rkrrhsgn+++t+rq+spte+a+e+a
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  820 DRHLDQLLMCAIYVMTKVTKEDKSFQNIMKCYRSQPQASSSVYRSVLISG-RKRRHSGNTENTHRQSSPTEGAQEQA 895 
+                                      **************************************************.9************************* PP
+
+                                      xxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....xxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  962 sresspv.mrssstlpipqpssapstptratgapqeleeeergdliqfynnvyikklktfalkysss....raeaPP 1033
+                                      s+esspv mrssstlpipqpssapstptra+g+pqe +eeergdli+fyn+vyik++k+fal+yss+     ae+PP
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  896 SGESSPVsMRSSSTLPIPQPSSAPSTPTRAPGGPQE-QEEERGDLIRFYNHVYIKQIKPFALRYSSNspknGAETPP 971 
+                                      ************************************.*****************************6343359**** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1034 LsPyPsvrigsPrrvllsqnhsiyvsPhknssvlsPrekilyyvsespskrlreinqmirtgetptkkrsialedeq 1110
+                                      L+PyPs+rigsPrrvlls+nhsiy+sPhk++s++sPr+ki+yyvs+sps+rlrein+mirtgetptkkrsiale+eq
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE  972 LCPYPSLRIGSPRRVLLSHNHSIYISPHKTGSPISPRDKIFYYVSSSPSHRLREINTMIRTGETPTKKRSIALEEEQ 1048
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1111 espakrlcqenddallrrlqdvandras 1138
+                                      +spakrlcqen++allrrlqdvandr+s
+  tr|A0A8M3AZW2|A0A8M3AZW2_DANRE 1049 QSPAKRLCQENQTALLRRLQDVANDRSS 1076
+                                      **************************99 PP
+
+>> tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  Retinoblastoma-like protein 1 OS=Danio rerio OX=7955 GN=rbl1 PE=4 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1858.6   2.0         0         0      34    1138 ..       7    1057 ..       2    1058 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 1858.6 bits;  conditional E-value: 0
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1   34 aapparsadgsiksafeelcrelnmdeeaaaealqsyrsisktytlegnelhWlaCslyvacrk.svptvskgtleG 109 
+                                       + ++rsadgsi+s+fe+lc+elnmdee+aaealq++rsi++tytleg+++hWlaCsly+acrk s+ptv++g++eG
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE    7 DTESVRSADGSIRSNFEALCQELNMDEETAAEALQNFRSIWNTYTLEGDVMHWLACSLYAACRKsSIPTVGRGVMEG 83  
+                                      45678***********************************************************99*********** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  110 nyvsltrilkssklslieffskvkkwedvanlsrdfrsrverlernfevsavifkkfepifedifkePqeekprtkr 186 
+                                      n+vsltril+s+klsli+ffsk+kkw+d+anl++dfrsr++rlernfevs+vif+kfepif d+f++Pq+e+pr++r
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE   84 NCVSLTRILRSAKLSLIQFFSKMKKWSDMANLCQDFRSRIGRLERNFEVSTVIFRKFEPIFLDMFQNPQSEPPRMPR 160 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  187 grkqrrlpctvsevfefcWvlfiyakGnflmisDDLvnsyhLLLCaLdlvycnallcsnrkdllnpafkGlpedfns 263 
+                                      +rk+rrlpc++s+vf+fcW+lf+y+kGnf+mi+DDLvnsyhLLLC+Ldlv+cnal+csnrkdl+n++f+Glp     
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  161 SRKHRRLPCHISDVFKFCWTLFVYTKGNFHMIGDDLVNSYHLLLCCLDLVFCNALMCSNRKDLINQNFRGLP----- 232 
+                                      ************************************************************************..... PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  264 kdtkpskeslcvieklcelhdGlvleakGikehffkpyikklfekkllkGkeetltgllepvnfgdslkalnrvyee 340 
+                                      kdt+++ke++cvi+klcelhdGlv+eakGikeh+fkpyik+lfek++lkG++etlt+ll+++nf+d++ka+nr+yee
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  233 KDTENLKEMPCVIDKLCELHDGLVVEAKGIKEHYFKPYIKTLFEKRMLKGDVETLTELLDTPNFQDNNKAINRDYEE 309 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  341 fvlsvGdlderiflGddaeeeiGtpskslaeyegielsdrvqvennlqqslekakalrvstpltGrryvkekevvvt 417 
+                                      fvl+vGd+der+flG+da+eeiGtp+ks+ae+++++ls+r+qvennlqq++ek+++l++stpltGrry+kekev+vt
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  310 FVLTVGDFDERVFLGADADEEIGTPRKSPAEPPSGHLSARMQVENNLQQHFEKTRSLAPSTPLTGRRYLKEKEVLVT 386 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  418 PvssamqsvsrLrtlltglknaPsekLlqifrsCsrdPtesiakrlkelgeiflqay.epaddlkslakdlaekrfk 493 
+                                      Pvssa+qsvsrL+++++gl+naPs++Llqif+sCsr+Ptesi++r+k+lge+f+qay +p+ddl+++++d+aekr+k
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  387 PVSSATQSVSRLQSMVSGLRNAPSDALLQIFNSCSRNPTESILNRVKTLGEKFKQAYtNPTDDLPGAHMDFAEKRLK 463 
+                                      *********************************************************888***************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  494 laeaLyykvlesvlkqekkrLgdkdlsglLeqdvfhrsLlaCcLevvifsykspgefPwileifdlPayhfykviev 570 
+                                      lae+Ly+k+le+v++qe+krL++kd+++lLeq+v+h+sLlaCcLevv+fsy+s+++fPwileif++P+++fykviev
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  464 LAEILYFKILENVMTQEMKRLQGKDWAVLLEQEVLHCSLLACCLEVVLFSYSSQRTFPWILEIFQIPPFYFYKVIEV 540 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.......xxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  571 liraeesLsrevvkhLnqveeqvleslaWkadspLweklreaknkvPaveevepPqnledgsei.......lvassa 640 
+                                      +ir+ee+Lsr++vkhLn++eeqvles+aW++ds+Lw++l++++nkvP+veev++P+n+++g+++       lva+s+
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  541 FIRSEEGLSRDMVKHLNSIEEQVLESRAWTRDSALWNALNKDNNKVPTVEEVNFPSNFDTGNNAggpthlpLVALSP 617 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  641 ltpsrltevradaagagrkv..ssptslhdryssppagtakrrlfvdgdatpepatpvkvapvklvssipvkivsge 715 
+                                      ++++rl+evr+++++++rk+  +sp+slhdryssp+ag+akrrlf+d da+p+       +pvk++s++p+ki++  
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  618 IIHPRLREVRTGLGSSARKDvpQSPISLHDRYSSPAAGSAKRRLFGD-DAPPQ-------SPVKRISVTPIKIIP-- 684 
+                                      ******************99778************************.*****.......9**************.. PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  716 tvsvsglegqtvvtmatatvtannGqtvtipvqgianesGGitfipvqvsvtsqagavtsdlntlsaqvllgaltsq 792 
+                                          sg+e+qt++t+++ +++++nGq++tip+++++ne+GGit+i++q+          sd+n+l+aqvll+a++s+
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  685 ----SGMENQTTTTTVL-SMATGNGQQLTIPLPVVKNEAGGITVIQLQA----------SDMNPLTAQVLLTASPSR 746 
+                                      ....9************.******************************9..........89**************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  793 qltttalaapgavqinaispdkqdkktpqqqtpstkrprktgsLsLffrkvyhlasvrLrdLcakLdisaelrkkiW 869 
+                                      +    alaap      ais+d+        q+p++++pr+tgsL+LffrkvyhlasvrLrdLc+kLdis+elr kiW
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  747 P----ALAAP------AISSDS--------QPPPANKPRRTGSLALFFRKVYHLASVRLRDLCLKLDISSELRGKIW 805 
+                                      *....99999......799999........6888******************************************* PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  870 tcfeysllhctdLmkDrhLDqLllcaiyviakvtkedksfqnimkcyreqPqansevyrsvLikgkrkrrhsgnade 946 
+                                      tcfe+sllhctdLmkDrhLDqLllca+y+i+++tke+++fq+imkcyr+qPqans+vyrsvLik+++k++   +ade
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  806 TCFEHSLLHCTDLMKDRHLDQLLLCAVYIISRITKEEHTFQDIMKCYRTQPQANSHVYRSVLIKRRPKVQ---QADE 879 
+                                      **********************************************************************...9*** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  947 tsrqdspteqakerasresspvmrssstlpipqpssapstptratgapqeleeeergdliqfynnvyikklktfalk 1023
+                                      ++++d+p++q++er+++++++  r+         ++a++t+t       ++e+eergdliqfynn+y++k+++fa+k
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  880 NMEVDPPADQSNERTDQAANE--RT---------DQADRTQT-------VFESEERGDLIQFYNNIYVSKMRSFAFK 938 
+                                      *******************99..66.........9******8.......99************************** PP
+
+                                      xxxx....xxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1024 ysss....raeaPPLsPyPsvr..igsPrrvllsqnhsiyvsPhknssvlsPrekilyyvsespskrlreinqmirt 1094
+                                      y+ s    r+eaPPLsP+Psvr  + sPrrv  sq+hsi+vsPhknss+l+P+++++y++++spsk+l++inqmir+
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE  939 YALStldnRMEAPPLSPFPSVRshTLSPRRV--SQKHSIFVSPHKNSSSLTPSTAYTYRFTGSPSKELSDINQMIRQ 1013
+                                      **9655559*************877******..******************************************** PP
+
+                                      xxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1095 getptkkrsiale.deqespakrlcqenddallrrlqdvandras 1138
+                                      g++ +kkr++++e de+esp+k+l+qendd+ll+rlqdv+++ras
+  tr|A0A8M1NIS0|A0A8M1NIS0_DANRE 1014 GGV-SKKRAFTMEgDETESPSKCLRQENDDVLLKRLQDVVSERAS 1057
+                                      ***.8999*****99****************************98 PP
+
+>> tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  Retinoblastoma-like protein 1 OS=Danio rerio OX=7955 GN=rbl1 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1838.8   4.2         0         0      34    1138 ..       7    1049 ..       2    1050 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 1838.8 bits;  conditional E-value: 0
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1   34 aapparsadgsiksafeelcrelnmdeeaaaealqsyrsisktytlegnelhWlaCslyvacrk.svptvskgtleG 109 
+                                       + ++rsadgsi+s+fe+lc+elnmdee+aaealq++rsi++tytleg+++hWlaCsly+acrk s+ptv++g++eG
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE    7 DTESVRSADGSIRSNFEALCQELNMDEETAAEALQNFRSIWNTYTLEGDVMHWLACSLYAACRKsSIPTVGRGVMEG 83  
+                                      45678***********************************************************99*********** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  110 nyvsltrilkssklslieffskvkkwedvanlsrdfrsrverlernfevsavifkkfepifedifkePqeekprtkr 186 
+                                      n+vsltril+s+klsli+ffsk+kkw+d+anl++dfrsr++rlernfevs+vif+kfepif d+f++Pq+e+pr++r
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE   84 NCVSLTRILRSAKLSLIQFFSKMKKWSDMANLCQDFRSRIGRLERNFEVSTVIFRKFEPIFLDMFQNPQSEPPRMPR 160 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  187 grkqrrlpctvsevfefcWvlfiyakGnflmisDDLvnsyhLLLCaLdlvycnallcsnrkdllnpafkGlpedfns 263 
+                                      +rk+rrlpc++s+vf+fcW+lf+y+kGnf+mi+DDLvnsyhLLLC+Ldlv+cnal+csnrkdl+n++f+Glp     
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  161 SRKHRRLPCHISDVFKFCWTLFVYTKGNFHMIGDDLVNSYHLLLCCLDLVFCNALMCSNRKDLINQNFRGLP----- 232 
+                                      ************************************************************************..... PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  264 kdtkpskeslcvieklcelhdGlvleakGikehffkpyikklfekkllkGkeetltgllepvnfgdslkalnrvyee 340 
+                                      kdt+++ke++cvi+klcelhdGlv+eakGikeh+fkpyik+lfek++lkG++etlt+ll+++nf+d++ka+nr+yee
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  233 KDTENLKEMPCVIDKLCELHDGLVVEAKGIKEHYFKPYIKTLFEKRMLKGDVETLTELLDTPNFQDNNKAINRDYEE 309 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  341 fvlsvGdlderiflGddaeeeiGtpskslaeyegielsdrvqvennlqqslekakalrvstpltGrryvkekevvvt 417 
+                                      fvl+vGd+der+flG+da+eeiGtp+ks+ae+++++ls+r+qvennlqq++ek+++l++stpltGrry+kekev+vt
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  310 FVLTVGDFDERVFLGADADEEIGTPRKSTAEPPSGHLSARMQVENNLQQHFEKTRSLAPSTPLTGRRYLKEKEVLVT 386 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  418 PvssamqsvsrLrtlltglknaPsekLlqifrsCsrdPtesiakrlkelgeiflqay.epaddlkslakdlaekrfk 493 
+                                      Pvssa+qsvsrL+++++gl+naPs++Llqif sCsr+Ptesi++r+k+lge+f+qay +p+ddl+++++d+aekr+k
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  387 PVSSATQSVSRLQSMVSGLRNAPSDALLQIFISCSRNPTESILNRVKTLGEKFKQAYtNPTDDLPGAHMDFAEKRLK 463 
+                                      *********************************************************888***************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  494 laeaLyykvlesvlkqekkrLgdkdlsglLeqdvfhrsLlaCcLevvifsykspgefPwileifdlPayhfykviev 570 
+                                      lae+Ly+k+le+v++qe+krL++kd+++lLeq+v+h+sLlaCcLevv+fsy+s+++fPwileif++P+++fykviev
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  464 LAEILYFKILENVMTQEMKRLQGKDWAVLLEQEVLHCSLLACCLEVVLFSYSSQRTFPWILEIFQIPPFYFYKVIEV 540 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.......xxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  571 liraeesLsrevvkhLnqveeqvleslaWkadspLweklreaknkvPaveevepPqnledgsei.......lvassa 640 
+                                      +ir+ee+Lsr++vkhLn++eeqvles+aW++ds+Lw++l++++nkvP+veev++P+n+++g+++       lva+s+
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  541 FIRSEEGLSRDMVKHLNSIEEQVLESRAWTRDSALWNALNKDNNKVPTVEEVNFPSNFDTGNNAggpthlpLVALSP 617 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  641 ltpsrltevradaagagrkv..ssptslhdryssppagtakrrlfvdgdatpepatpvkvapvklvssipvkivsge 715 
+                                      ++++rl+evr+++++++rk+  +sp+slhdryssp+ag+akrrlf+d da+p+       +pvk++s++p+ki++  
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  618 IIHPRLREVRTGLGSSARKDvpQSPISLHDRYSSPAAGSAKRRLFGD-DAPPQ-------SPVKRISVTPIKIIP-- 684 
+                                      ******************99778************************.*****.......9**************.. PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  716 tvsvsglegqtvvtmatatvtannGqtvtipvqgianesGGitfipvqvsvtsqagavtsdlntlsaqvllgaltsq 792 
+                                          sgle+qt++t+++ +++++nGq++tip+++++ne+GGit+i++q+          sd+n+l+aqvll+a++s+
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  685 ----SGLENQTTTTTVL-SMATGNGQQLTIPLPVVKNEAGGITVIQLQA----------SDMNPLTAQVLLTASPSR 746 
+                                      ....9************.******************************9..........89**************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  793 qltttalaapgavqinaispdkqdkktpqqqtpstkrprktgsLsLffrkvyhlasvrLrdLcakLdisaelrkkiW 869 
+                                      +    alaap      ais+d+        q+p++++pr+tgsL+LffrkvyhlasvrLrdLc+kLdis+elr kiW
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  747 P----ALAAP------AISSDS--------QPPPANKPRRTGSLALFFRKVYHLASVRLRDLCLKLDISSELRGKIW 805 
+                                      *....99999......799999........6888******************************************* PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  870 tcfeysllhctdLmkDrhLDqLllcaiyviakvtkedksfqnimkcyreqPqansevyrsvLikgkrkrrhsgnade 946 
+                                      tcfe+sllhctdLmkDrhLDqLllca+y+i+++tke+++fq+imkcyr+qPqans+vyrsvLik+++k++   +ade
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  806 TCFEHSLLHCTDLMKDRHLDQLLLCAVYIISRITKEEHTFQDIMKCYRTQPQANSHVYRSVLIKRRPKVQ---QADE 879 
+                                      **********************************************************************...9*** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  947 tsrqdspteqakerasresspvmrssstlpipqpssapstptratgapqeleeeergdliqfynnvyikklktfalk 1023
+                                      ++++d+p++q++er++                   +a++t+t       ++e+eergdliqfynn+y++k+++fa+k
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  880 NMEVDPPADQSNERSD-------------------QADRTQT-------VFESEERGDLIQFYNNIYVSKMRSFAFK 930 
+                                      *************998...................89****8.......99************************** PP
+
+                                      xxxx....xxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1024 ysss....raeaPPLsPyPsvr..igsPrrvllsqnhsiyvsPhknssvlsPrekilyyvsespskrlreinqmirt 1094
+                                      y+ s    r+eaPPLsP+Psvr  + sPrrv  sq+hsi+vsPhknss+l+P+++++y++++spsk+l++inqmir+
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE  931 YALStldnRMEAPPLSPFPSVRshTLSPRRV--SQKHSIFVSPHKNSSSLTPSTAYTYRFTGSPSKELSDINQMIRQ 1005
+                                      **9655559*************877******..******************************************** PP
+
+                                      xxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1095 getptkkrsiale.deqespakrlcqenddallrrlqdvandras 1138
+                                      g++ +kkr++++e de+esp+k+l+qendd+ll+rlqdv+++ras
+  tr|A0A8M9QAH9|A0A8M9QAH9_DANRE 1006 GGV-SKKRAFTMEgDETESPSKCLRQENDDVLLKRLQDVVSERAS 1049
+                                      ***.8999*****99****************************98 PP
+
+>> tr|A0A8M2BA88|A0A8M2BA88_DANRE  Retinoblastoma-like protein 2 isoform X3 OS=Danio rerio OX=7955 GN=rbl2 PE=4 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1732.0   0.0         0         0     217    1138 ..       1     895 [.       1     896 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 1732.0 bits;  conditional E-value: 0
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  217 misDDLvnsyhLLLCaLdlvycnallcsnrkdllnpafkGlpedfnskdtkpskeslcvieklcelhdGlvleakGi 293 
+                                      misDDLvnsyhLLLCaLdlvycnallcs+rkdllnpafkGlpedfnskd+kp+++slc+ie+lcelhdGlvleakG+
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE    1 MISDDLVNSYHLLLCALDLVYCNALLCSSRKDLLNPAFKGLPEDFNSKDYKPGPGSLCFIEQLCELHDGLVLEAKGA 77  
+                                      8**************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  294 kehffkpyikklfekkllkGkeetltgllepvnfgdslkalnrvyeefvlsvGdlderiflGddaeeeiGtpsksla 370 
+                                      kehf+kp+ikklfe+k+lkGke+tltg+lepvnfgdsl++lnrvyee+vls+G+lderiflGd+a+e+iGtp++   
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE   78 KEHFWKPFIKKLFERKILKGKEDTLTGFLEPVNFGDSLASLNRVYEEHVLSSGSLDERIFLGDGAREDIGTPGP--- 151 
+                                      **************************************************************************... PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  371 eyegielsdrvqvennlqqslekakalrvstpltGrryvkekevvvtPvssamqsvsrLrtlltglknaPsekLlqi 447 
+                                       yegie++dr+  +n+lq+s++ a+alrvstpltGrryv+e+ +v+tPvssamqsv+rL+tlltg+k++Ps+kL++i
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  152 -YEGIENQDRA--NNPLQNSMT-ASALRVSTPLTGRRYVPES-IVGTPVSSAMQSVGRLHTLLTGFKYRPSVKLRDI 223 
+                                      .**********..*********.******************9.********************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  448 frsCsrdPtesiakrlkelgeiflqayep.addlkslakdlaekrfklaeaLyykvlesvlkqekkrLgdkdlsglL 523 
+                                      frsC+rdPtes+a+rlke++eiflq+ye+ +dd+ksla+d+a+k+f+laeaLyyk+le++++qekkrLgd+dlsg+L
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  224 FRSCIRDPTESVAARLKEMSEIFLQNYEGtGDDNKSLARDIAVKYFCLAEALYYKSLEVIINQEKKRLGDVDLSGVL 300 
+                                      ***************************9989********************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  524 eqdvfhrsLlaCcLevvifsykspgefPwileifdlPayhfykvievliraeesLsrevvkhLnqveeqvleslaWk 600 
+                                      eqdvfhrsL+aCcLe+vifsy++pgefP++l+ifdlPayhfykvievl+raeesL+revvkhLn+veeqvleslaWk
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  301 EQDVFHRSLIACCLEIVIFSYRPPGEFPRVLQIFDLPAYHFYKVIEVLVRAEESLFREVVKHLNHVEEQVLESLAWK 377 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxx.xxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  601 adspLweklreaknkvPaveevepPqnledgseilvassaltpsrltevrad.aagagrkvs.sptslhdryssppa 675 
+                                      ++spLwe++reakn+vPa++ev+pPq+ledgs    +s+a+tps++te++++ aagag++vs sptslhdrysspp+
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  378 GNSPLWERIREAKNCVPACQEVMPPQHLEDGS----GSNANTPSSKTEFSGNiAAGAGKGVSpSPTSLHDRYSSPPT 450 
+                                      ********************************....****************999******99************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  676 gtakrrlfvdgdatpepatpvkvapvklvssipvkivsgetvsvsglegqtvvtmatatvtannGqtvtipvqgian 752 
+                                      gta+rrlfvdgd+tpepa+pvkvap+++vssip              +gqtvvtmatatvtannGqtvtipvqgian
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  451 GTAVRRLFVDGDTTPEPAPPVKVAPPSIVSSIP--------------AGQTVVTMATATVTANNGQTVTIPVQGIAN 513 
+                                      *********************************..............8***************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  753 esGGitfipvqvsvtsqagavtsdlntlsaqvllgaltsqqltttalaapgavqinaispdkqdkktpqqqtpstkr 829 
+                                      esGGitfipvqvsvtsqaga+   l+tlsaq+l+g+lt+qqlttt++   gavq n++sp+kqdkktpqq+tp tkr
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  514 ESGGITFIPVQVSVTSQAGAT---LPTLSAQTLTGTLTTQQLTTTPM---GAVQ-NNPSPPKQDKKTPQQGTP-TKR 582 
+                                      *********************...***********************...9***.******************.*** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  830 prktgsLsLffrkvyhlasvrLrdLcakLdisaelrkkiWtcfeysllhctdLmkDrhLDqLllcaiyviakvtked 906 
+                                      ++ktgsL+LffrkvyhlasvrLrdLcakLdisa+lr+kiWtcfeysl+hctdLm+DrhLDqLl+caiyv++kvtked
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  583 AQKTGSLCLFFRKVYHLASVRLRDLCAKLDISADLRRKIWTCFEYSLVHCTDLMMDRHLDQLLMCAIYVMTKVTKED 659 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  907 ksfqnimkcyreqPqansevyrsvLikgkrkrrhsgnadetsrqdspteqakerasresspv.mrssstlpipqpss 982 
+                                      ksfqnimkcyr+qPqa+s+vyrsvLi+g rkrrhsgn+++t+rq+spte+a+e+as+esspv mrssstlpipqpss
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  660 KSFQNIMKCYRSQPQASSSVYRSVLISG-RKRRHSGNTENTHRQSSPTEGAQEQASGESSPVsMRSSSTLPIPQPSS 735 
+                                      ****************************.9*********************************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  983 apstptratgapqeleeeergdliqfynnvyikklktfalkysss.....raeaPPLsPyPsvrigsPrrvllsqnh 1054
+                                      apstptra+g+pqe +eeergdli+fyn+vyik++k+fal+yss+     +ae+PPL+PyPs+rigsPrrvlls+nh
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  736 APSTPTRAPGGPQE-QEEERGDLIRFYNHVYIKQIKPFALRYSSNspkngQAETPPLCPYPSLRIGSPRRVLLSHNH 811 
+                                      **************.*****************************5555558************************** PP
+
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1055 siyvsPhknssvlsPrekilyyvsespskrlreinqmirtgetptkkrsialedeqespakrlcqenddallrrlqd 1131
+                                      siy+sPhk++s++sPr+ki+yyvs+sps+rlrein+mirtgetptkkrsiale+eq+spakrlcqen++allrrlqd
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  812 SIYISPHKTGSPISPRDKIFYYVSSSPSHRLREINTMIRTGETPTKKRSIALEEEQQSPAKRLCQENQTALLRRLQD 888 
+                                      ***************************************************************************** PP
+
+                                      xxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1132 vandras 1138
+                                      vandr+s
+  tr|A0A8M2BA88|A0A8M2BA88_DANRE  889 VANDRSS 895 
+                                      ******9 PP
+
+>> tr|A0AC58IA68|A0AC58IA68_DANRE  Retinoblastoma-associated protein OS=Danio rerio OX=7955 GN=rb1 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  202.6   1.9   3.4e-63   3.3e-59      48     357 ..      44     326 ..       4     347 .. 0.78
+   2 !  327.2   0.0  8.4e-101   8.2e-97     416     630 ..     358     589 ..     339     606 .. 0.95
+   3 !  178.1   0.5   8.9e-56   8.8e-52     821     934 ..     617     730 ..     602     733 .. 0.96
+   4 !  120.4   4.4   2.3e-38   2.3e-34    1001    1119 ..     732     854 ..     729     860 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 202.6 bits;  conditional E-value: 3.4e-63
+                                     xxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  48 afeelcrelnmdeeaaaeal....qsyrsisktytlegnelhWlaCslyvacrksvptvskgtleGnyvsltrilkssk 122
+                                     +f  l +el+  +    +a+    +++rs++kt+++++n+++W+aC l++a+         ++leG+++++t++lk+++
+  tr|A0AC58IA68|A0AC58IA68_DANRE  44 EFVFLSEELQSTNSICDHAWriweREIRSMDKTNMPYSNRQQWGAC-LFIAG---------MELEGINLTFTQFLKAVG 112
+                                     455566666666666666662223589*******************.*****.........****************** PP
+
+                                     xxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 123 lslieffskvkkwe.dvanlsrdfrsrverlernfevsavifkkfepifedifkePqeekprtkrgrkqrrlpctvsev 200
+                                     ls+++f+s+v+k++ +v+++s++++s+v+rle++++v+++++++f++++e+if+eP+++k      r         +e+
+  tr|A0AC58IA68|A0AC58IA68_DANRE 113 LSVKQFISLVRKMDvNVDTISPKVNSAVTRLENKYDVTLALYQRFVKTCEKIFAEPDNAK------R---------KEL 176
+                                     ************************************************************......7.........8** PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...xxxxxxxxxxxxxxxxxxxxxxxxxxxxx...x..xxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 201 fefcWvlfiyakGnflmisDDLvnsyhLLLCaLdlv...ycnallcsnrkdllnpafkGlpedfnskd...t..kpske 271
+                                     +e++W++f++akG+fl+++DDLv+s++LLLC+L+++    + +ll s  k ++  +    p     ++   +  +p++ 
+  tr|A0AC58IA68|A0AC58IA68_DANRE 177 WESSWTMFLLAKGTFLQMEDDLVISFQLLLCVLEFFakrLSPSLLQSPYKSVVSSSTLSPPTRTSRRNqgkSkpRPAEM 255
+                                     ***********************************93334678999999999988776666444333311130133344 PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 272 slcvieklcelhdGlvleakGikehffkpyikklfekkllkGkeetltgllepvnfgdslkalnrvyeefvlsvGdlde 350
+                                      + ++e lc+  d  v e k + +  f  ++  +              gll    +   ++al ++yee    + d+d 
+  tr|A0AC58IA68|A0AC58IA68_DANRE 256 DMQLLETLCKEGDCSVDEVKNVYQSTFCAFLDSV--------------GLLGLQGL-PPMEALSKQYEELYHKSKDFDA 319
+                                     4578999999999999999988877777776443..............22222221.2345677777777777777777 PP
+
+                                     xxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 351 riflGdd 357
+                                     r+fl dd
+  tr|A0AC58IA68|A0AC58IA68_DANRE 320 RLFLSDD 326
+                                     7777665 PP
+
+  == domain 2  score: 327.2 bits;  conditional E-value: 8.4e-101
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 416 vtPvssamqsvsrLrtlltglknaPsekLlqifrsCsrdPtesiakrlkelgeiflqayepaddlkslakdlaekrfkl 494
+                                      tP+++am+s+++Lr++lt+ +++Ps++Ll+++++C++dP+++i+kr++elge+f+q++++a+  +++ ++l++krf+l
+  tr|A0AC58IA68|A0AC58IA68_DANRE 358 QTPIRAAMTSIQQLRGDLTSGSDQPSSNLLVYYKNCTVDPSGEIKKRVEELGEVFIQRFAQAV-GQHC-EGLGRKRFYL 434
+                                     6*************************************************************9.9999.9********* PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxx...............xxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 495 aeaLyykvlesvlkqekkrLgdkdlsglLeqdvfhrsLlaCcLevvifsy.....kspge...............fPwi 553
+                                     +++Lyykv+es+lk+e+krL+++++s+lL++++fh+sLlaC+Levvi++y     k++g                fPwi
+  tr|A0AC58IA68|A0AC58IA68_DANRE 435 GAQLYYKVMESMLKSEEKRLSVQNFSKLLNNAAFHTSLLACALEVVIATYvgsslKNGGFgrssgasdsvesdlcFPWI 513
+                                     **************************************************8876644442667888999********** PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 554 leifdlPayhfykvievliraeesLsrevvkhLnqveeqvleslaWkadspLweklreaknkvPaveevepPqnled 630
+                                     l++f+lPa++fykvie++i+ae++L++++vkhL+q+e++++eslaW+adspL++ l+++++++P +e++epP++l++
+  tr|A0AC58IA68|A0AC58IA68_DANRE 514 LSVFQLPAFDFYKVIESFIKAEPTLKHDMVKHLEQCEHVIMESLAWRADSPLFDLLKQSREEGP-GEQAEPPATLNQ 589
+                                     ****************************************************************.*********987 PP
+
+  == domain 3  score: 178.1 bits;  conditional E-value: 8.9e-56
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 821 qqqtpstkrprktgsLsLffrkvyhlasvrLrdLcakLdis.aelrkkiWtcfeysllhctdLmkDrhLDqLllcaiyv 898
+                                     + +tp+t++pr ++sLsLf++k+y++a++rL++L+++L++s +e++++iWt+++++l+++++Lm+DrhLDqL+++a+y+
+  tr|A0AC58IA68|A0AC58IA68_DANRE 617 EPPTPGTRAPR-SNSLSLFYKKLYRMAYLRLKMLFSNLLTShPEMEPIIWTLLQHTLQNEYELMRDRHLDQLIMSAMYA 694
+                                     5689******9.*****************************99************************************ PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 899 iakvtkedksfqnimkcyreqPqansevyrsvLikg 934
+                                     i+kv+++d +f++i+++y+e+P++n+e++++vLi+ 
+  tr|A0AC58IA68|A0AC58IA68_DANRE 695 ICKVKNVDLRFKTIVTAYKELPNTNQETFKRVLIRE 730
+                                     **********************************85 PP
+
+  == domain 4  score: 120.4 bits;  conditional E-value: 2.3e-38
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxx....xxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1001 ergdliqfynnvyikklktfalkysssraeaPPLsPyPsvri....gsPrrvllsqnhsiyvsPhkns....svlsP 1069
+                                      + +++i+fyn v+++klkt++l+yss+r  +PPLsP+P++++    +sP+rv++s  +++yvsP+k+s    +v++P
+  tr|A0AC58IA68|A0AC58IA68_DANRE  732 QYDSIIVFYNLVFMQKLKTNILQYSSPR--PPPLSPIPHIPCspykNSPLRVPGS--NNVYVSPLKSSrvspLVMTP 804 
+                                      5699************************..***********99999*********..99*********998899*** PP
+
+                                      xxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1070 rekilyyvses..pskrlreinqmirtgetptkkrsialedeq.espakrlcq 1119
+                                      r++il++++es  +++++++inqm++++++++k+ s  l++++   p krl+ 
+  tr|A0AC58IA68|A0AC58IA68_DANRE  805 RSRILISIGESfgSADKFQKINQMVSSSDWSLKR-S--LDGGSaPKPLKRLRF 854 
+                                      ************9*****************9988.7..996651579999975 PP
+
+>> tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  Retinoblastoma-associated protein OS=Danio rerio OX=7955 GN=rb1 PE=4 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.3   2.9   3.3e-62   3.3e-58      48     356 ..      44     325 ..       4     348 .. 0.74
+   2 !  327.3   0.0  7.6e-101   7.4e-97     416     630 ..     358     589 ..     345     610 .. 0.95
+   3 !  178.0   0.5   9.1e-56   8.9e-52     821     934 ..     617     730 ..     603     733 .. 0.96
+   4 !  120.1   3.9   2.8e-38   2.8e-34    1001    1119 ..     732     854 ..     729     860 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 199.3 bits;  conditional E-value: 3.3e-62
+                                     xxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1  48 afeelcrelnmdeeaaaeal....qsyrsisktytlegnelhWlaCslyvacrksvptvskgtleGnyvsltrilkssk 122
+                                     +f  l +el+  +    +a+    +++rs++kt+++++n+++W+aC l++a+         ++leG+++++t++lk+++
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  44 EFVFLSEELQSTNSICDHAWriweREIRSMDKTNMPYSNRQQWGAC-LFIAG---------MELEGINLTFTQFLKAVG 112
+                                     455566666666666666662223589*******************.*****.........****************** PP
+
+                                     xxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 123 lslieffskvkkwe.dvanlsrdfrsrverlernfevsavifkkfepifedifkePqeekprtkrgrkqrrlpctvsev 200
+                                     ls+++f+s+v+k++ +v+++s++++s+v+rle++++v+++++++f++++e+if+eP+++k      r         +e+
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 113 LSVKQFISLVRKMDvNVDTISPKVNSAVTRLENKYDVTLALYQRFVKTCEKIFAEPDNAK------R---------KEL 176
+                                     ************************************************************......7.........8** PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...xxxxxxxxxxxxxxxxxxxxxxxxxxxxx...x..xxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 201 fefcWvlfiyakGnflmisDDLvnsyhLLLCaLdlv...ycnallcsnrkdllnpafkGlpedfnskd...t..kpske 271
+                                     +e++W++f++akG+fl+++DDLv+s++LLLC+L+++    + +ll s    ++  +    p     ++   +  +p++ 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 177 WESSWTMFLLAKGTFLQMEDDLVISFQLLLCVLEFFakrLSPSLLQSPYNSVVSSSTLSPPTRTSRRNqgkSkpRPAEM 255
+                                     **********************************983333557777777777766655444333222200020123333 PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 272 slcvieklcelhdGlvleakGikehffkpyikklfekkllkGkeetltgllepvnfgdslkalnrvyeefvlsvGdlde 350
+                                      + ++e lc+  d  v e k + +  f  ++  +              gll    +   ++al ++yee    + d+d 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 256 DMQLLETLCKEGDCSVDEVKNVYQSTFCAFLDSV--------------GLLGLQGL-PPMEALSKQYEELYHKSKDFDA 319
+                                     4567888888888888888777666666665432..............11211111.2345566666666666666666 PP
+
+                                     xxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 351 riflGd 356
+                                     r+fl d
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 320 RLFLSD 325
+                                     666655 PP
+
+  == domain 2  score: 327.3 bits;  conditional E-value: 7.6e-101
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 416 vtPvssamqsvsrLrtlltglknaPsekLlqifrsCsrdPtesiakrlkelgeiflqayepaddlkslakdlaekrfkl 494
+                                      tP+++am+s+++Lr++lt+ +++Ps++Ll+++++C++dP+++i+kr++elge+f+q++++a+  +++ ++l++krf+l
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 358 QTPIRAAMTSIQQLRGDLTSGSDQPSSNLLVYYKNCTVDPSGEIKKRVEELGEVFIQRFAQAV-GQHC-EGLGRKRFYL 434
+                                     6*************************************************************9.9999.9********* PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxx...............xxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 495 aeaLyykvlesvlkqekkrLgdkdlsglLeqdvfhrsLlaCcLevvifsy.....kspge...............fPwi 553
+                                     +++Lyykv+es+lk+e+krL+++++s+lL++++fh+sLlaC+Levvi++y     k++g                fPwi
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 435 GAQLYYKVMESMLKSEEKRLSVQNFSKLLNNAAFHTSLLACALEVVIATYvgsslKNGGFgrssgasdsvesdlcFPWI 513
+                                     **************************************************8876644442667888999********** PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 554 leifdlPayhfykvievliraeesLsrevvkhLnqveeqvleslaWkadspLweklreaknkvPaveevepPqnled 630
+                                     l++f+lPa++fykvie++i+ae++L++++vkhL+q+e++++eslaW++dspL++ l+++++++P +e++epP++l++
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 514 LSVFQLPAFDFYKVIESFIKAEPTLKHDMVKHLEQCEHVIMESLAWRTDSPLFDLLKQSREEGP-GEQAEPPATLNQ 589
+                                     ****************************************************************.*********987 PP
+
+  == domain 3  score: 178.0 bits;  conditional E-value: 9.1e-56
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 821 qqqtpstkrprktgsLsLffrkvyhlasvrLrdLcakLdis.aelrkkiWtcfeysllhctdLmkDrhLDqLllcaiyv 898
+                                     + +tp+t++pr ++sLsLf++k+y++a++rL++L+++L++s +e++++iWt+++++l+++++Lm+DrhLDqL+++a+y+
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 617 EPPTPGTRAPR-SNSLSLFYKKLYRMAYLRLKMLFSNLLTShPEMEPIIWTLLQHTLQNEYELMRDRHLDQLIMSAMYA 694
+                                     5689******9.*****************************99************************************ PP
+
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 899 iakvtkedksfqnimkcyreqPqansevyrsvLikg 934
+                                     i+kv+++d +f++i+++y+e+P++n+e++++vLi+ 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE 695 ICKVKNVDLRFKTIVTAYKELPNTNQETFKRVLIRE 730
+                                     **********************************85 PP
+
+  == domain 4  score: 120.1 bits;  conditional E-value: 2.8e-38
+                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxx....xxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1001 ergdliqfynnvyikklktfalkysssraeaPPLsPyPsvri....gsPrrvllsqnhsiyvsPhkns....svlsP 1069
+                                      + +++i+fyn v+++klkt++l+yss+r  +PPLsP+P++++    +sP+rv++s  +++yvsP+k+s    +v++P
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  732 QYDSIIVFYNLVFMQKLKTNILQYSSPR--PPPLSPIPHIPCspykNSPLRVPGS--NNVYVSPLKSSrvspLVMTP 804 
+                                      5699************************..***********99999*********..99*********998899*** PP
+
+                                      xxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxx RF
+         sp|Q08999|RBL2_HUMAN-i1 1070 rekilyyvses..pskrlreinqmirtgetptkkrsialedeq.espakrlcq 1119
+                                      r++il++++es  +++++++inqm++++++++k+ s  l++++   p krl+ 
+  tr|A0A8M1NAN6|A0A8M1NAN6_DANRE  805 RSRILISIGESfgSADKFQKINQMLSSSDWSLKR-S--LDGGSaPKPLKRLRF 854 
+                                      ************9*****************9988.7..996651579999975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1139 nodes)
+Target sequences:                      68855  (59015307 residues searched)
+Passed MSV filter:                      5076  (0.0737201); expected 1377.1 (0.02)
+Passed bias filter:                     1399  (0.0203181); expected 1377.1 (0.02)
+Passed Vit filter:                       138  (0.00200421); expected 68.9 (0.001)
+Passed Fwd filter:                        19  (0.000275942); expected 0.7 (1e-05)
+Initial search space (Z):              68855  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 3.19u 0.23s 00:00:03.42 Elapsed: 00:00:01.13
+# Mc/sec: 59427.80
+
+@@ New targets included:   0
+@@ New alignment includes: 14 subseqs (was 14), including original query
+@@
+@@ CONVERGED (in 2 rounds). 
+@@
+
+//
+[ok]

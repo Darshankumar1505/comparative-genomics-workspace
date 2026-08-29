@@ -1,0 +1,142 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  pfam/RB_A.hmm
+# target sequence database:        10090.faa
+# per-seq hits tabular output:     hmmer_out/RB_A_vs_10090.tab
+# per-dom hits tabular output:     hmmer_out/RB_A_vs_10090.domtab
+# number of worker threads:        4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       RB_A  [M=196]
+Accession:   PF01858.23
+Description: Retinoblastoma-associated protein A domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+    1.1e-81  273.4   1.2    4.3e-80  268.2   0.4    2.6  2  sp|Q64701|RBL1_MOUSE  Retinoblastoma-like protein 1 OS=Mus mu
+    6.9e-79  264.2   0.7    1.4e-76  256.7   0.1    2.9  3  sp|Q64700|RBL2_MOUSE  Retinoblastoma-like protein 2 OS=Mus mu
+    6.3e-67  225.2   0.8    6.3e-67  225.2   0.8    2.6  3  sp|P13405|RB_MOUSE    Retinoblastoma-associated protein OS=Mu
+
+
+Domain annotation for each sequence (and alignments):
+>> sp|Q64701|RBL1_MOUSE  Retinoblastoma-like protein 1 OS=Mus musculus OX=10090 GN=Rbl1 PE=1 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  268.2   0.4   7.5e-84   4.3e-80       1     196 []     385     578 ..     385     578 .. 0.99
+   2 ?    3.0   0.0     0.014        78     110     145 ..     833     868 ..     830     882 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 268.2 bits;  conditional E-value: 7.5e-84
+                  RB_A   1 tpvssalqsvkrLkellsglkdePsekLeeilkscsedptekilkrvkelaekflkkyseeseeekssslakeiaekrlklaekLYykv 89 
+                           tpv+sa+qsv+rL+++++glk++Pse+L++i++sc ++p+ +i k vk ++e+f+++y+++++++  + +++++a +rlklae LYyk+
+  sp|Q64701|RBL1_MOUSE 385 TPVASATQSVSRLQSIVAGLKSAPSEQLLNIFESCMRNPMGNIIKIVKGIGETFCQHYTQSTDKQ--PGSHIDFAVNRLKLAEILYYKI 471
+                           8****************************************************************..999******************* PP
+
+                  RB_A  90 LekilkaEkkrlseedlskllenevFhrsllaccleivlfayksersFpwilevfklkpfdfykvIevfiraeesLprelvkhLnsiEe 178
+                           Le+i+ +E++rl++ d+s lle+++Fh+sl+accleivlfay+s+r+Fpwi+ev++l+pf+fykvIev+ir+ee+L+r++vkhLnsiEe
+  sp|Q64701|RBL1_MOUSE 472 LETIMVQETRRLHGMDMSVLLEQDIFHKSLMACCLEIVLFAYSSPRTFPWIIEVLDLQPFYFYKVIEVVIRSEEGLSRDMVKHLNSIEE 560
+                           ***************************************************************************************** PP
+
+                  RB_A 179 qiLeslaWkkdSpLweal 196
+                           qiLeslaW+++S+Lweal
+  sp|Q64701|RBL1_MOUSE 561 QILESLAWTNNSALWEAL 578
+                           ***************986 PP
+
+  == domain 2  score: 3.0 bits;  conditional E-value: 0.014
+                  RB_A 110 lenevFhrsllaccleivlfayksersFpwilevfk 145
+                           l +++ ++ ll c++ i++++ k+er+F+ i++  +
+  sp|Q64701|RBL1_MOUSE 833 LMKDRHLDQLLLCAFYIMAKVTKEERTFQEIMKSYR 868
+                           567788899********************9998766 PP
+
+>> sp|Q64700|RBL2_MOUSE  Retinoblastoma-like protein 2 OS=Mus musculus OX=10090 GN=Rbl2 PE=1 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.8   0.0       1.6   9.5e+03      39      61 ..      38      60 ..      35      83 .. 0.56
+   2 !  256.7   0.1   2.5e-80   1.4e-76       1     196 []     414     606 ..     414     606 .. 0.97
+   3 !    4.9   0.0    0.0036        21     111     151 ..     879     919 ..     871     932 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -3.8 bits;  conditional E-value: 1.6
+                  RB_A 39 ptekilkrvkelaekflkkysee 61
+                          p+++i++r +el ++++ + + +
+  sp|Q64700|RBL2_MOUSE 38 PSHQIQQRFEELCSRLNMDEAAR 60
+                          67788888888877775432222 PP
+
+  == domain 2  score: 256.7 bits;  conditional E-value: 2.5e-80
+                  RB_A   1 tpvssalqsvkrLkellsglkdePsekLeeilkscsedptekilkrvkelaekflkkyseeseeekssslakeiaekrlklaekLYykv 89 
+                           tpvs+a++s++rL+++lsgl+++PsekLe+il+scs+dpt++i+ r+ke+ e+++++++ +++ +   ++akeia+k+++ ae LYykv
+  sp|Q64700|RBL2_MOUSE 414 TPVSTAAHSLSRLHTMLSGLRNAPSEKLERILRSCSRDPTQAIADRLKEMYEIYSQHFQPDENFS---NCAKEIANKHFRFAEMLYYKV 499
+                           8*****************************************************99776666555...889****************** PP
+
+                  RB_A  90 LekilkaEkkrlseedlskllenevFhrsllaccleivlfayksersFpwilevfklkpfdfykvIevfiraeesLprelvkhLnsiEe 178
+                           Le+++++E+krl++ dls +le++ Fhrsllaccle+v+f++k +++Fp+i e+f+++ ++fykvIevfirae++L+re+vkhLn+iEe
+  sp|Q64700|RBL2_MOUSE 500 LESVIEQEQKRLGDMDLSGVLEHDAFHRSLLACCLEVVAFSHKPPGNFPFIAEIFDVPHYHFYKVIEVFIRAEDGLCREVVKHLNQIEE 588
+                           ***************************************************************************************** PP
+
+                  RB_A 179 qiLeslaWkkdSpLweal 196
+                           qiL++laWk++SpLw+++
+  sp|Q64700|RBL2_MOUSE 589 QILDHLAWKTKSPLWDRI 606
+                           ***************975 PP
+
+  == domain 3  score: 4.9 bits;  conditional E-value: 0.0036
+                  RB_A 111 enevFhrsllaccleivlfayksersFpwilevfklkpfdf 151
+                             ++ ++ ll+c++ +++++ k++rsF+ i+ + + +p   
+  sp|Q64700|RBL2_MOUSE 879 MMDRHLDQLLMCAIYVMAKVTKEDRSFQNIMRCYRTQPQAR 919
+                           556677889***********************999888655 PP
+
+>> sp|P13405|RB_MOUSE  Retinoblastoma-associated protein OS=Mus musculus OX=10090 GN=Rb1 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.0      0.86   4.9e+03     139     172 ..     116     149 ..     109     149 .. 0.81
+   2 !  225.2   0.8   1.1e-70   6.3e-67       1     196 []     367     567 ..     367     567 .. 0.99
+   3 ?   -0.7   0.0      0.18   1.1e+03     110     143 ..     687     720 ..     674     728 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 0.86
+                RB_A 139 wilevfklkpfdfykvIevfiraeesLprelvkh 172
+                           +e    k fd++k I++  + ++ ++r l+k+
+  sp|P13405|RB_MOUSE 116 KSIETSVYKFFDLLKEIDTSTKVDNAMSRLLKKY 149
+                         5566677788999999999999999999999986 PP
+
+  == domain 2  score: 225.2 bits;  conditional E-value: 1.1e-70
+                RB_A   1 tpvssalqsvkrLkellsglkdePsekLeeilkscsedptekilkrvkelaekflkkyseeseeekssslakeiaekrlklaekLYykvLe 91 
+                         tpv++ ++++++L+ +l++ +d+Pse+L  ++++c+ +p+e+ilkrvk+++++f++k++++ ++      + +i  +r+kl+++LYy+v+e
+  sp|P13405|RB_MOUSE 367 TPVRTVMNTIQQLMVILNSASDQPSENLISYFNNCTVNPKENILKRVKDVGHIFKEKFANAVGQG-----CVDIGVQRYKLGVRLYYRVME 452
+                         8****************************************************************.....99******************* PP
+
+                RB_A  92 kilkaEkkrlseedlskllenevFhrsllaccleivlfaykser..........sFpwilevfklkpfdfykvIevfiraeesLprelvkh 172
+                         ++lk+E++rls +++skll++++Fh sllac+le+v+++y++++          sFpwil+v++lk+fdfykvIe+fi+ e +L+re++kh
+  sp|P13405|RB_MOUSE 453 SMLKSEEERLSIQNFSKLLNDNIFHMSLLACALEVVMATYSRSTlqhldsgtdlSFPWILNVLNLKAFDFYKVIESFIKVEANLTREMIKH 543
+                         ******************************************9999********************************************* PP
+
+                RB_A 173 LnsiEeqiLeslaWkkdSpLweal 196
+                         L+++E++i+eslaW +dSpL++++
+  sp|P13405|RB_MOUSE 544 LERCEHRIMESLAWLSDSPLFDLI 567
+                         *********************875 PP
+
+  == domain 3  score: -0.7 bits;  conditional E-value: 0.18
+                RB_A 110 lenevFhrsllaccleivlfayksersFpwilev 143
+                         l +++ ++ +++c++  ++++++ + +F  i+++
+  sp|P13405|RB_MOUSE 687 LMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTA 720
+                         6778888999******************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (196 nodes)
+Target sequences:                      17267  (9821174 residues searched)
+Passed MSV filter:                      1251  (0.0724503); expected 345.3 (0.02)
+Passed bias filter:                      553  (0.0320264); expected 345.3 (0.02)
+Passed Vit filter:                        53  (0.00306944); expected 17.3 (0.001)
+Passed Fwd filter:                         4  (0.000231656); expected 0.2 (1e-05)
+Initial search space (Z):              17267  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.09u 0.00s 00:00:00.09 Elapsed: 00:00:00.03
+# Mc/sec: 48233.31
+//
+[ok]

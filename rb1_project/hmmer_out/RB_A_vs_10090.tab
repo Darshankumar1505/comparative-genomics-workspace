@@ -1,0 +1,16 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+sp|Q64701|RBL1_MOUSE -          RB_A                 PF01858.23   1.1e-81  273.4   1.2   4.3e-80  268.2   0.4   2.6   2   0   0   2   2   2   1 Retinoblastoma-like protein 1 OS=Mus musculus OX=10090 GN=Rbl1 PE=1 SV=3
+sp|Q64700|RBL2_MOUSE -          RB_A                 PF01858.23   6.9e-79  264.2   0.7   1.4e-76  256.7   0.1   2.9   3   0   0   3   3   3   2 Retinoblastoma-like protein 2 OS=Mus musculus OX=10090 GN=Rbl2 PE=1 SV=3
+sp|P13405|RB_MOUSE   -          RB_A                 PF01858.23   6.3e-67  225.2   0.8   6.3e-67  225.2   0.8   2.6   3   0   0   3   3   3   1 Retinoblastoma-associated protein OS=Mus musculus OX=10090 GN=Rb1 PE=1 SV=2
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      pfam/RB_A.hmm
+# Target file:     10090.faa
+# Option settings: hmmsearch --tblout hmmer_out/RB_A_vs_10090.tab --domtblout hmmer_out/RB_A_vs_10090.domtab --cpu 4 pfam/RB_A.hmm 10090.faa 
+# Current dir:     /home/hp/rb1_project
+# Date:            Fri Aug 28 17:10:09 2026
+# [ok]

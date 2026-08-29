@@ -1,0 +1,13 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      pfam/RB_A.hmm
+# Target file:     7955.faa
+# Option settings: hmmsearch --tblout hmmer_out/RB_A_vs_7955.tab --cpu 4 pfam/RB_A.hmm 7955.faa 
+# Current dir:     /home/hp/rb1_project
+# Date:            Fri Aug 28 16:39:26 2026
+# [ok]
