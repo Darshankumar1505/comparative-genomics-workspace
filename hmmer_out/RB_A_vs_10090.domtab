@@ -1,0 +1,21 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+sp|Q64701|RBL1_MOUSE -           1063 RB_A                 PF01858.23   196   1.1e-81  273.4   1.2   1   2   7.5e-84   4.3e-80  268.2   0.4     1   196   385   578   385   578 0.99 Retinoblastoma-like protein 1 OS=Mus musculus OX=10090 GN=Rbl1 PE=1 SV=3
+sp|Q64701|RBL1_MOUSE -           1063 RB_A                 PF01858.23   196   1.1e-81  273.4   1.2   2   2     0.014        78    3.0   0.0   110   145   833   868   830   882 0.85 Retinoblastoma-like protein 1 OS=Mus musculus OX=10090 GN=Rbl1 PE=1 SV=3
+sp|Q64700|RBL2_MOUSE -           1135 RB_A                 PF01858.23   196   6.9e-79  264.2   0.7   1   3       1.6   9.5e+03   -3.8   0.0    39    61    38    60    35    83 0.56 Retinoblastoma-like protein 2 OS=Mus musculus OX=10090 GN=Rbl2 PE=1 SV=3
+sp|Q64700|RBL2_MOUSE -           1135 RB_A                 PF01858.23   196   6.9e-79  264.2   0.7   2   3   2.5e-80   1.4e-76  256.7   0.1     1   196   414   606   414   606 0.97 Retinoblastoma-like protein 2 OS=Mus musculus OX=10090 GN=Rbl2 PE=1 SV=3
+sp|Q64700|RBL2_MOUSE -           1135 RB_A                 PF01858.23   196   6.9e-79  264.2   0.7   3   3    0.0036        21    4.9   0.0   111   151   879   919   871   932 0.83 Retinoblastoma-like protein 2 OS=Mus musculus OX=10090 GN=Rbl2 PE=1 SV=3
+sp|P13405|RB_MOUSE   -            921 RB_A                 PF01858.23   196   6.3e-67  225.2   0.8   1   3      0.86   4.9e+03   -2.9   0.0   139   172   116   149   109   149 0.81 Retinoblastoma-associated protein OS=Mus musculus OX=10090 GN=Rb1 PE=1 SV=2
+sp|P13405|RB_MOUSE   -            921 RB_A                 PF01858.23   196   6.3e-67  225.2   0.8   2   3   1.1e-70   6.3e-67  225.2   0.8     1   196   367   567   367   567 0.99 Retinoblastoma-associated protein OS=Mus musculus OX=10090 GN=Rb1 PE=1 SV=2
+sp|P13405|RB_MOUSE   -            921 RB_A                 PF01858.23   196   6.3e-67  225.2   0.8   3   3      0.18   1.1e+03   -0.7   0.0   110   143   687   720   674   728 0.87 Retinoblastoma-associated protein OS=Mus musculus OX=10090 GN=Rb1 PE=1 SV=2
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      pfam/RB_A.hmm
+# Target file:     10090.faa
+# Option settings: hmmsearch --tblout hmmer_out/RB_A_vs_10090.tab --domtblout hmmer_out/RB_A_vs_10090.domtab --cpu 4 pfam/RB_A.hmm 10090.faa 
+# Current dir:     /home/hp/rb1_project
+# Date:            Fri Aug 28 17:10:09 2026
+# [ok]

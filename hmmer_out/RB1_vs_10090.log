@@ -1,0 +1,545 @@
+# jackhmmer :: iteratively search a protein sequence against a protein database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             queries/RB1_human.fasta
+# target sequence database:        10090.faa
+# MSA of hits saved to file:       hmmer_out/RB1_vs_10090.sto
+# per-seq hits tabular output:     hmmer_out/RB1_vs_10090.tab
+# number of worker threads:        4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P06400|RB_HUMAN  [L=928]
+Description: Retinoblastoma-associated protein OS=Homo sapiens OX=9606 GN=RB1 PE=1 SV=2
+
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
++         0 1910.7  14.5          0 1910.5  14.5    1.0  1  sp|P13405|RB_MOUSE     Retinoblastoma-associated protein OS=M
++   2.9e-73  247.3  10.2    1.6e-38  132.4   0.0    4.4  4  sp|Q64701|RBL1_MOUSE   Retinoblastoma-like protein 1 OS=Mus m
++   7.4e-70  236.1   8.5    1.8e-35  122.3   0.0    4.2  4  sp|Q64700|RBL2_MOUSE   Retinoblastoma-like protein 2 OS=Mus m
+  ------ inclusion threshold ------
+       0.19    9.8   2.5       0.26    9.3   2.5    1.2  1  sp|P05977|MYL1_MOUSE   Myosin light chain 1/3, skeletal muscl
+
+
+Domain annotation for each sequence (and alignments):
+>> sp|P13405|RB_MOUSE  Retinoblastoma-associated protein OS=Mus musculus OX=10090 GN=Rb1 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1910.5  14.5         0         0       1     928 []       1     921 []       1     921 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 1910.5 bits;  conditional E-value: 0
+  sp|P06400|RB_HUMAN   1 mppktprktaataaaaaaeppapppppppeedpeqdsgpedlplvrlefeeteepdftalcqklkipdhvrerawltwekvssvdgvlggy 91 
+                         mppk pr+      aaaaepp pppppp e+dp qdsgpe+lpl rlefee eep+f alcqklk+pdhvrerawltwekvssvdg+l gy
+  sp|P13405|RB_MOUSE   1 MPPKAPRR------AAAAEPPPPPPPPPREDDPAQDSGPEELPLARLEFEEIEEPEFIALCQKLKVPDHVRERAWLTWEKVSSVDGILEGY 85 
+                         79999997......5679************************************************************************* PP
+
+  sp|P06400|RB_HUMAN  92 iqkkkelwgicifiaavdldemsftftelqknieisvhkffnllkeidtstkvdnamsrllkkydvlfalfsklertceliyltqpsssis 182
+                         iqkkkelwgicifiaavdldem ftftelqk+ie sv+kff+llkeidtstkvdnamsrllkky+vl al+sklertceliyltqpss++s
+  sp|P13405|RB_MOUSE  86 IQKKKELWGICIFIAAVDLDEMPFTFTELQKSIETSVYKFFDLLKEIDTSTKVDNAMSRLLKKYNVLCALYSKLERTCELIYLTQPSSALS 176
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 183 teinsalvlkvswitfllakgevlqmeddlvisfqlmlcvldyfiklsppmllkepyktavipingsprtprrgqnrsariakqlendtri 273
+                         teins lvlk+switfllakgevlqmeddlvisfqlmlcv+dyfik+spp ll+epykta ipingsprtprrgqnrsariakqlendtri
+  sp|P13405|RB_MOUSE 177 TEINSMLVLKISWITFLLAKGEVLQMEDDLVISFQLMLCVVDYFIKFSPPALLREPYKTAAIPINGSPRTPRRGQNRSARIAKQLENDTRI 267
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 274 ievlckehecnidevknvyfknfipfmnslglvtsnglpevenlskryeeiylknkdldarlfldhdktlqtdsidsfetqrtprksnlde 364
+                         ievlckehecnidevknvyfknfipf+nslg+v+snglpeve+lskryee+ylknkdldarlfldhdktlqtd idsfet+rtprk+n de
+  sp|P13405|RB_MOUSE 268 IEVLCKEHECNIDEVKNVYFKNFIPFINSLGIVSSNGLPEVESLSKRYEEVYLKNKDLDARLFLDHDKTLQTDPIDSFETERTPRKNNPDE 358
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 365 evnvipphtpvrtvmntiqqlmmilnsasdqpsenlisyfnnctvnpkesilkrvkdigyifkekfakavgqgcveigsqryklgvrlyyr 455
+                         e nv+ phtpvrtvmntiqqlm+ilnsasdqpsenlisyfnnctvnpke+ilkrvkd+g+ifkekfa avgqgcv+ig qryklgvrlyyr
+  sp|P13405|RB_MOUSE 359 EANVVTPHTPVRTVMNTIQQLMVILNSASDQPSENLISYFNNCTVNPKENILKRVKDVGHIFKEKFANAVGQGCVDIGVQRYKLGVRLYYR 449
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 456 vmesmlkseeerlsiqnfskllndnifhmsllacalevvmatysrstsqnldsgtdlsfpwilnvlnlkafdfykviesfikaegnltrem 546
+                         vmesmlkseeerlsiqnfskllndnifhmsllacalevvmatysrst q+ldsgtdlsfpwilnvlnlkafdfykviesfik e+nltrem
+  sp|P13405|RB_MOUSE 450 VMESMLKSEEERLSIQNFSKLLNDNIFHMSLLACALEVVMATYSRSTLQHLDSGTDLSFPWILNVLNLKAFDFYKVIESFIKVEANLTREM 540
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 547 ikhlercehrimeslawlsdsplfdlikqskdregptdhlesacplnlplqnnhtaadmylspvrspkkkgsttrvnstanaetqatsafq 637
+                         ikhlercehrimeslawlsdsplfdlikqskd egp d+le acpl+lplq nhtaadmylsp+rspkk+ sttrvns an etqa saf 
+  sp|P13405|RB_MOUSE 541 IKHLERCEHRIMESLAWLSDSPLFDLIKQSKDGEGP-DNLEPACPLSLPLQGNHTAADMYLSPLRSPKKRTSTTRVNSAANTETQAASAFH 630
+                         ***********************************9.89**************************************************** PP
+
+  sp|P06400|RB_HUMAN 638 tqkplkstslslfykkvyrlaylrlntlcerllsehpelehiiwtlfqhtlqneyelmrdrhldqimmcsmygickvknidlkfkiivtay 728
+                         tqkplkstsl+lfykkvyrlaylrlntlc rlls+hpelehiiwtlfqhtlqneyelmrdrhldqimmcsmygickvknidlkfkiivtay
+  sp|P13405|RB_MOUSE 631 TQKPLKSTSLALFYKKVYRLAYLRLNTLCARLLSDHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAY 721
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 729 kdlphavqetfkrvlikeeeydsiivfynsvfmqrlktnilqyastrpptlspiphiprspykfpssplripggniyisplkspykisegl 819
+                         kdlpha qetfkrvli+eee+dsiivfynsvfmqrlktnilqyastrpptlspiphiprspykf ssplripggniyisplkspykisegl
+  sp|P13405|RB_MOUSE 722 KDLPHAAQETFKRVLIREEEFDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHIPRSPYKFSSSPLRIPGGNIYISPLKSPYKISEGL 812
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 820 ptptkmtprsrilvsigesfgtsekfqkinqmvcnsdrvlkrsaegsnppkplkklrfdiegsdeadgskhlpgeskfqqklaemtstrtr 910
+                         ptptkmtprsrilvsigesfgtsekfqkinqmvcnsdrvlkrsaeg nppkplkklrfdieg+deadgskhlp+eskfqqklaemtstrtr
+  sp|P13405|RB_MOUSE 813 PTPTKMTPRSRILVSIGESFGTSEKFQKINQMVCNSDRVLKRSAEGGNPPKPLKKLRFDIEGADEADGSKHLPAESKFQQKLAEMTSTRTR 903
+                         ******************************************************************************************* PP
+
+  sp|P06400|RB_HUMAN 911 mqkqkmndsmdtsnkeek 928
+                         mqkq+mn+s d snkeek
+  sp|P13405|RB_MOUSE 904 MQKQRMNESKDVSNKEEK 921
+                         ****************98 PP
+
+>> sp|Q64701|RBL1_MOUSE  Retinoblastoma-like protein 1 OS=Mus musculus OX=10090 GN=Rbl1 PE=1 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.7   0.2     1e-08   4.5e-05     117     343 ..      87     328 ..      79     351 .. 0.64
+   2 !  132.4   0.0   3.7e-42   1.6e-38     372     618 ..     384     625 ..     364     680 .. 0.86
+   3 !   76.1   0.2   3.8e-25   1.7e-21     595     757 ..     735     894 ..     727     915 .. 0.83
+   4 !   20.4   0.3   2.6e-08   0.00011     744     862 ..     918    1026 ..     907    1048 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 21.7 bits;  conditional E-value: 1e-08
+    sp|P06400|RB_HUMAN 117 ftelqknieisvhkffnllke.idtst...kvdnamsrllkkydvlfalfsklertceliylt....q...psssisteinsal..vlk 192
+                           +t + ++ ++s+ +ff+ +k+ +d s    +    + rl + ++v   +f k+e     i+          p s     i  ++  ++ 
+  sp|Q64701|RBL1_MOUSE  87 LTRILRSAKLSLIQFFSKMKKwMDMSNlpqEFRERIERLERNFEVSTVIFKKFEPIFLDIFQNpyeePpklPRSRKQRRIPCSVkdLFN 175
+                           56667777777777777665435665411133445667777788888888887776544433211112111233333344333322567 PP
+
+    sp|P06400|RB_HUMAN 193 vswitfllakgevlqmeddlvisfqlmlcvldyfiklsppmllkepyktavi.p.ingsprtprrgqnrsariakqlendtriievlck 279
+                             w  f+  kg    + ddlv s+ l+lc ld ++     ++   p +  ++ p + g p       +  a   k  e    ii vlc 
+  sp|Q64701|RBL1_MOUSE 176 FCWTLFVYTKGNFRMIGDDLVNSYHLLLCCLDLIFAN--AIM--CPNRRDLLnPsFKGLP------SDFHAPDFKAAEEPPCIIAVLCD 254
+                           89******************************86543..223..3545444302133444......455666778889999******** PP
+
+    sp|P06400|RB_HUMAN 280 ehecnidevknv...yfknfipfmnslglvtsnglpev.......enlskryeeiylknkdldarlfldhdktl 343
+                            h+  + e k +   yfk +i  +    ++    l ++       + ++k+yee  l   d+d r+fl  d   
+  sp|Q64701|RBL1_MOUSE 255 LHDGLLVEAKGIkehYFKPYISKLFDKKILKGECLLDLssftdnsKAVNKEYEEYVLTVGDFDERIFLGADAEE 328
+                           ***99888766533378887775555455544444433111100155789******************988654 PP
+
+  == domain 2  score: 132.4 bits;  conditional E-value: 3.7e-42
+    sp|P06400|RB_HUMAN 372 htpvrtvmntiqqlmmilnsasdqpsenlisyfnnctvnpkesilkrvkdigyifkekfakavgq...gcveigsqryklgvrlyyrvm 457
+                            tpv +   ++ +l+ i+      pse l++ f +c  np  +i+k vk ig  f + + ++  +   + ++++  r kl+  lyy+++
+  sp|Q64701|RBL1_MOUSE 384 TTPVASATQSVSRLQSIVAGLKSAPSEQLLNIFESCMRNPMGNIIKIVKGIGETFCQHYTQSTDKqpgSHIDFAVNRLKLAEILYYKIL 472
+                           589999*****************************************************998864332469999*************** PP
+
+    sp|P06400|RB_HUMAN 458 esmlkseeerlsiqnfskllndnifhmsllacalevvmatysrstsqnldsgtdlsfpwilnvlnlkafdfykviesfikaegnltrem 546
+                           e+++  e  rl   ++s ll  +ifh sl+ac le+v+  ys             +fpwi+ vl+l+ f fykvie  i++e  l+r+m
+  sp|Q64701|RBL1_MOUSE 473 ETIMVQETRRLHGMDMSVLLEQDIFHKSLMACCLEIVLFAYSS----------PRTFPWIIEVLDLQPFYFYKVIEVVIRSEEGLSRDM 551
+                           ***************************************9984..........357********************************* PP
+
+    sp|P06400|RB_HUMAN 547 ikhlercehrimeslawlsdsplfdlikqskdregptdhlesacplnlplqnnhtaad....mylspvrspkkkgs 618
+                           +khl   e++i+eslaw ++s l++ +  s +r    +  e   p n+ + n          m +sp+  p+ k  
+  sp|Q64701|RBL1_MOUSE 552 VKHLNSIEEQILESLAWTNNSALWEALHASANRVPSCE--EVIFPNNFEIGNGGNVQGhlpmMPMSPIIHPRVKEV 625
+                           *****************************999975554..557788888877654322111156677777776654 PP
+
+  == domain 3  score: 76.1 bits;  conditional E-value: 3.8e-25
+    sp|P06400|RB_HUMAN 595 plqnnhtaadmylspvrspkkkgsttrvnstanaetqatsafqtqkplkstslslfykkvyrlaylrlntlcerllsehpelehiiwtl 683
+                           p+  n t      spv    +    t    t   + q        kp ++ sl+lfy+kvy+la +rl  lc +l     el + iwt 
+  sp|Q64701|RBL1_MOUSE 735 PISMNPTQESTAESPVSLTAQSLIGTSPKQTHLTKAQDAHLTGVSKPKRTGSLALFYRKVYHLASVRLRDLCLKL-DVSNELRRKIWTC 822
+                           566666666666666666655555555556665666666666789***************************997.56679******** PP
+
+    sp|P06400|RB_HUMAN 684 fqhtlqneyelmrdrhldqimmcsmygickvknidlkfkiivtaykdlphavqetfkrvlikeeeydsiivfyn 757
+                           f+ tl +  +lm+drhldq+++c++y ++kv   +  f+ i+ +y++ p+a    ++ vl+k       +v yn
+  sp|Q64701|RBL1_MOUSE 823 FEFTLVHCPDLMKDRHLDQLLLCAFYIMAKVTKEERTFQEIMKSYRNQPQANSHVYRSVLLKSIP--GGVVVYN 894
+                           *************************************************************9753..3334444 PP
+
+  == domain 4  score: 20.4 bits;  conditional E-value: 2.6e-08
+    sp|P06400|RB_HUMAN  744 ikeeeydsiivfynsvfmqrlktnilqyastr......pptlspiphiprspykfpssplripg.gniyisplkspykiseglptpt 823 
+                            +kee    +i fyn+v++ r+k+  l+y  ++       p lsp+phi +     p sp ri    ++y+sp    +k   g     
+  sp|Q64701|RBL1_MOUSE  918 VKEER-GDLIKFYNTVYVGRVKSFALKYDLSNqdhimdAPPLSPFPHIKQQ----PGSPRRISQqHSLYVSP----HKNGAG----- 990 
+                            56655.56899****************975541223335889999999876....689***98615688876....555555..... PP
+
+    sp|P06400|RB_HUMAN  824 kmtprsrilvsigesfgtsekfqkinqmvcnsdrvlkrs 862 
+                             +tprs +l  ++ s   s+ ++ in m+   ++  k+ 
+  sp|Q64701|RBL1_MOUSE  991 -LTPRSALLYKFNGS--PSKSLKDINNMIRQGEQKTKKR 1026
+                            .58999999998765..5667888999998877655543 PP
+
+>> sp|Q64700|RBL2_MOUSE  Retinoblastoma-like protein 2 OS=Mus musculus OX=10090 GN=Rbl2 PE=1 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.5   0.0   1.2e-11   5.2e-08      19     342 ..       8     356 ..       1     377 [. 0.64
+   2 !  122.3   0.0   4.1e-39   1.8e-35     370     617 ..     411     644 ..     398     681 .. 0.83
+   3 !   73.3   0.2   2.7e-24   1.2e-20     638     801 ..     823     986 ..     810     992 .. 0.79
+   4 !   10.8   1.5   2.2e-05     0.093     744     857 ..     991    1093 ..     979    1113 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 31.5 bits;  conditional E-value: 1.2e-11
+    sp|P06400|RB_HUMAN  19 eppapppppppeedpeqdsgpedlplvrlefeeteepdftalcqklkipdhvrerawltwekvssvdgvlggyiqk.kkelwgici.fi 105
+                            pp pp      e+ e+d    d            +  f  lc +l + +  r +aw ++  +s    + g+ +      l+  c   +
+  sp|Q64700|RBL2_MOUSE   8 SPPPPPAAAASSEEEEEDGDAADRAQPAGSPSHQIQQRFEELCSRLNMDEAARAEAWSSYRSMSESYTLEGNDLHWlACALYVACRkSV 96 
+                           44444444556677778877778776666666667789************************999888888777641456777775234 PP
+
+    sp|P06400|RB_HUMAN 106 aavdld..emsf.tftelqknieisvhkffnllkeidtstkvd....namsrllkkydvlfalfsklertceliyl....tqpsssist 183
+                             v     e ++ ++t + +  e s+ +ffn +k+ +    +         rl + + v   +f k e   + i+      qp      
+  sp|Q64700|RBL2_MOUSE  97 PTVSKGtaEGNYvSLTRILRCSEQSLIEFFNKMKKWEDMANLPphfrERTERLERNFTVSAVIFKKYEPIFQDIFKypqeEQPRQQRGR 185
+                           45544311333325677888889999*******99876665541111567899999************999888752222466655443 PP
+
+    sp|P06400|RB_HUMAN 184 e.....insalvlkvswitfllakgevlqmeddlvisfqlmlcvldyfi....klsppmllkepyktavipingsprtprrgqnrsari 263
+                           +       ++ ++   w+ f+ akg    + ddlv s+ l+lc ld       + s    l  p     +  +  p+  + + +    i
+  sp|Q64700|RBL2_MOUSE 186 KqrrqpCTTSEIFHFCWVLFIYAKGNFPMISDDLVNSYHLLLCALDLVYgnalQCSNRKELVNPNFKG-LSEDCHPKDSKASSDPPCVI 273
+                           211112567789999*******************************7541000233333333332222.23344455555555555555 PP
+
+    sp|P06400|RB_HUMAN 264 akqle.ndtriievl.ckehecnidevknvyfknfipfm..nslglvtsnglpe.venlskryeeiylknkdldarlfldhdkt 342
+                            k    +d  ++e    keh      ++ ++ k ++     n  g++   ++ e  + ++k yee  l   +ld r+fl +d  
+  sp|Q64700|RBL2_MOUSE 274 EKLCSlHDGLVLEAKgIKEHFWK-PYIRKLFEKKLLKGKeeNLTGFLEPGNFGEsFKAVNKAYEEYVLAAGNLDERVFLGEDAE 356
+                           55433244555554323455443.345555555555432225556555544444156678888888888888888888888765 PP
+
+  == domain 2  score: 122.3 bits;  conditional E-value: 4.1e-39
+    sp|P06400|RB_HUMAN 370 pphtpvrtvmntiqqlmmilnsasdqpsenlisyfnnctvnpkesilkrvkdigyifkekfakavg.qgcv.eigsqryklgvrlyyrv 456
+                           p  tpv t  +++ +l  +l+   + pse l   + +c+ +p ++i  r+k++  i+ + f    +  +c  ei++++++++  lyy+v
+  sp|Q64700|RBL2_MOUSE 411 PCVTPVSTAAHSLSRLHTMLSGLRNAPSEKLERILRSCSRDPTQAIADRLKEMYEIYSQHFQPDENfSNCAkEIANKHFRFAEMLYYKV 499
+                           6679*********************************************************876542556439**************** PP
+
+    sp|P06400|RB_HUMAN 457 mesmlkseeerlsiqnfskllndnifhmsllacalevvmatysrstsqnldsgtdlsfpwilnvlnlkafdfykviesfikaegnltre 545
+                           +es+++ e++rl   ++s +l  + fh sllac levv  +  +        g   +fp+i  ++++  + fykvie fi+ae  l re
+  sp|Q64700|RBL2_MOUSE 500 LESVIEQEQKRLGDMDLSGVLEHDAFHRSLLACCLEVVAFS--HKPP-----G---NFPFIAEIFDVPHYHFYKVIEVFIRAEDGLCRE 578
+                           ************************************99654..4332.....3...6******************************** PP
+
+    sp|P06400|RB_HUMAN 546 mikhlercehrimeslawlsdsplfdlikqskdregptdhlesacplnlplqnnhtaadmylsp.vrspkkkg 617
+                           ++khl + e++i++ law + spl+d i+ +++r  pt      c   +p qn +   ++y++    +p++ g
+  sp|Q64700|RBL2_MOUSE 579 VVKHLNQIEEQILDHLAWKTKSPLWDRIRDNENRV-PT------CEEVMPPQNLERTDEIYIAGsPLTPRRVG 644
+                           ****************************9988775.55......33344455555555555532022344444 PP
+
+  == domain 3  score: 73.3 bits;  conditional E-value: 2.7e-24
+    sp|P06400|RB_HUMAN 638 tqkplkstslslfykkvyrlaylrlntlcerllsehpelehiiwtlfqhtlqneyelmrdrhldqimmcsmygickvknidlkfkiivt 726
+                           + +p k++sl+lf++kvy la +rl  lc +l     el   iwt f+ ++    elm drhldq++mc++y ++kv   d  f+ i+ 
+  sp|Q64700|RBL2_MOUSE 823 SIRPRKTSSLALFFRKVYYLAGVRLRDLCIKL-DISDELRKKIWTCFEFSIIQCTELMMDRHLDQLLMCAIYVMAKVTKEDRSFQNIMR 910
+                           45899************************997.55689*************************************************** PP
+
+    sp|P06400|RB_HUMAN 727 aykdlphavqetfkrvlikeeeydsiivfynsvfmqrlktnilqyastrpptlspiphip.rspykfpssplripg 801
+                            y+  p+a  + ++ vlik +  +s      s      + n  + +    p +     +p   p   p +p r+ g
+  sp|Q64700|RBL2_MOUSE 911 CYRTQPQARSQVYRSVLIKGKRRNSGSSESRSHQNSPTELNTDRASRDSSPVMRSNSTLPvPQPSSAPPTPTRLTG 986
+                           *******************998887655444443333333433333334444444443431246666667777666 PP
+
+  == domain 4  score: 10.8 bits;  conditional E-value: 2.2e-05
+    sp|P06400|RB_HUMAN  744 ikeeeydsiivfynsvfmqrlktnilqyastrpptlspiphiprspykf..pssplripggn...iyisplkspykiseglptptkm 825 
+                            ++eee   +i fyn+++ ++++   ++y+  +  t +p    p spy f    sp r+  +    iyisp       +e++p+    
+  sp|Q64700|RBL2_MOUSE  991 VEEEERGDLIQFYNNIYRKQIQAFAMKYSQANAQTDTP----PLSPYPFvrTGSPRRVQLSQshpIYISPHN-----NEAMPS---- 1064
+                            78999***********************9888877665....555555522568888765431126666543.....577775.... PP
+
+    sp|P06400|RB_HUMAN  826 tprsrilvsigesfgtsekfqkinqmvcnsdr 857 
+                             pr +i+  ++   + s+++++in m+   + 
+  sp|Q64700|RBL2_MOUSE 1065 -PREKIFYYFSN--SPSKRLREINSMIRTGET 1093
+                            .46666665544..356777777777766555 PP
+
+>> sp|P05977|MYL1_MOUSE  Myosin light chain 1/3, skeletal muscle isoform OS=Mus musculus OX=10090 GN=Myl1 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.3   2.5     6e-05      0.26       6      58 ..       3      50 ..       1      72 [. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 9.3 bits;  conditional E-value: 6e-05
+    sp|P06400|RB_HUMAN  6 prktaataaaaaaeppapppppppeedpeqdsgpedlplvrlefeeteepdft 58
+                          p+k     aaa    pap p p p +  e +    dl  +++ef + ++ df 
+  sp|P05977|MYL1_MOUSE  3 PKKDVKKPAAA--PAPAPAPAPAPAKPKE-E--KIDLSAIKIEFSKEQQEDFK 50
+                          55555544444..4466666666655433.3..369**********9999996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (928 nodes)
+Target sequences:                      17267  (9821174 residues searched)
+Passed MSV filter:                      1900  (0.110036); expected 345.3 (0.02)
+Passed bias filter:                     1192  (0.0690334); expected 345.3 (0.02)
+Passed Vit filter:                       350  (0.0202699); expected 17.3 (0.001)
+Passed Fwd filter:                        80  (0.00463312); expected 0.2 (1e-05)
+Initial search space (Z):              17267  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 1.19u 0.02s 00:00:01.21 Elapsed: 00:00:00.34
+# Mc/sec: 26676.09
+
+@@ New targets included:   3
+@@ New alignment includes: 10 subseqs (was 1), including original query
+@@ Continuing to next round.
+
+@@
+@@ Round:                  2
+@@ Included in MSA:        10 subsequences (query + 9 subseqs from 3 targets)
+@@ Model size:             928 positions
+@@
+
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+          0 1808.2   8.5          0 1808.1   8.5    1.0  1  sp|P13405|RB_MOUSE    Retinoblastoma-associated protein OS=Mu
+          0 1225.9  16.5     4e-258  858.9   0.2    4.0  3  sp|Q64700|RBL2_MOUSE  Retinoblastoma-like protein 2 OS=Mus mu
+          0 1109.5   7.2   1.2e-219  731.6   0.4    4.0  3  sp|Q64701|RBL1_MOUSE  Retinoblastoma-like protein 1 OS=Mus mu
+  ------ inclusion threshold ------
+      0.073   10.9   0.1       0.12   10.2   0.1    1.2  1  sp|Q3UAW9|BRF2_MOUSE  Transcription factor IIIB 50 kDa subuni
+
+
+Domain annotation for each sequence (and alignments):
+>> sp|P13405|RB_MOUSE  Retinoblastoma-associated protein OS=Mus musculus OX=10090 GN=Rb1 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1808.1   8.5         0         0       1     928 []       1     921 []       1     921 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 1808.1 bits;  conditional E-value: 0
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1   1 mppkaprktaataaaaaaepppppaaaaseedeeedsdaedlalarlefeeqeepefealcqklkvddavrerawltyekvssvdgll 88 
+                            mppkapr+      aaaaeppppp+++++e+d+++ds++e+l+larlefee+eepef+alcqklkv+d+vrerawlt+ekvssvdg+l
+     sp|P13405|RB_MOUSE   1 MPPKAPRR------AAAAEPPPPPPPPPREDDPAQDSGPEELPLARLEFEEIEEPEFIALCQKLKVPDHVRERAWLTWEKVSSVDGIL 82 
+                            9*******......999*********************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  89 ggylqkkkelygicifiaavdldemsftltrllksielslikffnklkkidtstklderierLekkfevsavlfkklerifedifkeq 176
+                            +gy+qkkkel+gicifiaavdldem+ft+t+l+ksie+s++kff++lk+idtstk+d++++rL+kk++v+++l++kler++e+i+++q
+     sp|P13405|RB_MOUSE  83 EGYIQKKKELWGICIFIAAVDLDEMPFTFTELQKSIETSVYKFFDLLKEIDTSTKVDNAMSRLLKKYNVLCALYSKLERTCELIYLTQ 170
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 177 PrsqksrkinsslvlkvsWilfllakGevlmieDDLvisyqLlLCvlDlviklspakllkePnkkavlpingsPrtsrrgsdrsaria 264
+                            P+s+ s++ins+lvlk+sWi+fllakGevl++eDDLvis+qL+LCv+D++ik+sp++ll+eP+k+a++pingsPrt+rrg++rsaria
+     sp|P13405|RB_MOUSE 171 PSSALSTEINSMLVLKISWITFLLAKGEVLQMEDDLVISFQLMLCVVDYFIKFSPPALLREPYKTAAIPINGSPRTPRRGQNRSARIA 258
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 265 kqleedtliievlikeheckidevkkvyfkkfikklnslglleseglpelkavskrYeevvLkakdlDerlfLdeDatlqtdsidsfe 352
+                            kqle+dt+iievl+kehec+idevk+vyfk+fi+++nslg+++s+glpe++++skrYeev+Lk+kdlD+rlfLd+D+tlqtd+idsfe
+     sp|P13405|RB_MOUSE 259 KQLENDTRIIEVLCKEHECNIDEVKNVYFKNFIPFINSLGIVSSNGLPEVESLSKRYEEVYLKNKDLDARLFLDHDKTLQTDPIDSFE 346
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 353 tertprksnldeevnvvppvtPvrtvansisrLmvilnslkdaPsekLisifesCtrnPkenilkrvkdigeifkekfakavdkgcve 440
+                            tertprk+n+dee+nvv+p+tPvrtv+n+i++Lmvilns++d+Pse+Lis+f++Ct+nPkenilkrvkd+g+ifkekfa+av++gcv+
+     sp|P13405|RB_MOUSE 347 TERTPRKNNPDEEANVVTPHTPVRTVMNTIQQLMVILNSASDQPSENLISYFNNCTVNPKENILKRVKDVGHIFKEKFANAVGQGCVD 434
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 441 iavkryklaerLyykvlesvlkseekrLsiqdlsklLeddifhksLlaCaLevvlatysrstsqnldsGtdlsfPwilevldlkafdf 528
+                            i+v+rykl++rLyy+v+es+lksee+rLsiq++sklL+d+ifh+sLlaCaLevv+atysrst+q+ldsGtdlsfPwil+vl+lkafdf
+     sp|P13405|RB_MOUSE 435 IGVQRYKLGVRLYYRVMESMLKSEEERLSIQNFSKLLNDNIFHMSLLACALEVVMATYSRSTLQHLDSGTDLSFPWILNVLNLKAFDF 522
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 529 ykvievfikaeegLtremvkhLerieerilesLaWlsdspLfdlikqskdrvgptdnlesacpenlplqnnetaedmylspvrspkkk 616
+                            ykvie+fik+e++Ltrem+khLer+e+ri+esLaWlsdspLfdlikqskd++gp dnle+acp++lplq+n+ta+dmylsp+rspkk+
+     sp|P13405|RB_MOUSE 523 YKVIESFIKVEANLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSKDGEGP-DNLEPACPLSLPLQGNHTAADMYLSPLRSPKKR 609
+                            ******************************************************.9******************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 617 esttrvnstantetqaasafqtqkPkkstsLaLfykkvyrLaslrLrdLClkLldesdeLrkkiWtlfeftlvneyeLmrdrhLdqll 704
+                            +sttrvns+antetqaasaf+tqkP+kstsLaLfykkvyrLa+lrL++LC++Ll++++eL+++iWtlf++tl+neyeLmrdrhLdq++
+     sp|P13405|RB_MOUSE 610 TSTTRVNSAANTETQAASAFHTQKPLKSTSLALFYKKVYRLAYLRLNTLCARLLSDHPELEHIIWTLFQHTLQNEYELMRDRHLDQIM 697
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 705 lCalyviakvkkedrkfkeivkaykdlPqaasevyksvLikeeerdslivfynsvyvqrlktnilkyastraptlspiphiprsPykf 792
+                            +C++y+i+kvk++d+kfk+iv+aykdlP+aa+e++k+vLi+eee+ds+ivfynsv++qrlktnil+yastr+ptlspiphiprsPykf
+     sp|P13405|RB_MOUSE 698 MCSMYGICKVKNIDLKFKIIVTAYKDLPHAAQETFKRVLIREEEFDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHIPRSPYKF 785
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 793 pssPlRisggniyisPlkspykiseglptptkltPrsrilvsigesfgtskklkkinqmvrnservlkrsaegsnppkplkklrfdie 880
+                            +ssPlRi+ggniyisPlkspykiseglptptk+tPrsrilvsigesfgts+k++kinqmv+ns+rvlkrsaeg+nppkplkklrfdie
+     sp|P13405|RB_MOUSE 786 SSSPLRIPGGNIYISPLKSPYKISEGLPTPTKMTPRSRILVSIGESFGTSEKFQKINQMVCNSDRVLKRSAEGGNPPKPLKKLRFDIE 873
+                            **************************************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 881 gadeadgskhlpaeskfqqklaemtstrtrmqkqkmneskdvsnkeek 928
+                            gadeadgskhlpaeskfqqklaemtstrtrmqkq+mneskdvsnkeek
+     sp|P13405|RB_MOUSE 874 GADEADGSKHLPAESKFQQKLAEMTSTRTRMQKQRMNESKDVSNKEEK 921
+                            **********************************************98 PP
+
+>> sp|Q64700|RBL2_MOUSE  Retinoblastoma-like protein 2 OS=Mus musculus OX=10090 GN=Rbl2 PE=1 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  858.9   0.2  9.2e-262    4e-258      16     617 ..       5     644 ..       1     653 [. 0.91
+   2 !  267.1   1.2   6.4e-83   2.8e-79     637     802 ..     822     987 ..     811     991 .. 0.97
+   3 !  104.8   3.0   6.8e-34     3e-30     744     862 ..     991    1098 ..     987    1113 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 858.9 bits;  conditional E-value: 9.2e-262
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  16 aaaepppppaaaaseedeeedsdaedlalarlefeeqeepefealcqklkvddavrerawltyekvssvdgllggylqk.kkelygic 102
+                               +pppppaaaas+e+eeed+da+d+a++++++++q++++fe+lc++l++d+a+r++aw++y+++s++++l+g++l++ +++ly++c
+   sp|Q64700|RBL2_MOUSE   5 GNQSPPPPPAAAASSEEEEEDGDAADRAQPAGSPSHQIQQRFEELCSRLNMDEAARAEAWSSYRSMSESYTLEGNDLHWlACALYVAC 92 
+                            5679************************************************************************************ PP
+
+                            x.xxxxxxxx..xxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxx....xxxx RF
+  sp|P06400|RB_HUMAN-i1 103 i.fiaavdld..emsf.tltrllksielslikffnklkkidtstkld....erierLekkfevsavlfkklerifedifk....eqPr 178
+                            + ++++v+++  e+++ +ltr+l+++e+sli+ffnk+kk++++++l+    er+erLe++f+vsav+fkk+e+if+difk    eqPr
+   sp|Q64700|RBL2_MOUSE  93 RkSVPTVSKGtaEGNYvSLTRILRCSEQSLIEFFNKMKKWEDMANLPphfrERTERLERNFTVSAVIFKKYEPIFQDIFKypqeEQPR 180
+                            *9*******999********************************8777777*****************************887779** PP
+
+                            xxxxxx.....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 179 sqksrk.....insslvlkvsWilfllakGevlmieDDLvisyqLlLCvlDlvi....klspakllkePnkkavlpingsPrtsrrgs 257
+                            +q++rk     +++s++++++W+lf++akG+++mi+DDLv+sy+LlLC+lDlv+    ++s++k+l++Pn+k+ l+++++P++s+++s
+   sp|Q64700|RBL2_MOUSE 181 QQRGRKqrrqpCTTSEIFHFCWVLFIYAKGNFPMISDDLVNSYHLLLCALDLVYgnalQCSNRKELVNPNFKG-LSEDCHPKDSKASS 267
+                            ****99999****************************************************************.************** PP
+
+                            xxxxxxxxxxx.xxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 258 drsariakqle.edtliievl.ikeheckidevkkvyfkkfikkl..nslglleseglpe.lkavskrYeevvLkakdlDerlfLdeD 340
+                            d++++i+k+++ +d+l++e++ ikeh++k ++++k+++kk++k++  n +g+le+++++e +kav+k+Yee+vL+a++lDer+fL+eD
+   sp|Q64700|RBL2_MOUSE 268 DPPCVIEKLCSlHDGLVLEAKgIKEHFWK-PYIRKLFEKKLLKGKeeNLTGFLEPGNFGEsFKAVNKAYEEYVLAAGNLDERVFLGED 354
+                            *****************************.*************99999************9*************************** PP
+
+                            xxxxxxxxx.....xx...xxxxxxxxx....xxxxx..xxxx.............xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 341 atlqtdsid.....sf...etertprks....nldee..vnvv.............ppvtPvrtvansisrLmvilnslkdaPsekLi 401
+                            a+ ++ ++      +     +ert  ++     ld+     v              p+vtPv+t+a+s+srL+++l++l++aPsekL+
+   sp|Q64700|RBL2_MOUSE 355 AEEEVGTLSrclsaASgteSAERTQMRDilqqHLDKSkaLRVCtpltgvryvqensPCVTPVSTAAHSLSRLHTMLSGLRNAPSEKLE 442
+                            *977655431111111111345665443111134433211221111122222444489****************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 402 sifesCtrnPkenilkrvkdigeifkekfakavd.kgcv.eiavkryklaerLyykvlesvlkseekrLsiqdlsklLeddifhksLl 487
+                            +i++sC+r+P+++i++r+k+++ei++++f+++++ ++c+ eia+k++++ae+Lyykvlesv+++e+krL+++dls++Le+d+fh+sLl
+   sp|Q64700|RBL2_MOUSE 443 RILRSCSRDPTQAIADRLKEMYEIYSQHFQPDENfSNCAkEIANKHFRFAEMLYYKVLESVIEQEQKRLGDMDLSGVLEHDAFHRSLL 530
+                            **********************************99***9************************************************ PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 488 aCaLevvlatysrstsqnldsGtdlsfPwilevldlkafdfykvievfikaeegLtremvkhLerieerilesLaWlsdspLfdlikq 575
+                            aC+Levv+++  ++++     G   +fP+i+e++d+++++fykvievfi+ae+gL+re+vkhL++iee+il++LaW+++spL+d+i++
+   sp|Q64700|RBL2_MOUSE 531 ACCLEVVAFS--HKPP-----G---NFPFIAEIFDVPHYHFYKVIEVFIRAEDGLCREVVKHLNQIEEQILDHLAWKTKSPLWDRIRD 608
+                            *******998..8888.....7...*************************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 576 skdrvgptdnlesacpenlplqnnetaedmylsp.vrspkkke 617
+                            +++rv pt      c+e++p+qn e+++++y+++ +++p+++ 
+   sp|Q64700|RBL2_MOUSE 609 NENRV-PT------CEEVMPPQNLERTDEIYIAGsPLTPRRVG 644
+                            *****.54......89*****************9888998865 PP
+
+  == domain 2  score: 267.1 bits;  conditional E-value: 6.4e-83
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 637 qtqkPkkstsLaLfykkvyrLaslrLrdLClkLldesdeLrkkiWtlfeftlvneyeLmrdrhLdqlllCalyviakvkkedrkfkei 724
+                             +++P+k++sLaLf++kvy+La++rLrdLC+kL d+sdeLrkkiWt+fef++++++eLm+drhLdqll+Ca+yv+akv+kedr+f++i
+   sp|Q64700|RBL2_MOUSE 822 SSIRPRKTSSLALFFRKVYYLAGVRLRDLCIKL-DISDELRKKIWTCFEFSIIQCTELMMDRHLDQLLMCAIYVMAKVTKEDRSFQNI 908
+                            689******************************.****************************************************** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 725 vkaykdlPqaasevyksvLikeeerdslivfynsvyvqrlktnilkyastraptlspiphip.rsPykfpssPlRisgg 802
+                            +++y+++Pqa+s+vy+svLik+++r+s++++++s++++++++n+++++++++p++++++++p ++P+++p++P+R++g 
+   sp|Q64700|RBL2_MOUSE 909 MRCYRTQPQARSQVYRSVLIKGKRRNSGSSESRSHQNSPTELNTDRASRDSSPVMRSNSTLPvPQPSSAPPTPTRLTGA 987
+                            **************************************************************9*************985 PP
+
+  == domain 3  score: 104.8 bits;  conditional E-value: 6.8e-34
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxx...xxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  744 ikeeerdslivfynsvyvqrlktnilkyastraptlspiphiprsPykf..pssPlRisggn...iyisPlkspykiseglptptk 824 
+                             ++eeer++li+fyn++y+++++++++ky++++a+t++p    p sPy+f  ++sP+R++ ++   iyisP++     +e++p+   
+   sp|Q64700|RBL2_MOUSE  991 VEEEERGDLIQFYNNIYRKQIQAFAMKYSQANAQTDTP----PLSPYPFvrTGSPRRVQLSQshpIYISPHN-----NEAMPS--- 1064
+                             89************************************....9*****999********977788*****88.....******... PP
+
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  825 ltPrsrilvsigesfgtskklkkinqmvrnservlkrs 862 
+                               Pr++i++++++s  +sk+l++in+m+r++e  +k+ 
+   sp|Q64700|RBL2_MOUSE 1065 --PREKIFYYFSNS--PSKRLREINSMIRTGETPTKKR 1098
+                             ..***********7..*****************99985 PP
+
+>> sp|Q64701|RBL1_MOUSE  Retinoblastoma-like protein 1 OS=Mus musculus OX=10090 GN=Rbl1 PE=1 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  731.6   0.4  2.8e-223  1.2e-219      54     622 ..      18     629 ..       3     637 .. 0.88
+   2 !  264.6   0.0   3.5e-82   1.5e-78     594     757 ..     734     894 ..     726     904 .. 0.97
+   3 !  109.2   0.3   3.3e-35   1.4e-31     744     875 ..     918    1041 ..     907    1048 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 731.6 bits;  conditional E-value: 2.8e-223
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxx..xxxxxxxx..xxxx.xxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  54 epefealcqklkvddavrerawltyekvssvdgllggylqk.kkelygici..fiaavdld..emsf.tltrllksielslikffnkl 135
+                            ++ ++alcq l++d+   ++a   +  +   ++l+g+ +++ ++ ly++c+   i++v ++  e++  +ltr+l+s++lsli+ff+k+
+   sp|Q64701|RBL1_MOUSE  18 REALQALCQELNLDEGSAAEALDDFTAIRGNYSLEGEVIHWlACSLYVACRksIIPTVGKGvmEGNCvSLTRILRSAKLSLIQFFSKM 105
+                            56789*********************************************99789******9999988******************** PP
+
+                            xx.xxxxx...xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.......xxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 136 kk.idtst...klderierLekkfevsavlfkklerifedifkeq.......Prsqksrkinssl..vlkvsWilfllakGevlmieD 210
+                            kk +d+s+   +++erierLe++fevs+v+fkk+e+if dif+++       Prs+k+r+i++s+  +++++W+lf+++kG+++mi+D
+   sp|Q64701|RBL1_MOUSE 106 KKwMDMSNlpqEFRERIERLERNFEVSTVIFKKFEPIFLDIFQNPyeeppklPRSRKQRRIPCSVkdLFNFCWTLFVYTKGNFRMIGD 193
+                            **667777777888*****************************744445667************999********************* PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.x.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...xx RF
+  sp|P06400|RB_HUMAN-i1 211 DLvisyqLlLCvlDlviklspakllkePnkkavl.p.ingsPrtsrrgsdrsariakqleedtliievlikeheckidevkkv...yf 293
+                            DLv+sy+LlLC+lDl++++  a++  +Pn++++l p ++g+P      sd++a+++k++ee+++ii+vl+++h++ ++e+k++   yf
+   sp|Q64701|RBL1_MOUSE 194 DLVNSYHLLLCCLDLIFAN--AIM--CPNRRDLLnPsFKGLP------SDFHAPDFKAAEEPPCIIAVLCDLHDGLLVEAKGIkehYF 271
+                            *****************98..676..********845*****......9********************************99999** PP
+
+                            xxxxxxxxxxxxxxxxxxxxx.......xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx........x..........xx.....xxx RF
+  sp|P06400|RB_HUMAN-i1 294 kkfikklnslglleseglpel.......kavskrYeevvLkakdlDerlfLdeDatlqt........d..........si.....dsf 351
+                            k++i+kl+++++l++e+l++l       kav+k+Yee+vL+++d+Der+fL++Da+ +         d          s+     + f
+   sp|Q64701|RBL1_MOUSE 272 KPYISKLFDKKILKGECLLDLssftdnsKAVNKEYEEYVLTVGDFDERIFLGADAEEEIgtprkftaDtpfgkltsqaSVecnlqQHF 359
+                            ********************99********************************9865411111111111111111111111111223 PP
+
+                            xxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 352 etertprksnldeev....nvvppvtPvrtvansisrLmvilnslkdaPsekLisifesCtrnPkenilkrvkdigeifkekfakavd 435
+                            e +r+   s +        +  + +tPv+++++s+srL++i+++lk+aPse+L++ifesC+rnP++ni+k+vk+ige+f++++++++d
+   sp|Q64701|RBL1_MOUSE 360 EKKRSFAPSTPLTGRrylqEKEAVTTPVASATQSVSRLQSIVAGLKSAPSEQLLNIFESCMRNPMGNIIKIVKGIGETFCQHYTQSTD 447
+                            44443222222221100112235689************************************************************** PP
+
+                            x...xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 436 k...gcveiavkryklaerLyykvlesvlkseekrLsiqdlsklLeddifhksLlaCaLevvlatysrstsqnldsGtdlsfPwilev 520
+                            k   +++++av+r+klae+Lyyk+le+++++e++rL+++d+s+lLe+difhksL+aC+Le+vl++ys+          +++fPwi+ev
+   sp|Q64701|RBL1_MOUSE 448 KqpgSHIDFAVNRLKLAEILYYKILETIMVQETRRLHGMDMSVLLEQDIFHKSLMACCLEIVLFAYSS----------PRTFPWIIEV 525
+                            77999**************************************************************9..........79******** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.... RF
+  sp|P06400|RB_HUMAN-i1 521 ldlkafdfykvievfikaeegLtremvkhLerieerilesLaWlsdspLfdlikqskdrvgptdnlesacpenlplqnnetaed.... 604
+                            ldl++f+fykviev+i++eegL+r+mvkhL++iee+ilesLaW+++s+L++++++s++rv++++  e+++p+n++++n++++++    
+   sp|Q64701|RBL1_MOUSE 526 LDLQPFYFYKVIEVVIRSEEGLSRDMVKHLNSIEEQILESLAWTNNSALWEALHASANRVPSCE--EVIFPNNFEIGNGGNVQGhlpm 611
+                            ***************************************************************9..*****************99**9 PP
+
+                            xxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 605 mylspvrspkkkesttrv 622
+                            m++sp+++p++ke+ t  
+   sp|Q64701|RBL1_MOUSE 612 MPMSPIIHPRVKEVRTDS 629
+                            *************99875 PP
+
+  == domain 2  score: 264.6 bits;  conditional E-value: 3.5e-82
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 594 lplqnnetaedmylspvrspkkkesttrvnstantetqaasafqtqkPkkstsLaLfykkvyrLaslrLrdLClkLldesdeLrkkiW 681
+                            +p+++n+t+e++++spv+ ++++ ++t++++t++t++q+a++++++kPk+++sLaLfy+kvy+Las+rLrdLClkL d+s+eLr+kiW
+   sp|Q64701|RBL1_MOUSE 734 VPISMNPTQESTAESPVSLTAQSLIGTSPKQTHLTKAQDAHLTGVSKPKRTGSLALFYRKVYHLASVRLRDLCLKL-DVSNELRRKIW 820
+                            79**************************************************************************.*********** PP
+
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1 682 tlfeftlvneyeLmrdrhLdqlllCalyviakvkkedrkfkeivkaykdlPqaasevyksvLikeeerdslivfyn 757
+                            t+feftlv++++Lm+drhLdqlllCa+y++akv+ke+r+f+ei+k+y+++Pqa+s+vy+svL+k+++  +++v+yn
+   sp|Q64701|RBL1_MOUSE 821 TCFEFTLVHCPDLMKDRHLDQLLLCAFYIMAKVTKEERTFQEIMKSYRNQPQANSHVYRSVLLKSIP--GGVVVYN 894
+                            *******************************************************************..8899998 PP
+
+  == domain 3  score: 109.2 bits;  conditional E-value: 3.3e-35
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  744 ikeeerdslivfynsvyvqrlktnilkyastr......aptlspiphiprsPykfpssPlRisg.gniyisPlkspykiseglptp 822 
+                             +kee+ ++li+fyn+vyv r+k+++lky+ ++      ap+lsp+phi+++    p+sP+Ris+ +++y+sP    +k+++g    
+   sp|Q64701|RBL1_MOUSE  918 VKEER-GDLIKFYNTVYVGRVKSFALKYDLSNqdhimdAPPLSPFPHIKQQ----PGSPRRISQqHSLYVSP----HKNGAG---- 990 
+                             67777.*************************999*****************....8******99799*****....679999.... PP
+
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  823 tkltPrsrilvsigesfgtskklkkinqmvrnservlkrs..aegsnppkplkkl 875 
+                               ltPrs++l+++++s  +sk+lk+in+m+r++e+++k+   a  ++   p k+l
+   sp|Q64701|RBL1_MOUSE  991 --LTPRSALLYKFNGS--PSKSLKDINNMIRQGEQKTKKRviAISGDADSPAKRL 1041
+                             ..9************7..*******************996224455666666665 PP
+
+>> sp|Q3UAW9|BRF2_MOUSE  Transcription factor IIIB 50 kDa subunit OS=Mus musculus OX=10090 GN=Brf2 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.2   0.1   2.8e-05      0.12      53     107 ..      72     126 ..      54     144 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 2.8e-05
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  sp|P06400|RB_HUMAN-i1  53 eepefealcqklkvddavrerawltyekvssvdgllggylqkkkelygicifiaa 107
+                              ++  +lc+ lk++ +  + a + y+k  +  g+  + lqkk  l g c+ i++
+   sp|Q3UAW9|BRF2_MOUSE  72 DLRRVRDLCRILKLPLTFEDTAISYYQKAYQLSGIRAARLQKKEVLVGCCVLITC 126
+                            4467889*******************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (928 nodes)
+Target sequences:                      17267  (9821174 residues searched)
+Passed MSV filter:                      1113  (0.0644582); expected 345.3 (0.02)
+Passed bias filter:                      656  (0.0379915); expected 345.3 (0.02)
+Passed Vit filter:                       138  (0.00799212); expected 17.3 (0.001)
+Passed Fwd filter:                        17  (0.000984537); expected 0.2 (1e-05)
+Initial search space (Z):              17267  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.77u 0.03s 00:00:00.80 Elapsed: 00:00:00.33
+# Mc/sec: 27465.03
+
+@@ New targets included:   0
+@@ New alignment includes: 8 subseqs (was 10), including original query
+@@
+@@ CONVERGED (in 2 rounds). 
+@@
+
+# Alignment of 8 hits satisfying inclusion thresholds saved to: hmmer_out/RB1_vs_10090.sto
+//
+[ok]
