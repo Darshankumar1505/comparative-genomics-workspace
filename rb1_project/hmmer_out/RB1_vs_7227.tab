@@ -1,0 +1,14 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+sp|Q24472|RBF_DROME  -          sp|P06400|RB_HUMAN   -           1.1e-244  812.4  13.7  8.2e-167  554.6   5.5   2.1   2   0   0   2   2   2   2 Retinoblastoma family protein OS=Drosophila melanogaster OX=7227 GN=Rbf PE=1 SV=2
+#
+# Program:         jackhmmer
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      queries/RB1_human.fasta
+# Target file:     7227.faa
+# Option settings: jackhmmer -N 5 -A hmmer_out/RB1_vs_7227.sto --tblout hmmer_out/RB1_vs_7227.tab --cpu 4 queries/RB1_human.fasta 7227.faa 
+# Current dir:     /home/hp/rb1_project
+# Date:            Fri Aug 28 16:27:22 2026
+# [ok]

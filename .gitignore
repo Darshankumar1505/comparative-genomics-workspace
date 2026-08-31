@@ -1,0 +1,16 @@
+# Large files > 100MB excluded for GitHub, route to Zenodo
+*.RData
+*.rdata
+*.zip
+/results/extracted_checkpoints_csv/phylostratr_ALL5_final_human_check.csv
+/results/extracted_checkpoints_csv/phylostratr_ALL5_final_mouse_check.csv
+/results/extracted_checkpoints_csv/phylostratr_ALL5_final_zebrafish_check.csv
+/results/extracted_checkpoints_csv/phylostratr_checkpoint3_human_check.csv
+/results/extracted_checkpoints_csv/phylostratr_checkpoint3_mouse_check.csv
+/results/extracted_checkpoints_csv/phylostratr_checkpoint3_zebrafish_check.csv
+/results/extracted_checkpoints_csv/phylostratr_FINAL_verified_zebrafish_raw.csv
+/results/phylostratr_checkpoints/phylostratr_ALL5_final.RData
+/results/phylostratr_checkpoints/phylostratr_checkpoint3.RData
+/data/raw_blast/10090_mus_musculus_blast_hits.tab
+/data/raw_blast/7955_danio_rerio_blast_hits.tab
+/data/raw_blast/9606_homo_sapiens_blast_hits.tab

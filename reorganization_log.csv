@@ -1,0 +1,80 @@
+old_path,new_path
+.RData,organized_workspace/data/misc/.RData
+.RDataTmp,organized_workspace/data/misc/.RDataTmp
+.Rhistory,organized_workspace/data/misc/.Rhistory
+01_inventory.py,organized_workspace/data/misc/01_inventory.py
+02_organize.py,organized_workspace/data/misc/02_organize.py
+10090.tab,organized_workspace/data/raw_blast/10090_mus_musculus_blast_hits.tab
+4932.tab,organized_workspace/data/raw_blast/4932_saccharomyces_cerevisiae_blast_hits.tab
+7227.tab,organized_workspace/data/raw_blast/7227_drosophila_melanogaster_blast_hits.tab
+7955.tab,organized_workspace/data/raw_blast/7955_danio_rerio_blast_hits.tab
+9606.tab,organized_workspace/data/raw_blast/9606_homo_sapiens_blast_hits.tab
+hpa_normal_tissue.tsv.zip.zip,organized_workspace/data/misc/hpa_normal_tissue.tsv.zip.zip
+manifest.csv,organized_workspace/data/misc/manifest.csv
+phylostratr_ALL5_final.RData,organized_workspace/results/phylostratr_checkpoints/phylostratr_ALL5_final.RData
+phylostratr_checkpoint.RData,organized_workspace/results/phylostratr_checkpoints/phylostratr_checkpoint.RData
+phylostratr_checkpoint2.RData,organized_workspace/results/phylostratr_checkpoints/phylostratr_checkpoint2.RData
+phylostratr_checkpoint3.RData,organized_workspace/results/phylostratr_checkpoints/phylostratr_checkpoint3.RData
+phylostratr_FINAL_verified.RData,organized_workspace/results/phylostratr_checkpoints/phylostratr_FINAL_verified.RData
+phylostratr_session01.Rhistory,organized_workspace/data/misc/phylostratr_session01.Rhistory
+phylostratr_workspace.RData,organized_workspace/results/phylostratr_checkpoints/phylostratr_workspace.RData
+rb_pathway_foldseek_summary.csv,organized_workspace/data/misc/rb_pathway_foldseek_summary.csv
+rb_pathway_foldseek_summary_with_plants.csv,organized_workspace/data/misc/rb_pathway_foldseek_summary_with_plants.csv
+rb_pathway_hmmer_summary.csv,organized_workspace/data/misc/rb_pathway_hmmer_summary.csv
+run_phylostratr.R,organized_workspace/data/misc/run_phylostratr.R
+blastdb/10090.faa.pdb,organized_workspace/data/misc/10090.faa.pdb
+blastdb/10090.faa.phr,organized_workspace/data/misc/10090.faa.phr
+blastdb/10090.faa.pin,organized_workspace/data/misc/10090.faa.pin
+blastdb/10090.faa.pjs,organized_workspace/data/misc/10090.faa.pjs
+blastdb/10090.faa.pot,organized_workspace/data/misc/10090.faa.pot
+blastdb/10090.faa.psq,organized_workspace/data/misc/10090.faa.psq
+blastdb/10090.faa.ptf,organized_workspace/data/misc/10090.faa.ptf
+blastdb/10090.faa.pto,organized_workspace/data/misc/10090.faa.pto
+blastdb/4932.pdb,organized_workspace/data/misc/4932.pdb
+blastdb/4932.phr,organized_workspace/data/misc/4932.phr
+blastdb/4932.pin,organized_workspace/data/misc/4932.pin
+blastdb/4932.pjs,organized_workspace/data/misc/4932.pjs
+blastdb/4932.pot,organized_workspace/data/misc/4932.pot
+blastdb/4932.psq,organized_workspace/data/misc/4932.psq
+blastdb/4932.ptf,organized_workspace/data/misc/4932.ptf
+blastdb/4932.pto,organized_workspace/data/misc/4932.pto
+blastdb/7227.faa.pdb,organized_workspace/data/misc/7227.faa.pdb
+blastdb/7227.faa.phr,organized_workspace/data/misc/7227.faa.phr
+blastdb/7227.faa.pin,organized_workspace/data/misc/7227.faa.pin
+blastdb/7227.faa.pjs,organized_workspace/data/misc/7227.faa.pjs
+blastdb/7227.faa.pot,organized_workspace/data/misc/7227.faa.pot
+blastdb/7227.faa.psq,organized_workspace/data/misc/7227.faa.psq
+blastdb/7227.faa.ptf,organized_workspace/data/misc/7227.faa.ptf
+blastdb/7227.faa.pto,organized_workspace/data/misc/7227.faa.pto
+blastdb/7955.faa.pdb,organized_workspace/data/misc/7955.faa.pdb
+blastdb/7955.faa.phr,organized_workspace/data/misc/7955.faa.phr
+blastdb/7955.faa.pin,organized_workspace/data/misc/7955.faa.pin
+blastdb/7955.faa.pjs,organized_workspace/data/misc/7955.faa.pjs
+blastdb/7955.faa.pot,organized_workspace/data/misc/7955.faa.pot
+blastdb/7955.faa.psq,organized_workspace/data/misc/7955.faa.psq
+blastdb/7955.faa.ptf,organized_workspace/data/misc/7955.faa.ptf
+blastdb/7955.faa.pto,organized_workspace/data/misc/7955.faa.pto
+blastdb/9606.faa.pdb,organized_workspace/data/misc/9606.faa.pdb
+blastdb/9606.faa.phr,organized_workspace/data/misc/9606.faa.phr
+blastdb/9606.faa.pin,organized_workspace/data/misc/9606.faa.pin
+blastdb/9606.faa.pjs,organized_workspace/data/misc/9606.faa.pjs
+blastdb/9606.faa.pot,organized_workspace/data/misc/9606.faa.pot
+blastdb/9606.faa.psq,organized_workspace/data/misc/9606.faa.psq
+blastdb/9606.faa.ptf,organized_workspace/data/misc/9606.faa.ptf
+blastdb/9606.faa.pto,organized_workspace/data/misc/9606.faa.pto
+Excel Outputs/cleaned_target_genes_summary.csv,organized_workspace/results/excel_summaries/cleaned_target_genes_summary.csv
+Excel Outputs/Enrichment_Analysis_Report.xlsx,organized_workspace/results/excel_summaries/Enrichment_Analysis_Report.xlsx
+Excel Outputs/final_gene_phylostrata_4species.csv,organized_workspace/results/excel_summaries/final_gene_phylostrata_4species.csv
+Excel Outputs/final_gene_phylostrata_5species.csv,organized_workspace/results/excel_summaries/final_gene_phylostrata_5species.csv
+Excel Outputs/gene_phylostrata_results.csv,organized_workspace/results/excel_summaries/gene_phylostrata_results.csv
+Excel Outputs/haig_thread_gene_ages.csv,organized_workspace/results/excel_summaries/haig_thread_gene_ages.csv
+Excel Outputs/output.log,organized_workspace/results/excel_summaries/output.log
+Excel Outputs/pathway_ps_summary_FINAL.csv,organized_workspace/results/excel_summaries/pathway_ps_summary_FINAL.csv
+Excel Outputs/rb1_pathway_4species.csv,organized_workspace/results/excel_summaries/rb1_pathway_4species.csv
+Excel Outputs/rb1_pathway_results.csv,organized_workspace/results/excel_summaries/rb1_pathway_results.csv
+Excel Outputs/step2_expression_cleaned_summary.csv,organized_workspace/results/excel_summaries/step2_expression_cleaned_summary.csv
+Excel Outputs/step2_expression_profile_summary.csv,organized_workspace/results/excel_summaries/step2_expression_profile_summary.csv
+Excel Outputs/step2_hpa_tissue_expression.csv,organized_workspace/results/excel_summaries/step2_hpa_tissue_expression.csv
+Excel Outputs/step2_sensory_single_cell_matches.csv,organized_workspace/results/excel_summaries/step2_sensory_single_cell_matches.csv
+Excel Outputs/step3_go_enrichment.csv,organized_workspace/results/excel_summaries/step3_go_enrichment.csv
+hpa_normal_tissue.tsv.zip/proteinatlas.tsv,organized_workspace/data/misc/proteinatlas.tsv

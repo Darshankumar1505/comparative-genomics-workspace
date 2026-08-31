@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Picha"
+    given-names: "Darshankumar"
+    affiliation: "Government Medical College, Akola"
+title: "comparative-genomics-workspace"
+version: "v1.0.1"
+doi: "10.5281/zenodo.22150156"
+date-released: 2026-08-28
+url: "https://github.com/Darshankumar1505/comparative-genomics-workspace"
+license: "MIT"
