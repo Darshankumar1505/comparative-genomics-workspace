@@ -611,3 +611,15 @@ This repository contains structured, reproducible outputs and analysis artifacts
 2. **HMMER & Foldseek:** Hidden Markov Model homology profiles and 3D structural comparisons.
 3. **Phylostratr Checkpoints:** Evolutionary phylogenomic profiling checkpoints exported to plain-text CSV for transparent version control.
 4. **Enrichment & Expression:** Gene Ontology (GO), KEGG pathways, and Human Protein Atlas (HPA) expression datasets.# comparative-genomics-workspace
+
+## Installation & Reproducibility
+
+To recreate the exact Conda environment and package versions used in this repository, run:
+
+```bash
+conda env create -f environment.yml
+conda activate <environment_name>
+
+git add README.md
+git commit -m "Add environment setup instructions to README"
+git push origin main
